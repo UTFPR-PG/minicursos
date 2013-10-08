@@ -10,9 +10,9 @@
 
 * Dual-boot? **DONE**
 
-2. Passos básicos **TODO**
+2. Passos básicos de instalação **TODO**
 
-visão geral do processo: formatação/particionamento/etc.. **TODO**
+* visão geral do processo: formatação/particionamento/etc.. **TODO**
 
 ### O que é um sistema linux? **DONE**
 1. Quem é esse tal de kernel? **DONE**
@@ -20,11 +20,17 @@ visão geral do processo: formatação/particionamento/etc.. **TODO**
 3. Desktop environments / window managers - O que são e para que servem e porque você não deve mudar de distribuição cada vez que o gnome der pau. **DONE**
 ### Porque usar? **TODO**
 1. Enfatizar o uso de sistemas linux no suporte à práticas do cientista da computação. **TODO**
+
 * Benefícios da CLI **TODO**
+
 * man pages **DONE**
+
 * linux é escrito em C! **TODO**
+
 * código aberto **TODO**
+
 * interfaces entre comandos (unix way) **TODO**
+
 2. Gerenciamento de pacotes **TODO**
 3. Facilidade de manutenção **TODO**
 4. Ajuda a entender conceitos da computação **TODO**
