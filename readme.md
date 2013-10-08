@@ -1,39 +1,40 @@
 ## Linux 101
 ---
 
-### **DONE** Breve histórico
-1. Tanenbaum/MINIX - Linus/Linux
-2. **TODO** Instruções *básicas* de instalação
-3. como você pode fazer para ter o linux em seu computador?
+### Breve histórico **DONE**
+1.  Tanenbaum/MINIX - Linus/Linux **DONE**
+### Instruções *básicas* de instalação **TODO**
+1. como você pode fazer para ter o linux em seu computador? **DONE**
 
-Virtual Machine?
+Virtual Machine? **DONE**
 
-Dual-boot?
+Dual-boot? **DONE**
 
-4. Passos básicos
+2. Passos básicos **TODO**
 
-visão geral do processo: formatação/particionamento/etc..
+visão geral do processo: formatação/particionamento/etc.. **TODO**
 
-### **DONE** O que é um sistema linux?
-1. Quem é esse tal de kernel?
-2. O que é uma distro? Quais são? (aquele gráfico que os guris mostraram é interessante)
-3. Desktop environments / window managers - O que são e para que servem e porque você não deve mudar de distribuição cada vez que o gnome der pau.
-### **TODO** Porque usar?
-1. Enfatizar o uso de sistemas linux no suporte à práticas do cientista da computação.
-..* Benefícios da CLI
-..* man pages
-..* linux é escrito em C!
-..* código aberto
-..* interfaces entre comandos (unix way)
-2. Gerenciamento de pacotes
-3. Facilidade de manutenção
-4. Ajuda a entender conceitos da computação
-5. Controle sobre o que está instalado no seu computador(velocidade de boot, etc)     
-### **TODO** Prática
-1. compilar e rodar um Hello World. (ver com a Sheila quais outros assuntos básicos poderíamos tratar)
-2. stdin/stdout
-### **TODO** Usando linux no dia a dia
-1. Passar uma visão cultural geral no que diz respeito a hackear o sistema de maneira contida
-2. Pesquisar no google
-3. Procurar ajuda na lista? de discussão
-4. Manter o windão do lado para algumas tarefas não é crime. Usar o wine, vm, dual boot.
+### O que é um sistema linux? **DONE**
+1. Quem é esse tal de kernel? **DONE**
+2. O que é uma distro? Quais são? **DONE**
+3. Desktop environments / window managers - O que são e para que servem e porque você não deve mudar de distribuição cada vez que o gnome der pau. **DONE**
+### Porque usar? **TODO**
+1. Enfatizar o uso de sistemas linux no suporte à práticas do cientista da computação. **TODO**
+..* Benefícios da CLI **TODO**
+..* man pages **DONE**
+..* linux é escrito em C! **TODO**
+..* código aberto **TODO**
+..* interfaces entre comandos (unix way) **TODO**
+2. Gerenciamento de pacotes **TODO**
+3. Facilidade de manutenção **TODO**
+4. Ajuda a entender conceitos da computação **TODO**
+5. Controle sobre o que está instalado no seu computador(velocidade de boot, etc) **TODO**
+### Prática **TODO**
+1. compilar e rodar um Hello World. **TODO**
+2. stdin/stdout **TODO**
+3. comandos básicos **DONE**
+### Usando linux no dia a dia **TODO**
+1. Passar uma visão cultural geral no que diz respeito a hackear o sistema de maneira contida **TODO**
+2. Pesquisar no google **TODO**
+3. Procurar ajuda na lista? de discussão **TODO**
+4. Manter o windão do lado para algumas tarefas não é crime. Usar o wine, vm, dual boot. **TODO**
