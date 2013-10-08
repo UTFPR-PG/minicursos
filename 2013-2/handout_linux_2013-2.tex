@@ -82,15 +82,57 @@ Outra distinção importante que deve ser feita é quanto ao conceito de Desktop
 
 A maioria das distribuições já provê um DE e um WM, porém algumas delas trazem apenas os programas essenciais, ficando a instalação da parte gráfica a cargo do usuário. É importante entender a diferença entre distro, desktop environment e window manager para que no caso de um problema ou caso alguma funcionalidade não lhe agrade, você saiba exatamente em qual parte do sistema está o problema.
 
-\subsection{Como obter?}
+\section{Como obter?}
+A maioria das distribuições Linux é disponibilizada grátis na internet na forma de imagens \textit{.iso}. Para a instalação, as seguintes alternativas existem:
 
-\subsubsection{Virtual Machine}
-Uma máquina virtual (\textbf{VM}) é um computador fictício, baseado somente em \emph{software}. A VM funciona como um emulador, reproduzindo a arquitetura e funcionalidades de um computador de verdade.
-Instalar o Linux em uma VM garante a utilização de programas e aplicações como se instalássemos direto no computador, entretanto diminuindo a eficiência, já que estamos tentando utilizar um sistema operacional a partir de outro.
+\begin{enumerate}
+\item Manter o sistema operacional nativo e rodar Linux em uma máquina virtual\\
+  Recomendado para testes iniciais, antes de se decidir por uma distribuição.
+  
+\item Manter o sistema operacional nativo e o Linux em dual-boot\\
+  Recomendado para aqueles que usam com frequência as funcionalidades do sistema nativo, como jogos ou softwares proprietários não disponíveis para Linux.
+  
+\item Remover o sistema nativo e usar somente Linux\\
+  Recomendado para aqueles que já tem certa experiência com Linux e não necessitam de outro sistema operacional.
+  
+\item Trocar o sistema nativo pelo Linux e rodar o sistema antigo em uma máquina virtual\\
+  Para aqueles que já optaram por usar Linux, mas que em uma pequena fração do tempo, ainda precisam de funcionalidades do outro sistema.
+\end{enumerate}
 
+\subsection{Máquina Virtual}
 
+Uma máquina virtual (\textbf{VM}) é, como o nome indica, um computador virtual baseado somente em \emph{software} que funciona como um emulador, reproduzindo a arquitetura e funcionalidades de um computador de verdade. Através da máquina virtual, pode-se ter vários sistemas operacionais instalados em uma mesma máquina e utilizá-los todos sem afetar o sistema base do computador.
 
-\section{Comandos da CLI}
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=.3]{vm.jpg}
+  \caption{Exemplo do uso de uma máquina virtual}
+  \label{fig:vm}
+\end{figure}
+
+Observe a imagem \ref{fig:vm} acima. Nela pode-se ver um sistema Windows servindo como base para outro sistema Windows rodando dentro da VM. O sistema que está dentro da VM não afeta de maneira alguma o sistema base. Desta forma, já que a VM nada mais é que um \textit{software} rodando em um sistema qualquer, podemos levantar as seguintes vantagens de seu uso:
+
+\begin{itemize}
+\item Nada que seja feito no sistema virtual afetará o sistema real.
+\item Pode-se instalar e desinstalar vários sistemas com facilidade.
+\item Em situações em que o sistema base possui acesso restrito, como em um ambiente acadêmico, a VM pode ser uma boa alternativa, já que dentro da máquina virtual o usuário possui controle total.
+\end{itemize}
+
+Porém, pelo mesmo fato de ser apenas um programa rodando em seu computador a VM tem as desvantagens de que:
+
+\begin{itemize}
+\item Como estão sendo utilizados recursos de um sistema para rodar outro sistema, ocorrerá diminuição da eficiência, e o sistema poderá ficar lento ou não ter memória suficiente para executar algum programa.
+  \item Para uma utilização prolongada, será sempre melhor instalar o sistema diretamente em seu computador.
+\end{itemize}  
+
+\subsection{Dual-boot}
+Outra alternativa bastante popular na instalação de sistemas operacionais é o dual-boot, ou multi-boot. Nessa situação, os dois (ou mais) sistemas serão instalados totalmente em uma máquina, cada qual recebendo uma porção do disco rígido. Quando o usuário liga o computador, uma tela é exibida permitindo que se escolha qual dos sistemas deve ser carregado. Para alternar entre sistemas, basta reiniciar o computador e escolher o outro sistema.
+
+A principal vantagem dessa abordagem é que ambos os sistemas possuem a máquina toda para si, exatamente como ocorre quando há apenas um sistema operacional instalado.
+
+Uma desvantagem que pode ser citada é que não é possível executar os dois sistemas ao mesmo tempo e deve-se aguardar o \textit{reboot} para selecionar o outro sistema.
+
+\section{Comandos da CLI}\label{cli}
 
 Como um guia, todas as linhas de comando terão o caracter \$ no começo, apenas para indicar a linha onde será digitado o comando em questão. O caracter deve ser ignorado.\\
 
