@@ -10,6 +10,8 @@
 
 * Dual-boot? **DONE**
 
+* foi feita apenas a parte teórica, precisa fazer ao vivo na quarta feita
+
 2. Passos básicos de instalação **TODO**
 
 * visão geral do processo: formatação/particionamento/etc.. **TODO**
