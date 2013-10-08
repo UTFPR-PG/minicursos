@@ -11,6 +11,10 @@
 \colorbox{light-gray}{\texttt{\pbox{\textwidth}{\$ #1}}}
 }
 
+\newcommand{\cominline}[1]{
+\colorbox{light-gray}{\texttt{\pbox{\textwidth}{#1}}}
+}
+
 \handoutdate{\today}
 
 \begin{document}
@@ -132,7 +136,15 @@ A principal vantagem dessa abordagem é que ambos os sistemas possuem a máquina
 
 Uma desvantagem que pode ser citada é que não é possível executar os dois sistemas ao mesmo tempo e deve-se aguardar o \textit{reboot} para selecionar o outro sistema.
 
-\section{Comandos da CLI}\label{cli}
+
+\section{jose}
+
+\section{Comandos da CLI}
+
+Quando utilizamos um computador, estamos acostumados a usar a interface gráfica. Isso significa que fazemos bastante uso do mouse para termos uma garantia de intuitividade. A CLI (\emph{Command Line Interface}) não utiliza esses preceitos que estamos acostumados. Ela necessita de comandos para realizar tarefas como a criação de uma pasta, ou fazer a copia de um arquivo, entre outros. No começo pode parecer difícil decorar esses comandos, mas com o tempo e costume, a utilização da CLI fará com que a navegabilidade seja muito mais rápida.
+
+Um comando da CLI possui um nome e pode possuir parâmetros. Esses parametros podem modificar o comportamento do comando para suprir as suas necessidades. Normalmente, um parâmetro acompanha o nome do comando dessa forma: \cominline{grep -h}, onde ``h'' pode ser a forma abreviada de um parâmetro. É comum a forma mais longa ser acompanhada de dois ``-'', da seguinte forma: \cominline{grep --help}. Informações sobre os parâmetros podem ser encontradas no manual do comando, assim como sua descrição e exemplos de uso. O manual é acessado dessa maneira: \cominline{man grep}.
+\\
 
 Como um guia, todas as linhas de comando terão o caracter \$ no começo, apenas para indicar a linha onde será digitado o comando em questão. O caracter deve ser ignorado.\\
 
@@ -140,7 +152,7 @@ Para saber em qual pasta você está trabalhando na linha de comando, digite \te
 
 \com{pwd\\/home/usuario}\\
 
-A mudança de diretórios, ou seja, pastas, deve ser feita através do comando \textbf{cd} (``change directory''). Há alguns atalhos que podem ser utilizados na mudança de diretórios: o \textbf{$\sim$} é um atalho para o ``/home/usuario'', um \textbf{.} significa o diretório atual e \textbf{..} é equivalente ao diretório anterior.\\
+A mudança de diretórios, ou seja, pastas, deve ser feita através do comando \textbf{cd} (``change directory''). Há alguns atalhos que podem ser utilizados na mudança de diretórios: o \textbf{$\sim$} é um atalho para o ``/home/usuario'', um \textbf{.} significa o diretório atual e \textbf{..} é equivalente ao diretório anterior. É importante lembrar que o / (``root'') também é um diretório!\\
 
 \com{cd /home/usuario/Área\textbackslash\xspace de\textbackslash\xspace Trabalho\\\$ cd ..\\\$ pwd\\/home/usuario\\\$ cd ./Área\textbackslash\xspace de\textbackslash\xspace Trabalho\\\$ pwd\\/home/usuario/Área\textbackslash\xspace de\textbackslash\xspace Trabalho}\\
 
@@ -148,7 +160,48 @@ Você pode criar uma pasta usando o \textbf{mkdir} (``make directory''). Lembre-
 
 \com{cd /tmp/\\\$ mkdir NovaPasta\\\$ mkdir NovaPasta/Pasta2}\\
 
-Se você desejar saber o conteúdo de uma pasta, basta utilizar o comando \textbf{ls} (``list'').
+Se você desejar saber o conteúdo de uma pasta, basta utilizar o comando \textbf{ls} (``list''). Este comando mostrará tanto pastas quanto arquivos presentes.\\
+
+\com{cd /tmp/\\\$ ls\\NovaPasta\\\$ cd NovaPasta\\\$ ls\\Pasta2}\\
+
+Para remover uma pasta, um simples comando pode ser usado, o \textbf{rmdir}, porém a pasta só será removida se ela estiver vazia, caso contrário uma mensagem de erro aparecerá na tela. No nosso exemplo, podemos excluir a Pasta2 dessa forma:\\
+
+\com{cd /temp/\\\$ rmdir ./NovaPasta/Pasta2}\\
+
+Você pode criar um arquivo vazio com apenas um comando, o \textbf{touch}. \\
+
+\com{cd /tmp/NovaPasta\\\$ touch teste.txt}\\
+
+Para podermos copiar um arquivo, utilizaremos o comando \textbf{cp}.\\
+
+\com{ls /tmp/NovaPasta\\teste.txt\\\$ cp /tmp/NovaPasta/teste.txt /tmp/teste2.txt}\\
+
+Utilizando o \textbf {cp} com o parâmetro \textbf{-r} somos capazes de copiar pastas.\\
+
+\com{cp -r /tmp/NovaPasta /tmp/NovaPasta2}\\
+
+Remover um arquivo definitivamente é bem simples quando utilizamos o comando \textbf{rm}. Apenas é necessário colocar o nome do arquivo que se deseja excluir e estar na pasta correta.\\
+
+\com{cd /tmp/\\\$ rm teste2.txt}\\
+
+Novamente, para excluirmos uma pasta, é preciso usar o parâmetro \textbf{-r}. É preciso ter muito cuidado ao usar essa funcionalidade, pois esse comando apagará definitivamente qualquer pasta mesmo que haja conteúdo dentro.\\
+
+\com{cd /tmp/\\\$ rm -r NovaPasta2}\\
+\\
+
+Há outros comandos que são interessantes:
+\begin{itemize}
+\item\cominline{cat ArquivoQualquer.txt} - Imprime na tela o conteúdo de ArquivoQualquer.txt
+\item\cominline{find /home/usuario -name ArquivoQualquer} - Procura dentro da ``home'' um arquivo de nome ArquivoQualquer.
+\item\cominline{grep string caminho\_para\_pasta/} - Procura dentro dos arquivos da pasta a string colocada após grep.
+\item\cominline{shutdown -h now} - Desliga o computador.
+\item\cominline{shutdown -r now} - Reinicia o computador.
+\item\cominline{sudo comando} - Executar um programa como um super usuário.
+\item\cominline{tar -cvf Arquivo.tar.gz caminho\_para\_pasta/} - Comprimir arquivos na pasta indicada pelo caminho.
+\item\cominline{tar -xzf Arquivo.tar.gz} - Extrair arquivos de um .tar.gz.
+\end{itemize}
+
+
 
 
 
