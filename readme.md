@@ -1,12 +1,19 @@
 ## Linux 101
+---
+
 ### DONE Breve histórico
 1. Tanenbaum/MINIX - Linus/Linux
 2. TODO Instruções *básicas* de instalação
 3. como você pode fazer para ter o linux em seu computador?
-     Virtual Machine?
-     Dual-boot?
+
+Virtual Machine?
+
+Dual-boot?
+
 4. Passos básicos
-     visão geral do processo: formatação/particionamento/etc..
+
+visão geral do processo: formatação/particionamento/etc..
+
 ### DONE O que é um sistema linux?
 1. Quem é esse tal de kernel?
 2. O que é uma distro? Quais são? (aquele gráfico que os guris mostraram é interessante)
