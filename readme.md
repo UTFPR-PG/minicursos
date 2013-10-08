@@ -1,5 +1,9 @@
 ## Linux 101
 ---
+Atividades que devem ser abrangidas pelo handout do curso. Tudo isso será refeito em forma de slides ou será reproduzido no curso.
+
+Qualquer coisa, abram issues e não liguem para a numeração zoada do git, eu to com preguiça de arrumar.
+
 
 ### Breve histórico **DONE**
 1.  Tanenbaum/MINIX - Linus/Linux **DONE**
@@ -14,7 +18,7 @@
 
 2. Passos básicos de instalação **TODO**
 
-* visão geral do processo: formatação/particionamento/etc.. **TODO**
+* visão geral do processo: formatação/particionamento/etc.. **TODO**p
 
 ### O que é um sistema linux? **DONE**
 1. Quem é esse tal de kernel? **DONE**
