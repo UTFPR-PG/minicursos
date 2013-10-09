@@ -81,27 +81,27 @@ Como visto anteriormente, o que se conhece popularmente como Linux, é na verdad
 
 Algumas distribuições mais comuns são: Ubuntu, Debian, Fedora, entre várias outras.
 
-O conceito de distribuição (também chamadas de ``distro'') geralmente gera alguma confusão entre os usuários de Linux, já que todos os softwares com os quais a pessoa está interagindo no uso cotidiano do sistema são na verdade softwares que são providos pela distribuição. Isto faz com que um usuário, ao experimentar várias distros em seu computador, não perceba que na verdade, o \textit{kernel} rodando por baixo da camada de software de usuário é o mesmo para todas as distribuições.
+O conceito de distribuição (também chamadas de ``distro'') geralmente gera alguma confusão entre os usuários de Linux, já que todos os \textit{softwares} com os quais a pessoa está interagindo no uso cotidiano do sistema são na verdade \textit{softwares} que são providos pela distribuição. Isto faz com que um usuário, ao experimentar várias \textit{distros} em seu computador, não perceba que na verdade, o \textit{kernel} rodando por baixo da camada de \textit{software} de usuário é o mesmo para todas as distribuições.
 
 \subsubsection{Desktop Environments e Window Managers}
-Outra distinção importante que deve ser feita é quanto ao conceito de Desktop Environments (ambientes de desktop) e Window Managers (gerenciadores de janelas). Falando de maneira grosseira, Desktop Environments são a parte da distribuição responsável por partes do sistema como o ``menu iniciar'', gerenciamento de sessão e o próprio desktop. Os Window Managers são a parte que gerencia a aparência das janelas e o comportamento de funções como a troca de janelas (alt + Tab).
+Outra distinção importante que deve ser feita é quanto ao conceito de \textit{Desktop Environments} (ambientes de \textit{desktop}) e \textit{Window Managers} (gerenciadores de janelas). Falando de maneira grosseira, \textit{Desktop Environments} são a parte da distribuição responsável por partes do sistema como o ``menu iniciar'', gerenciamento de sessão e o próprio \textit{desktop}. Os \textit{Window Managers} são a parte que gerencia a aparência das janelas e o comportamento de funções como a troca de janelas (alt + Tab).
 
-A maioria das distribuições já provê um DE e um WM, porém algumas delas trazem apenas os programas essenciais, ficando a instalação da parte gráfica a cargo do usuário. É importante entender a diferença entre distro, desktop environment e window manager para que no caso de um problema ou caso alguma funcionalidade não lhe agrade, você saiba exatamente em qual parte do sistema está o problema.
+A maioria das distribuições já provê um DE e um WM, porém algumas delas trazem apenas os programas essenciais, ficando a instalação da parte gráfica a cargo do usuário. É importante entender a diferença entre \textit{distro}, \textit{desktop environment} e \textit{window manager} para que no caso de um problema ou caso alguma funcionalidade não lhe agrade, você saiba exatamente em qual parte do sistema está o problema.
 
 \section{Como obter?}
-A maioria das distribuições Linux é disponibilizada grátis na internet na forma de imagens \textit{.iso}. Para a instalação, as seguintes alternativas existem:
+A maioria das distribuições Linux é disponibilizada grátis na \textit{internet} na forma de imagens \textit{.iso}. Para a instalação, as seguintes alternativas existem:
 
 \begin{enumerate}
-\item Manter o sistema operacional nativo e rodar Linux em uma máquina virtual\\
+\item Manter o sistema operacional nativo e rodar Linux em uma máquina virtual.\\
   Recomendado para testes iniciais, antes de se decidir por uma distribuição.
 
-\item Manter o sistema operacional nativo e o Linux em dual-boot\\
-  Recomendado para aqueles que usam com frequência as funcionalidades do sistema nativo, como jogos ou softwares proprietários não disponíveis para Linux.
+\item Manter o sistema operacional nativo e o Linux em dual-boot.\\
+  Recomendado para aqueles que usam com frequência as funcionalidades do sistema nativo, como jogos ou \textit{softwares} proprietários não disponíveis para Linux.
 
-\item Remover o sistema nativo e usar somente Linux\\
+\item Remover o sistema nativo e usar somente Linux.\\
   Recomendado para aqueles que já tem certa experiência com Linux e não necessitam de outro sistema operacional.
 
-\item Trocar o sistema nativo pelo Linux e rodar o sistema antigo em uma máquina virtual\\
+\item Trocar o sistema nativo pelo Linux e rodar o sistema antigo em uma máquina virtual.\\
   Para aqueles que já optaram por usar Linux, mas que em uma pequena fração do tempo, ainda precisam de funcionalidades do outro sistema.
 \end{enumerate}
 
@@ -134,7 +134,7 @@ Porém, pelo mesmo fato de ser apenas um programa rodando em seu computador a VM
 \end{itemize}
 
 \subsection{Dual-boot}
-Outra alternativa bastante popular na instalação de sistemas operacionais é o dual-boot, ou multi-boot. Nessa situação, os dois (ou mais) sistemas serão instalados totalmente em uma máquina, cada qual recebendo uma porção do disco rígido. Quando o usuário liga o computador, uma tela é exibida permitindo que se escolha qual dos sistemas deve ser carregado. Para alternar entre sistemas, basta reiniciar o computador e escolher o outro sistema.
+Outra alternativa bastante popular na instalação de sistemas operacionais é o \textit{dual-boot}, ou \textit{multi-boot}. Nessa situação, os dois (ou mais) sistemas serão instalados totalmente em uma máquina, cada qual recebendo uma porção do disco rígido. Quando o usuário liga o computador, uma tela é exibida permitindo que se escolha qual dos sistemas deve ser carregado. Para alternar entre sistemas, basta reiniciar o computador e escolher o outro sistema.
 
 A principal vantagem dessa abordagem é que ambos os sistemas possuem a máquina toda para si, exatamente como ocorre quando há apenas um sistema operacional instalado.
 
@@ -146,12 +146,12 @@ Existem algumas características dos sistemas baseados em Linux que fazem com qu
 \subsection{Familiaridade geral com termos e conceitos}
 Pelo fato de se basear em software de código aberto, existem muitos conceitos teóricos da computação que podem ser verificados muito facilmente quando se usa Linux. Um exemplo simples é o próprio \textit{kernel}, que é escrito na linguagem C. Ao estudar programação ou Sistemas Operacionais, o código do \textit{kernel} pode ser explorado para que se entenda como os conceitos estudados são aplicados em um sistema operacional ``de verdade''.
 
-Outro exemplo são as aplicações na área de Redes de Computadores que em sua maioria se baseiam em Linux. Ao usar Linux no seu dia a dia, você já estará se familiarizando com alguns conceitos nesta área.
+Outro exemplo são as aplicações na área de Redes de Computadores, que em sua maioria se baseiam em Linux. Ao usar Linux no seu dia a dia, você já estará se familiarizando com alguns conceitos nesta área.
 
 \subsection{Aprendizado de boas práticas}
 O uso contínuo do sistema pode levar ao conhecimento de boas práticas de programação. Um bom exemplo é a ``filosofia'' de se projetar programas que façam apenas uma tarefa, mas a façam de maneira bem feita.
 
-Outro ponto que se pode ressaltar é o fato de o Linux ser bastante documentado. Isso significa que os programas possuem um manual de instruções de utilização. Acosutmar-se a ler manuais e pesquisar sobre funções desconhecidas é um ponto importante dentro da computação, já que constantemente nos deparamos com código escrito por outras pessoas ou situações novas nas quais não possuímos domínio. Saber buscar informação nos lugares certos é algo valioso.
+Outro ponto que se pode ressaltar é o fato de o Linux ser bastante documentado. Isso significa que os programas possuem um manual de instruções de utilização. Acostumar-se a ler manuais e pesquisar sobre funções desconhecidas é um ponto importante dentro da computação, já que constantemente nos deparamos com código escrito por outras pessoas ou situações novas nas quais não possuímos domínio. Saber buscar informação nos lugares certos é algo valioso.
 
 \subsection{Gerenciamento de pacotes}
 Além dos benefícios dentro da computação, as distribuições Linux também trazem algumas funcionalidades que são úteis para qualquer pessoa. O gerenciamento de pacotes é uma delas.
@@ -160,18 +160,18 @@ Normalmente, as distribuições Linux aplicam o conceito de ``pacote''. Um pacot
 
 \section{Uso da linha de comando}
 
-Quando utilizamos um computador, estamos acostumados a usar a \underline{interface gráfica}. Isso significa que fazemos bastante uso do mouse para acessar as variadas funções do sistema e os resultados das nossas ações são exibidos na tela de maneira muito clara. Ex: ao mover um arquivo, podemos simplesmente clicar sobre ele e arrastá-lo para outra pasta. Esta interação é feita de maneira muito intuitiva.
+Quando utilizamos um computador, estamos acostumados a usar a \underline{interface gráfica}. Isso significa que fazemos bastante uso do \textit{mouse} para acessar as variadas funções do sistema e os resultados das nossas ações são exibidos na tela de maneira muito clara. Ex: ao mover um arquivo, podemos simplesmente clicar sobre ele e arrastá-lo para outra pasta. Esta interação é feita de maneira muito intuitiva.
 
-Embora hoje em dia, quase todas as distribuições Linux possuam uma interface gráfica, o seu ponto forte é a \underline{interface de linha de comando}. A CLI (\emph{Command Line Interface}) não é baseada nos preceitos de mouse + gráficos com os quais estamos acostumados. A sua utilização se faz através de comandos de texto. Para realizar tarefas como a criação de uma pasta, ou fazer a cópia de um arquivo, um comando será digitado em um console. Para executar a mesma ação do exemplo anterior, digitaríamos o comando: \com{mv local\_arquivo local\_destino}. O comando não retornaria resposta alguma, o que em um sistema Unix significa que tudo ocorreu com sucesso. No começo, esta nova forma de interagir com o computador e estes comandos podem parecer intimidantes, porém com o tempo e costume, a utilização da CLI fará com que a navegabilidade se torne rápida e focada.
+Embora hoje em dia, quase todas as distribuições Linux possuam uma interface gráfica, o seu ponto forte é a \underline{interface de linha de comando}. A CLI (\emph{Command Line Interface}) não é baseada nos preceitos de \textit{mouse} + gráficos com os quais estamos acostumados. A sua utilização se faz através de comandos de texto. Para realizar tarefas como a criação de uma pasta, ou fazer a cópia de um arquivo, um comando será digitado em um console. Para executar a mesma ação do exemplo anterior, digitaríamos o comando: \com{mv local\_arquivo local\_destino}. O comando não retornaria resposta alguma, o que em um sistema Unix significa que tudo ocorreu com sucesso. No começo, esta nova forma de interagir com o computador e estes comandos podem parecer intimidantes, porém com o tempo e costume, a utilização da CLI fará com que a navegabilidade se torne rápida e focada.
 
-Além da navegação básica pelas pastas, os comandos da CLI também podem ser combinados de forma a executar tarefas complexas, como manipulação de arquivos, gerenciamento de rede, atividades que em outros sistemas operacionais provavelmente teríamos que procurar por um programa na internet para realizá-las.
+Além da navegação básica pelas pastas, os comandos da CLI também podem ser combinados de forma a executar tarefas complexas, como manipulação de arquivos ou gerenciamento de rede, atividades que em outros sistemas operacionais provavelmente teríamos que procurar por um programa na internet para realizá-las.\\
 
 A seguir, veremos alguns comandos básicos e sua utilização.
 
 % Um comando da CLI possui um nome e pode possuir parâmetros. Esses parametros podem modificar o comportamento do comando para suprir as suas necessidades. Normalmente, um parâmetro acompanha o nome do comando dessa forma: \cominline{grep -h}, onde ``h'' pode ser a forma abreviada de um parâmetro. É comum a forma mais longa ser acompanhada de dois ``-'', da seguinte forma: \cominline{grep --help}. Informações sobre os parâmetros podem ser encontradas no manual do comando, assim como sua descrição e exemplos de uso. O manual é acessado dessa maneira: \cominline{man grep}.
 % \\
 
-Como um guia, todas as linhas de comandos terão o caracter \$ no começo, apenas para indicar a linha onde será digitado o comando em questão. O caracter não faz parte do comando e deve ser ignorado.\\
+{\small \it Como um guia, todas as linhas de comandos terão o caracter \$ no começo, apenas para indicar a linha onde será digitado o comando em questão. O caracter não faz parte do comando e deve ser ignorado.\\}
 
 Ao abrir uma janela de terminal, primeiramente precisamos saber ``onde estamos''. Para saber em qual pasta você está trabalhando na linha de comando, digite \textbf{pwd}, que significa ``print working directory''.\\
 
