@@ -4,6 +4,7 @@
 \usepackage{pbox}
 \usepackage[brazil]{babel}
 \usepackage{xcolor}
+\usepackage[alf]{abntex2cite}
 \definecolor{dark-gray}{gray}{0.20}
 \definecolor{light-gray}{gray}{0.85}
 
@@ -26,7 +27,7 @@ Este material é apresentado como parte de uma série de minicursos que serão m
 Os conteúdos são dispostos aqui apenas como um apanhado geral com o objetivo de prover um embasamento mínimo e recomenda-se que outras fontes de pesquisa sejam utilizadas para o aprofundamento nestes assuntos.
 
 \subsection{Unix}
-O sistema \textbf{Unix} é um sistema operacional desenvolvido por Ken Thompson, Dennis Richie, Douglas McIlroy e Joe Ossanna em 1970, na American Telephone \& Telegraph Company (AT\&T).
+O sistema \textbf{Unix} é um sistema operacional desenvolvido por Ken Thompson, Dennis Ritchie, Douglas McIlroy e Joe Ossanna em 1970, na American Telephone \& Telegraph Company (AT\&T).
 
 Este sistema foi projetado para ser portável, multi-tarefa e multi-usuário. Sistemas Unix são caracterizados por vários conceitos, como o uso de arquivos de texto para guardar dados, um sistema de arquivos hierárquico, o tratamento de certos dispositivos como arquivos e a idéia de que é melhor ter vários programas pequenos, cada um desempenhando uma única tarefa, de forma que eles possam ser encadeados para realizar uma tarefa maior do que o uso de um só programa que possua todas as funcionalidades. Estes conceitos são conhecidos como a ``filosofia Unix''.
 
@@ -92,13 +93,13 @@ A maioria das distribuições Linux é disponibilizada grátis na internet na fo
 \begin{enumerate}
 \item Manter o sistema operacional nativo e rodar Linux em uma máquina virtual\\
   Recomendado para testes iniciais, antes de se decidir por uma distribuição.
-  
+
 \item Manter o sistema operacional nativo e o Linux em dual-boot\\
   Recomendado para aqueles que usam com frequência as funcionalidades do sistema nativo, como jogos ou softwares proprietários não disponíveis para Linux.
-  
+
 \item Remover o sistema nativo e usar somente Linux\\
   Recomendado para aqueles que já tem certa experiência com Linux e não necessitam de outro sistema operacional.
-  
+
 \item Trocar o sistema nativo pelo Linux e rodar o sistema antigo em uma máquina virtual\\
   Para aqueles que já optaram por usar Linux, mas que em uma pequena fração do tempo, ainda precisam de funcionalidades do outro sistema.
 \end{enumerate}
@@ -127,7 +128,7 @@ Porém, pelo mesmo fato de ser apenas um programa rodando em seu computador a VM
 \begin{itemize}
 \item Como estão sendo utilizados recursos de um sistema para rodar outro sistema, ocorrerá diminuição da eficiência, e o sistema poderá ficar lento ou não ter memória suficiente para executar algum programa.
   \item Para uma utilização prolongada, será sempre melhor instalar o sistema diretamente em seu computador.
-\end{itemize}  
+\end{itemize}
 
 \subsection{Dual-boot}
 Outra alternativa bastante popular na instalação de sistemas operacionais é o dual-boot, ou multi-boot. Nessa situação, os dois (ou mais) sistemas serão instalados totalmente em uma máquina, cada qual recebendo uma porção do disco rígido. Quando o usuário liga o computador, uma tela é exibida permitindo que se escolha qual dos sistemas deve ser carregado. Para alternar entre sistemas, basta reiniciar o computador e escolher o outro sistema.
@@ -164,8 +165,6 @@ Além da navegação básica pelas pastas, os comandos da CLI também podem ser 
 
 A seguir, veremos alguns comandos básicos e sua utilização.
 
-
-
 % Um comando da CLI possui um nome e pode possuir parâmetros. Esses parametros podem modificar o comportamento do comando para suprir as suas necessidades. Normalmente, um parâmetro acompanha o nome do comando dessa forma: \cominline{grep -h}, onde ``h'' pode ser a forma abreviada de um parâmetro. É comum a forma mais longa ser acompanhada de dois ``-'', da seguinte forma: \cominline{grep --help}. Informações sobre os parâmetros podem ser encontradas no manual do comando, assim como sua descrição e exemplos de uso. O manual é acessado dessa maneira: \cominline{man grep}.
 % \\
 
@@ -179,7 +178,7 @@ A resposta do comando é a pasta atual. ``/home/usuario'', seria similar ao ``C:
 
 Há alguns ``atalhos'' que podem ser utilizados na hora de digitar comandos:
 \begin{itemize}
-\item o caracter \textbf{$\sim$} é uma outra forma de representar a pasta ``/home/usuario''  
+\item o caracter \textbf{$\sim$} é uma outra forma de representar a pasta ``/home/usuario''
 \item um \textbf{.} significa o diretório atual e \textbf{..} é equivalente ao diretório anterior. Portanto, no caso acima, \textbf{.} significaria ``/home/usuario'' e \textbf{..} significaria ``/home''
 \end{itemize}
 A mudança de diretórios, ou seja, pastas, deve ser feita através do comando \textbf{cd} (``change directory'').
@@ -237,14 +236,17 @@ Há outros comandos que são interessantes:
 \item\cominline{tar -xf Arquivo.tar.gz} - Extrair arquivos de um .tar.gz.
 \end{itemize}
 
+\section{Passos seguintes}
+
+
+
+\nocite{Tanenbaum:2007:MOS:1410217}
+\nocite{shotts2012linux}
+\nocite{anatomy2007}
+\nocite{gnu.org}
+\nocite{learn2012}
+\nocite{linux2013}
+
+\bibliography{handout_linux_2013-2}
+
 \end{document}
-
-
-
-
-
-
-
-
-
-
