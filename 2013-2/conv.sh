@@ -1,5 +1,5 @@
 #!/bin/sh
 
-for file in ./*.jpg; do
-    convert "$file" $(echo "$file" | sed 's/\.jpg$/\.eps/')
+for file in ./*.{jpg,png}; do
+   convert "$file" $(echo "$file" | sed 's/\(\.jpg\|\.png\)$/\.eps/')
 done
