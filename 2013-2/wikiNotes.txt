@@ -1,0 +1,8 @@
+- First thing  is to disconnect network! Even on Debian or Ubuntu!
+- Ubuntu (VMWare options menu)
+	- Increase RAM to 3GB;
+	- Increase processor cores to 3;
+	- Activate 3D Acceleration (optional)
+	- Leave Unity options as default
+
+
