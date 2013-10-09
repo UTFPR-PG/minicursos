@@ -8,3 +8,6 @@
 *.jpg
 *.bm
 *.png
+*.eps
+*.ps
+*.dvi
