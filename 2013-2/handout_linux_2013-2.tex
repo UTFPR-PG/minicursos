@@ -115,7 +115,9 @@ Uma máquina virtual (\textbf{VM}) é, como o nome indica, um computador virtual
   \label{fig:vm}
 \end{figure}
 
-Observe a imagem \ref{fig:vm}. Nela pode-se ver um sistema Windows servindo como base para outro sistema Windows rodando dentro da VM. O sistema que está dentro da VM não afeta de maneira alguma o sistema base. Desta forma, já que a VM nada mais é que um \textit{software} rodando em um sistema qualquer, podemos levantar as seguintes vantagens de seu uso:
+Observe a imagem \ref{fig:vm}. Nela pode-se ver um sistema Windows (XP) servindo como base para outro sistema Windows (Win 7) rodando dentro da VM. Para efeitos de nomenclatura, chama-se de \textit{host} o sistema que está como base para executar a máquina virtual e \textit{guest} o sistema que está sendo emulado na VM. No exemplo acima, o \textit{host} é definido pelo Windows XP, enquanto o \textit{guest} é o Windows 7.
+
+O sistema que está dentro da VM não afeta de maneira alguma o sistema base. Desta forma, já que a VM nada mais é que um \textit{software} rodando em um sistema qualquer, podemos levantar as seguintes vantagens de seu uso:
 
 \begin{itemize}
 \item Nada que seja feito no sistema virtual afetará o sistema real.
