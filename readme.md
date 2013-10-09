@@ -26,22 +26,22 @@ Qualquer coisa, abram issues e não liguem para a numeração zoada do git, eu t
 2. O que é uma distro? Quais são? **DONE**
 3. Desktop environments / window managers - O que são e para que servem e porque você não deve mudar de distribuição cada vez que o gnome der pau. **DONE**
 ### Porque usar? **TODO**
-1. Enfatizar o uso de sistemas linux no suporte à práticas do cientista da computação. **TODO**
+1. Enfatizar o uso de sistemas linux no suporte à práticas do cientista da computação. **DONE**
 
-* Benefícios da CLI **TODO**
+* Benefícios da CLI **DONE**
 
 * man pages **DONE**
 
-* linux é escrito em C! **TODO**
+* linux é escrito em C! **DONE**
 
-* código aberto **TODO**
+* código aberto **DONE**
 
-* interfaces entre comandos (unix way) **TODO**
+* interfaces entre comandos (unix way) **DONE**
 
-2. Gerenciamento de pacotes **TODO**
-3. Facilidade de manutenção **TODO**
-4. Ajuda a entender conceitos da computação **TODO**
-5. Controle sobre o que está instalado no seu computador(velocidade de boot, etc) **TODO**
+2. Gerenciamento de pacotes **DONE**
+3. Facilidade de manutenção **DONE**
+4. Ajuda a entender conceitos da computação **DONE**
+5. Controle sobre o que está instalado no seu computador(velocidade de boot, etc) **DONE**
 ### Prática **TODO**
 1. compilar e rodar um Hello World. **TODO**
 2. stdin/stdout **TODO**

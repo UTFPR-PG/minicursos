@@ -4,6 +4,7 @@
 \usepackage{pbox}
 \usepackage[brazil]{babel}
 \usepackage{xcolor}
+\usepackage[alf]{abntex2cite}
 \definecolor{dark-gray}{gray}{0.20}
 \definecolor{light-gray}{gray}{0.85}
 
@@ -26,9 +27,9 @@ Este material é apresentado como parte de uma série de minicursos que serão m
 Os conteúdos são dispostos aqui apenas como um apanhado geral com o objetivo de prover um embasamento mínimo e recomenda-se que outras fontes de pesquisa sejam utilizadas para o aprofundamento nestes assuntos.
 
 \subsection{Unix}
-O sistema \textbf{Unix} é um sistema operacional desenvolvido por Ken Thompson, Dennis Richie, Douglas McIlroy e Joe Ossanna em 1970, na American Telephone \& Telegraph Company (AT\&T).
+O sistema \textbf{Unix} é um sistema operacional desenvolvido por Ken Thompson, Dennis Ritchie, Douglas McIlroy e Joe Ossanna em 1970, na American Telephone \& Telegraph Company (AT\&T).
 
-Este sistema foi projetado para ser portável, multi-tarefa e multi-usuário. Sistemas Unix são caracterizados por vários conceitos, como o uso de arquivos de texto para guardar dados, um sistema de arquivos hierárquico, o tratamento de certos dispositivos como arquivos (sec tal) e a idéia de que é melhor ter vários programas pequenos, cada um desempenhando uma única tarefa, de forma que eles possam ser encadeados para realizar uma tarefa maior do que o uso de um só programa que possua todas as funcionalidades. Estes conceitos são conhecidos como a ``filosofia Unix''.
+Este sistema foi projetado para ser portável, multi-tarefa e multi-usuário. Sistemas Unix são caracterizados por vários conceitos, como o uso de arquivos de texto para guardar dados, um sistema de arquivos hierárquico, o tratamento de certos dispositivos como arquivos e a idéia de que é melhor ter vários programas pequenos, cada um desempenhando uma única tarefa, de forma que eles possam ser encadeados para realizar uma tarefa maior do que o uso de um só programa que possua todas as funcionalidades. Estes conceitos são conhecidos como a ``filosofia Unix''.
 
 % que permitia uma grande portabilidade para diversas plataformas, o que fez com que o sistema crescesse rapidamente e fosse muito utilizado por instituições academicas. O sistema Unix gerou a criação do projeto GNU por Richard Stallman.
 
@@ -58,7 +59,7 @@ Embora a maioria das pessoas conheça apenas o termo Linux, a nomenclatura mais 
 
 O projeto GNU foi iniciado em setembro de 1983 por Richard Stallman, enquanto trabalhava no laboratório de inteligência artificial do Massachusetts Institute of Technology (MIT). O intuito do projeto é criar um ambiente de colaboração em que usuários de computadores possam ter acesso a programas que são distribuídos juntamente com o seu código-fonte (\textit{software} livre). A idéia da disseminação do \textit{software} livre é dar aos seus usuários total controle sobre os programas que são utilizados, ao contrário do \textit{software} proprietário, em que é provido o executável, mas não há como realizar modificações, nem mesmo saber o conteúdo do código que gerou o mesmo.
 
-Juntamente com o projeto GNU, foi criada o movimento ``Free software'' e a instituição de fins não lucrativos ``Free software foundation'', que atualmente, entre outras atividades, administra o projeto GNU e as licenças GNU (vide cite gnu).
+Juntamente com o projeto GNU, foi criado o movimento ``Free software'' e a instituição de fins não lucrativos ``Free software foundation'', que atualmente, entre outras atividades, administra o projeto GNU e as licenças GNU.
 
 \subsection{O kernel}\label{kernel}
 O \textit{kernel} é a parte do sistema que faz a ponte entre os recursos de \textit{hardware}, como memória, CPU, dispositivos de entrada e saída; e a camada de \textit{software}.
@@ -92,13 +93,13 @@ A maioria das distribuições Linux é disponibilizada grátis na internet na fo
 \begin{enumerate}
 \item Manter o sistema operacional nativo e rodar Linux em uma máquina virtual\\
   Recomendado para testes iniciais, antes de se decidir por uma distribuição.
-  
+
 \item Manter o sistema operacional nativo e o Linux em dual-boot\\
   Recomendado para aqueles que usam com frequência as funcionalidades do sistema nativo, como jogos ou softwares proprietários não disponíveis para Linux.
-  
+
 \item Remover o sistema nativo e usar somente Linux\\
   Recomendado para aqueles que já tem certa experiência com Linux e não necessitam de outro sistema operacional.
-  
+
 \item Trocar o sistema nativo pelo Linux e rodar o sistema antigo em uma máquina virtual\\
   Para aqueles que já optaram por usar Linux, mas que em uma pequena fração do tempo, ainda precisam de funcionalidades do outro sistema.
 \end{enumerate}
@@ -127,7 +128,7 @@ Porém, pelo mesmo fato de ser apenas um programa rodando em seu computador a VM
 \begin{itemize}
 \item Como estão sendo utilizados recursos de um sistema para rodar outro sistema, ocorrerá diminuição da eficiência, e o sistema poderá ficar lento ou não ter memória suficiente para executar algum programa.
   \item Para uma utilização prolongada, será sempre melhor instalar o sistema diretamente em seu computador.
-\end{itemize}  
+\end{itemize}
 
 \subsection{Dual-boot}
 Outra alternativa bastante popular na instalação de sistemas operacionais é o dual-boot, ou multi-boot. Nessa situação, os dois (ou mais) sistemas serão instalados totalmente em uma máquina, cada qual recebendo uma porção do disco rígido. Quando o usuário liga o computador, uma tela é exibida permitindo que se escolha qual dos sistemas deve ser carregado. Para alternar entre sistemas, basta reiniciar o computador e escolher o outro sistema.
@@ -136,25 +137,59 @@ A principal vantagem dessa abordagem é que ambos os sistemas possuem a máquina
 
 Uma desvantagem que pode ser citada é que não é possível executar os dois sistemas ao mesmo tempo e deve-se aguardar o \textit{reboot} para selecionar o outro sistema.
 
+\section{Porque usar?}
+Existem algumas características dos sistemas baseados em Linux que fazem com que eles sejam atrativos para o uso na Ciência da Computação. Pode-se dizer que um sistema Linux possui foco nos desenvolvedores de sistemas enquanto que outros sistemas operacionais possuem foco no usuário.
 
-\section{jose}
+\subsection{Familiaridade geral com termos e conceitos}
+Pelo fato de se basear em software de código aberto, existem muitos conceitos teóricos da computação que podem ser verificados muito facilmente quando se usa Linux. Um exemplo simples é o próprio \textit{kernel}, que é escrito na linguagem C. Ao estudar programação ou Sistemas Operacionais, o código do \textit{kernel} pode ser explorado para que se entenda como os conceitos estudados são aplicados em um sistema operacional ``de verdade''.
 
-\section{Comandos da CLI}
+Outro exemplo são as aplicações na área de Redes de Computadores que em sua maioria se baseiam em Linux. Ao usar Linux no seu dia a dia, você já estará se familiarizando com alguns conceitos nesta área.
 
-Quando utilizamos um computador, estamos acostumados a usar a interface gráfica. Isso significa que fazemos bastante uso do mouse para termos uma garantia de intuitividade. A CLI (\emph{Command Line Interface}) não utiliza esses preceitos que estamos acostumados. Ela necessita de comandos para realizar tarefas como a criação de uma pasta, ou fazer a copia de um arquivo, entre outros. No começo pode parecer difícil decorar esses comandos, mas com o tempo e costume, a utilização da CLI fará com que a navegabilidade seja muito mais rápida.
+\subsection{Aprendizado de boas práticas}
+O uso contínuo do sistema pode levar ao conhecimento de boas práticas de programação. Um bom exemplo é a ``filosofia'' de se projetar programas que façam apenas uma tarefa, mas a façam de maneira bem feita.
 
-Um comando da CLI possui um nome e pode possuir parâmetros. Esses parametros podem modificar o comportamento do comando para suprir as suas necessidades. Normalmente, um parâmetro acompanha o nome do comando dessa forma: \cominline{grep -h}, onde ``h'' pode ser a forma abreviada de um parâmetro. É comum a forma mais longa ser acompanhada de dois ``-'', da seguinte forma: \cominline{grep --help}. Informações sobre os parâmetros podem ser encontradas no manual do comando, assim como sua descrição e exemplos de uso. O manual é acessado dessa maneira: \cominline{man grep}.
-\\
+Outro ponto que se pode ressaltar é o fato de o Linux ser bastante documentado. Isso significa que os programas possuem um manual de instruções de utilização. Acosutmar-se a ler manuais e pesquisar sobre funções desconhecidas é um ponto importante dentro da computação, já que constantemente nos deparamos com código escrito por outras pessoas ou situações novas nas quais não possuímos domínio. Saber buscar informação nos lugares certos é algo valioso.
 
-Como um guia, todas as linhas de comando terão o caracter \$ no começo, apenas para indicar a linha onde será digitado o comando em questão. O caracter deve ser ignorado.\\
+\subsection{Gerenciamento de pacotes}
+Além dos benefícios dentro da computação, as distribuições Linux também trazem algumas funcionalidades que são úteis para qualquer pessoa. O gerenciamento de pacotes é uma delas.
 
-Para saber em qual pasta você está trabalhando na linha de comando, digite \textbf{pwd}, que significa ``print working directory''.\\
+Normalmente, as distribuições Linux aplicam o conceito de ``pacote''. Um pacote nada mais é que um programa preparado para ser instalado em seu sistema. Pacotes são específicos para cada distribuição e garantem que programas serão instalados e desinstalados de forma correta. Além disso, há o conceito de ``repositórios'' que são servidores que abrigam vários pacotes. A vantagem dessa abordagem é que quando se quer instalar um programa, ao invés de se procurar em um site de busca pelo programa que se deseja, baixar um executável e instalar o programa; um usuário Linux pode simplesmente digitar o nome do programa em seu gerenciador de pacotes que irá automaticamente percorrer os repositórios procurando pelo pacote correto, mais atual e com garantia de idoneidade. Isto mantém o sistema muito fácil de gerenciar, já que o gerenciador de pacotes toma conta de tudo. Os pacotes também são, em geral, submetidos ao julgamento da comunidade de usuários do sistema, tornando pacotes ``quebrados'' ou com código malicioso mais difíceis de serem encontrados.
+
+\section{Uso da linha de comando}
+
+Quando utilizamos um computador, estamos acostumados a usar a \underline{interface gráfica}. Isso significa que fazemos bastante uso do mouse para acessar as variadas funções do sistema e os resultados das nossas ações são exibidos na tela de maneira muito clara. Ex: ao mover um arquivo, podemos simplesmente clicar sobre ele e arrastá-lo para outra pasta. Esta interação é feita de maneira muito intuitiva.
+
+Embora hoje em dia, quase todas as distribuições Linux possuam uma interface gráfica, o seu ponto forte é a \underline{interface de linha de comando}. A CLI (\emph{Command Line Interface}) não é baseada nos preceitos de mouse + gráficos com os quais estamos acostumados. A sua utilização se faz através de comandos de texto. Para realizar tarefas como a criação de uma pasta, ou fazer a cópia de um arquivo, um comando será digitado em um console. Para executar a mesma ação do exemplo anterior, digitaríamos o comando: \com{mv local\_arquivo local\_destino}. O comando não retornaria resposta alguma, o que em um sistema Unix significa que tudo ocorreu com sucesso. No começo, esta nova forma de interagir com o computador e estes comandos podem parecer intimidantes, porém com o tempo e costume, a utilização da CLI fará com que a navegabilidade se torne rápida e focada.
+
+Além da navegação básica pelas pastas, os comandos da CLI também podem ser combinados de forma a executar tarefas complexas, como manipulação de arquivos, gerenciamento de rede, atividades que em outros sistemas operacionais provavelmente teríamos que procurar por um programa na internet para realizá-las.
+
+A seguir, veremos alguns comandos básicos e sua utilização.
+
+% Um comando da CLI possui um nome e pode possuir parâmetros. Esses parametros podem modificar o comportamento do comando para suprir as suas necessidades. Normalmente, um parâmetro acompanha o nome do comando dessa forma: \cominline{grep -h}, onde ``h'' pode ser a forma abreviada de um parâmetro. É comum a forma mais longa ser acompanhada de dois ``-'', da seguinte forma: \cominline{grep --help}. Informações sobre os parâmetros podem ser encontradas no manual do comando, assim como sua descrição e exemplos de uso. O manual é acessado dessa maneira: \cominline{man grep}.
+% \\
+
+Como um guia, todas as linhas de comandos terão o caracter \$ no começo, apenas para indicar a linha onde será digitado o comando em questão. O caracter não faz parte do comando e deve ser ignorado.\\
+
+Ao abrir uma janela de terminal, primeiramente precisamos saber ``onde estamos''. Para saber em qual pasta você está trabalhando na linha de comando, digite \textbf{pwd}, que significa ``print working directory''.\\
 
 \com{pwd\\/home/usuario}\\
 
-A mudança de diretórios, ou seja, pastas, deve ser feita através do comando \textbf{cd} (``change directory''). Há alguns atalhos que podem ser utilizados na mudança de diretórios: o \textbf{$\sim$} é um atalho para o ``/home/usuario'', um \textbf{.} significa o diretório atual e \textbf{..} é equivalente ao diretório anterior. É importante lembrar que o / (``root'') também é um diretório!\\
+A resposta do comando é a pasta atual. ``/home/usuario'', seria similar ao ``C:\textbackslash Usuários\textbackslash usuário\textbackslash'' \  de um sistema Windows.
 
-\com{cd /home/usuario/Área\textbackslash\xspace de\textbackslash\xspace Trabalho\\\$ cd ..\\\$ pwd\\/home/usuario\\\$ cd ./Área\textbackslash\xspace de\textbackslash\xspace Trabalho\\\$ pwd\\/home/usuario/Área\textbackslash\xspace de\textbackslash\xspace Trabalho}\\
+Há alguns ``atalhos'' que podem ser utilizados na hora de digitar comandos:
+\begin{itemize}
+\item o caracter \textbf{$\sim$} é uma outra forma de representar a pasta ``/home/usuario''
+\item um \textbf{.} significa o diretório atual e \textbf{..} é equivalente ao diretório anterior. Portanto, no caso acima, \textbf{.} significaria ``/home/usuario'' e \textbf{..} significaria ``/home''
+\end{itemize}
+A mudança de diretórios, ou seja, pastas, deve ser feita através do comando \textbf{cd} (``change directory'').
+
+\com{cd /home/usuario/Área\textbackslash\xspace de\textbackslash\xspace Trabalho/\\\$ cd ..\\\$ pwd\\/home/usuario\\\$ cd ./Área\textbackslash\xspace de\textbackslash\xspace Trabalho/\\\$ pwd\\/home/usuario/Área\textbackslash\xspace de\textbackslash\xspace Trabalho}\\
+
+É importante lembrar que o / também é um diretório! Esta é a pasta raiz do seu sistema, portanto:\\
+
+\com{cd /home/usuario/}
+é \underline{\textbf{diferente}} de:
+\com{cd home/usuario/}\\
 
 Você pode criar uma pasta usando o \textbf{mkdir} (``make directory''). Lembre-se que sempre que você não souber em que pasta você está, você pode utilizar o pwd.\\
 
@@ -166,7 +201,7 @@ Se você desejar saber o conteúdo de uma pasta, basta utilizar o comando \textb
 
 Para remover uma pasta, um simples comando pode ser usado, o \textbf{rmdir}, porém a pasta só será removida se ela estiver vazia, caso contrário uma mensagem de erro aparecerá na tela. No nosso exemplo, podemos excluir a Pasta2 dessa forma:\\
 
-\com{cd /temp/\\\$ rmdir ./NovaPasta/Pasta2}\\
+\com{cd /tmp/\\\$ rmdir ./NovaPasta/Pasta2}\\
 
 Você pode criar um arquivo vazio com apenas um comando, o \textbf{touch}. \\
 
@@ -197,15 +232,21 @@ Há outros comandos que são interessantes:
 \item\cominline{shutdown -h now} - Desliga o computador.
 \item\cominline{shutdown -r now} - Reinicia o computador.
 \item\cominline{sudo comando} - Executar um programa como um super usuário.
-\item\cominline{tar -cvf Arquivo.tar.gz caminho\_para\_pasta/} - Comprimir arquivos na pasta indicada pelo caminho.
-\item\cominline{tar -xzf Arquivo.tar.gz} - Extrair arquivos de um .tar.gz.
+\item\cominline{tar -cf Arquivo.tar.gz caminho\_para\_pasta/} - Comprimir arquivos na pasta indicada pelo caminho.
+\item\cominline{tar -xf Arquivo.tar.gz} - Extrair arquivos de um .tar.gz.
 \end{itemize}
 
+\section{Passos seguintes}
 
 
 
+\nocite{Tanenbaum:2007:MOS:1410217}
+\nocite{shotts2012linux}
+\nocite{anatomy2007}
+\nocite{gnu.org}
+\nocite{learn2012}
+\nocite{linux2013}
 
-
-
+\bibliography{handout_linux_2013-2}
 
 \end{document}
