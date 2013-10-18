@@ -6,3 +6,109 @@
 	- Leave Unity options as default
 
 
+
+
+
+
+
+
+
+
+
+
+# 2013/1 #
+
+**Local:** Laboratório 6 - C102
+
+**Palestrantes:** Igor Tibúrcio, Gabriel Casella
+
+**Apoio:** Fabiano Rosas, Matheus Pereira Junior
+
+**Apoio Técnico:** Edu George
+
+**Coordenação:** Saulo Queiroz
+
+**Informações gerais:**
+    Este foi o primeiro curso realizado e serviu como uma experiência inicial.
+
+**Conteúdos abrangidos:**
+
+   - história
+   - distros
+   - instalacao do debian na VM
+   - estrutura de diretórios
+   - comandos shell
+
+**Distribuições Linux utilizadas:**
+
+   Debian 7
+
+**Notas dos realizadores:**
+
+    Talvez o processo de intalação do Debian na VM não tenha sido uma boa escolha. Houveram alguns problemas com relação à rede da UTF e já que a instalação do Debian utilizada não vinha com o gcc instalado, não houve como compilar programas.
+
+A parte de comandos shell foi feita de maneira ad-hoc, conforme o gabriel foi lembrando comandos úteis. Precisa melhorar. Apesar disso, os calouros se mostraram muito engajados.
+
+A apresentação deveria ter sido melhor planejada. Os slides não serviram como material de apoio.
+
+Talvez a parte de instalação não caiba nesse curso, pois ela toma muito tempo e é necessário dar um suporte muito grande aos alunos durante o processo. Não da para "deixar instalando" como foi pensado inicialmente.
+
+----
+
+# 2013/2 #
+
+**Local:** Laboratório 6 - C102
+
+**Palestrantes:** Fabiano Rosas, Gabriel Casella, Georgia Garcia
+
+**Apoio:** Igor Tibúrcio
+
+**Apoio Técnico:** Edu George
+
+**Coordenação:** Saulo Queiroz
+
+**Distribuições Linux utilizadas**
+    Debian 7
+
+    Ubuntu 12.04
+
+**Informações gerais:**
+    Nesta edição foi produzido um handout que foi disponibilizado aos alunos ao final do curso e slides de apoio.
+    O minicurso foi realizado em dois dias, ocupando duas aulas de Introdução à Ciência da Computação, cedidas pela professora Eliana Ishikawa.
+    Foi decidido instalar duas distros para poder salientar as diferenças entre elas.
+
+**Conteúdos abrangidos:**
+    1. Breve histórico
+        - Tanenbaum/MINIX - Linus/Linux.
+    2. Instruções básicas de instalação usando VMWare
+        - Noções gerais sobre o funcionamento de máquinas virtuais.
+        - Visão geral do processo de formatação/particionamento.
+    3. O que é um sistema linux?
+        - O kernel. Distinção entre o kernel e o resto do SO.
+        - O que é uma distro? Quais são?
+        - Desktop environments / window managers - O que são e para que servem e porque você não deve mudar de distribuição cada vez que o gnome der pau.
+    4. Porque usar?
+        - Uso de sistemas linux no suporte à práticas do cientista da computação.
+        - Benefícios da CLI.
+        - man pages.
+        - Linux é escrito em C!
+        - Código aberto.
+        - Interfaces entre comandos (unix way).
+        - Gerenciamento de pacotes.
+        - Facilidade de manutenção.
+        - Ajuda a entender conceitos da computação.
+    5. Prática
+        - Comandos básicos.
+    6. Usando linux no dia a dia
+        - Visão cultural geral no que diz respeito a hackear o sistema de maneira contida.
+        - Pesquisar no google.
+        - Procurar ajuda na lista de discussão.
+
+**Notas dos realizadores:**
+
+    Novamente houveram problemas com relação à máquina virtual. No primeiro dia, perdemos muito tempo porque algo estava impedindo o acesso a um mirror do Debian. No segundo dia, fizemos a instalação com a rede desativada na VM, mas o problema dessa vez foi com relação ao Ubuntu que necessita das VMWare Tools para ser instalado na VM.
+    Mesmo após termos conseguido fazer a instalação do Ubuntu, alguns alunos não conseguiram rodar o sistema devido aos requerimentos de memória e processamento do Unity.
+    Talvez, nas próximas edições fosse mais sensato simplesmente mostrar como é feita a instalação(no projetor) e não fazer a instalação passo a passo.
+
+
+

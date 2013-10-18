@@ -1,0 +1,8 @@
+cat all
+awk mul colunas
+ls > file
+ls &> /dev/null
+comandos de navegação
+
+
+
