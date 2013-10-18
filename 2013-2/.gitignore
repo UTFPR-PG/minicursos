@@ -5,9 +5,9 @@
 *.bbl
 *.dvi
 *.blg
-*.jpg
+#*.jpg
 *.bm
-*.png
-*.eps
-*.ps
+#*.png
+#*.eps
+#*.ps
 *.dvi
