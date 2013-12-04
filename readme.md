@@ -13,7 +13,7 @@ Repositório para manter conteúdo relacionado aos minicursos.
 
     "if you want a tool for producing a slick advertisement or a letter to Aunt Henrietta, unless you're already using it for something else, TeX is not the tool for you."
 
-    http://tug.org/whatis.html
+    [http://tug.org/whatis.html]()
 
 - [ ] História
 
