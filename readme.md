@@ -27,9 +27,9 @@ Repositório para manter conteúdo relacionado aos minicursos.
 
     - [ ] Básicos da instalação
 
-        * links úteis
+        * links úteis:
 
-            http://www.tug.org/protext/
+            [http://www.tug.org/protext/]()
 
 - [ ] Parte prática:
 
