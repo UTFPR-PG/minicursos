@@ -5,7 +5,7 @@ Repositório para manter conteúdo relacionado aos minicursos.
 ### TODO list LaTeX:
 * Latex 101
 
-** Introdução a typesetting
+  * Introdução a typesetting
 
 ** Problemas comuns dos editores WYSIWYG
 
