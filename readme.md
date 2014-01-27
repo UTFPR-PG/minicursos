@@ -3,7 +3,15 @@
 Repositório para manter conteúdo relacionado aos minicursos.
 
 ### TODO list LaTeX:
-- [ ] Introdução a typesetting
+- [ ] Introdução
+
+    - [ ] Typesetting
+    
+        - [ ] Texts, formulas, etc
+    
+    - [ ] Sectioning, summary, etc
+    
+    - [ ] Bibliography
 
 - [ ] Problemas comuns dos editores WYSIWYG
 
