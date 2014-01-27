@@ -13,7 +13,7 @@ Repositório para manter conteúdo relacionado aos minicursos.
     
     - [ ] Bibliography
 
-- [ ] Problemas comuns dos editores WYSIWYG
+    - [ ] Problemas comuns dos editores WYSIWYG
 
 - [ ] TeX ao resgate!
 
@@ -23,25 +23,23 @@ Repositório para manter conteúdo relacionado aos minicursos.
 
     [http://tug.org/whatis.html]()
     
+    - [ ] Como surgiu?
+    
+        - [ ] Donald Knuth
+    
     - [ ] Visão geral, exemplos de entrada/saída
     
     - [ ] Estrutura do TeX/LaTeX
+    
+        - [ ] latex/pdflatex/bibtex    
 
-- [ ] História
+    - [ ] LaTeX
 
-    - [ ] Donald Knuth
+        - [ ] Básicos da instalação
 
-        * Foto
+            * links úteis:
 
-        * Livros
-
-- [ ] LaTeX
-
-    - [ ] Básicos da instalação
-
-        * links úteis:
-
-            [http://www.tug.org/protext/]()
+                [http://www.tug.org/protext/]()
 
 - [ ] Parte prática:
 
