@@ -3,9 +3,17 @@
 Repositório para manter conteúdo relacionado aos minicursos.
 
 ### TODO list LaTeX:
-- [ ] Introdução a typesetting
+- [ ] Introdução
 
-- [ ] Problemas comuns dos editores WYSIWYG
+    - [ ] Typesetting
+    
+        - [ ] Texts, formulas, etc
+    
+    - [ ] Sectioning, summary, etc
+    
+    - [ ] Bibliography
+
+    - [ ] Problemas comuns dos editores WYSIWYG
 
 - [ ] TeX ao resgate!
 
@@ -15,25 +23,22 @@ Repositório para manter conteúdo relacionado aos minicursos.
 
     [http://tug.org/whatis.html]()
     
+    - [ ] Como surgiu?
+    
+        - [ ] Donald Knuth
+    
     - [ ] Visão geral, exemplos de entrada/saída
     
     - [ ] Estrutura do TeX/LaTeX
+    
+        - [ ] latex/pdflatex/bibtex    
 
-- [ ] História
+    - [ ] LaTeX
 
-    - [ ] Donald Knuth
+        - [ ] Básicos da instalação
 
-        * Foto
-
-        * Livros
-
-- [ ] LaTeX
-
-    - [ ] Básicos da instalação
-
-        * links úteis:
-
-            [http://www.tug.org/protext/]()
+            * links úteis: 
+                [http://www.tug.org/protext/]()
 
 - [ ] Parte prática:
 
