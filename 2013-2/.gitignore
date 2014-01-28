@@ -8,6 +8,7 @@
 *.out
 *.brf
 *.bak
+*.cls
 
 # Images and other files
 *.jpg
