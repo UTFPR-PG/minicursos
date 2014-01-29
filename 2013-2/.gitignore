@@ -12,13 +12,11 @@
 *.bst
 
 # Images and other files
-*.jpg
 *.bm
-*.png
 *.gif
-*.eps
 *.blg
 *.ps
+resources/exemplos/*
 
 # LibreOffice lock file
 *\#
