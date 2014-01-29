@@ -5,24 +5,36 @@ no processo de difusão do conhecimento. Autores a utilizam em seus livros, pesq
 Devido à sua importância, é natural que existam certas diretivas para se produzir um texto de forma correta e aqueles que não estão habituados a estas regras muitas vezes encontram dificuldades. Um problema frequente é o da apresentação visual dos documentos. No ambiente acadêmico, o interesse está no conteúdo de um trabalho e não em sua estética. Os artigos devem ser formatados seguindo uma norma padrão, geralmente definida pela instituição ou evento/revista no qual o trabalho está sendo divulgado. 
 
 \subsection{Normas para escrita de trabalhos científicos}
-A normas são definidas não de maneira aleatória, mas levando em consideração vários fatores como legibilidade do texto, tamanho do documento, local de publicação, presença de fórmulas matemáticas ou imagens, etc. Alguns dos detalhes presentes nas normas para escrita de artigos e trabalhos acadêmicos são:
+A normas são definidas não de maneira aleatória, mas levando em consideração vários fatores como legibilidade do texto, tamanho do documento, local de publicação, presença de fórmulas matemáticas ou imagens, etc. Alguns dos detalhes presentes nas normas para escrita de artigos e trabalhos acadêmicos são: requisitos com relação à fontes, à disposição de parágrafos e seções, exibição de fórmulas e figuras, formatação de sumário e bibliografia.
 
+Como estes detalhes são difíceis de serem capturados em palavras e regras, mostra-se abaixo um mesmo documento formatado de maneira a atender as regras de formatação do {\slshape Institute of Electrical and Electronics Engineers} (\textbf{IEEE}, acima) e da Sociedade Brasileira de Computação (\textbf{SBC}, abaixo).
+
+Observe as diferenças com relação aos elementos de formatação do texto:
 \begin{itemize}
-\item Requisitos com relação à fontes.
-\item Requisitos com relação à disposição de parágrafos e seções.
-\item Exibição de fórmulas e figuras.
-\item Formatação de sumário.
-\item Bibliografia.
+\item Margens.
+\item Estilos e tamanhos de fonte.
+\item Centralização.
+\item Forma de apresentar o nome dos autores.
+\item Numeração das seções.
+\item Tabulação dos parágrafos.
 \end{itemize}
 
-Como estes detalhes são difíceis de serem capturados em palavras e regras, mostra-se abaixo o mesmo documento formatado de maneira a atender as regras de formatação para cada entidade.
+% Como exemplo do formato utilizado no padrão de conferências do IEEE, a página \pageref{IEEE} mostra o estilo de formatação necessário para submissão. Este formato é muito requisitado nos congressos internacionais e até mesmo para alguns eventos da SBC.
 
-Como exemplo do formato utilizado no padrão de conferências do IEEE, a página \pageref{IEEE} mostra o estilo de formatação necessário para submissão. Este formato é muito requisitado nos congressos internacionais e até mesmo para alguns eventos da SBC.
+% No entanto, alguns congressos da SBC utilizam também formato próprio. Esse formato pode ser analisado na página \pageref{SBC}
+{\clearpage
+\label{cabecalhos}
+\newgeometry{left=0cm,bottom=0cm,top=0cm,right=0cm}
 
-No entanto, alguns congressos da SBC utilizam também formato próprio. Esse formato pode ser analisado na página \pageref{SBC}
+\noindent\includegraphics[trim=0 15cm 0 0,clip]{contents/intro_writing_conference/intro_writing_ieee}
 
-\label{IEEE}\includepdf{contents/intro_writing_conference/intro_writing_ieee.pdf}
-\label{SBC}\includepdf{contents/intro_writing_conference/intro_writing_sbc.pdf}
+\hrule
+%\noindent\hdashrule[0.5ex]{\textwidth}{2pt}{10pt}
+
+\noindent\includegraphics[trim=0 15cm 0 0,clip]{contents/intro_writing_conference/intro_writing_sbc}
+
+\clearpage
+\restoregeometry}
 
 %Estes são apenas alguns dos detalhes que são exigidos e fica claro que a correta formatação de um documento é um processo que acaba ocupando uma grande parte do tempo dedicado à escrita do mesmo e a utilização de ferramentas que automatizem e facilitem este processo são sempre bem vindas. Uma destas ferramentas é o \LaTeX.
 
