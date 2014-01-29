@@ -5,7 +5,7 @@ Repositório para manter conteúdo relacionado aos minicursos.
 ### TODO list LaTeX:
 - [ ] Introdução
 
-    - [ ] Typesetting
+    - [ ] --Typesetting--
     
         - [ ] Texts, formulas, etc
     
