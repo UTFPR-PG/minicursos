@@ -1,0 +1,7 @@
+- Trabalhar devargazinho e com carinho pra não rasgar os calouros;
+- Começar com pequenos exemplos .tex;
+- Deixar pronto alguns exemplos na chroot;
+- Apresentar algum exemplo que apresente problema;
+- Depois pesquisar no Google com eles (como dojo);
+
+- Tratar sobre referências bibliográficas];
