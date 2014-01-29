@@ -9,6 +9,7 @@
 *.brf
 *.bak
 *.cls
+*.bst
 
 # Images and other files
 *.jpg
@@ -33,4 +34,4 @@
 *.zip
 *.tar
 *.tar.*
-*.lzma 
+*.lzma
