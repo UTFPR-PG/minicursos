@@ -10,6 +10,7 @@
 *.bak
 *.cls
 *.bst
+*.bib.bak
 
 # Images and other files
 *.bm
