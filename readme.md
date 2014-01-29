@@ -43,6 +43,8 @@ Repositório para manter conteúdo relacionado aos minicursos.
                 [http://www.tug.org/protext/]()
                 
         - [ ] Misc links, referências, material de consulta.
+        
+    - [ ] Finalização do handout: considerações finais, recomendações, etc.
 
 - [ ] Parte prática:
  
