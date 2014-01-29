@@ -1,5 +1,5 @@
-\documentclass[12pt]{article}
-\usepackage{sbc-template}
+\documentclass[conference]{IEEEtran}
+%\usepackage{sbc-template}
 \usepackage{graphicx,url}
 \usepackage[brazil]{babel}        % pacote portugues brasileiro
 \usepackage[utf8]{inputenc} % pacote para acentuacao direta
@@ -12,12 +12,16 @@
 
 \title{Comparação básica entre as normas ABNT, IEEE e SBC para elaboração de artigos}
 
-\author{Gabriel B. Casella, Lin Y. Han, Weverton Carvalho}
-
-
-\address{Departamento de Informática -- Universidade Tecnológica Federal do Paraná - UTFPR\\
-  \email{\{gbc921, nilyuhan, wevertoncarvalho34\}@gmail.com}
+\author{
+	\IEEEauthorblockN{CASELLA, G. B.\IEEEauthorrefmark{1}, HAN, L. Y.\IEEEauthorrefmark{2}, CARVALHO, W.\IEEEauthorrefmark{3}}
+	\IEEEauthorblockA{ %\IEEEauthorrefmark{1}\IEEEauthorrefmark{2}
+		Departamento de Ciência da Computação\\
+		UTFPR, Ponta Grossa, Paran\'a\\
+	\{\IEEEauthorrefmark{1}gbc921,
+	\IEEEauthorrefmark{2}nilyuhan,
+	\IEEEauthorrefmark{3}wevertoncarvalho34\}@gmail.com}
 }
+
 \begin{document} 
 
 \maketitle
@@ -41,15 +45,15 @@ Trata-se de uma entidade privada, sem fins lucrativos. A ABNT é membro fundador
 \section{IEEE}
 O \textit{Institute of Electrical and Electronics Engineers} é a maior associação profissional do mundo dedicada a inovação e excelência tecnológica em benefício da humanidade\cite{IEEEAbout}. Possui em torno de 425 mil membros em 160 países e foi fundada em 1963
 
-As normas do IEEE visam tornar padrão as formas de publicação, criando um consenso único em que o foco está no conteúdo e não no texto. Suas políticas também são criadas com base no retorno que essa publicação terá ao autor da obra\cite{IEEECommunicationStandards}.
+As normas do IEEE visam tornar padrão as formas de publicação, criando um consenso único em que o foco está no conteúdo e não no texto. Suas políticas também são criadas com base no retorno que essa publicação terá ao autor da obra.%\cite{IEEECommunicationStandards}.
 
 \section{SBC}
-A SBC (Sociedade Brasileira de Computação) é a sociedade científica sem fins lucrativos, que reúne pesquisadores, professores, estudantes e profissionais da computação. Ela faz parte da SBPC (Sociedade Brasileira para o Progresso da Ciência) e da IFIP (\textit{International Federation for Information Processing})\cite{SBCSobre}.
+A SBC (Sociedade Brasileira de Computação) é a sociedade científica sem fins lucrativos, que reúne pesquisadores, professores, estudantes e profissionais da computação. Ela faz parte da SBPC (Sociedade Brasileira para o Progresso da Ciência) e da IFIP (\textit{International Federation for Information Processing}).%\cite{SBCSobre}.
 
 A Sociedade induz o crescimento de pesquisas científicas na área de Computação, que fundamenta a formação de conhecimento e tecnologia de autenticidade brasileira. Realiza atividades de diversas natureza para a computação no Brasil, além de ter um papel importante na elaboração de políticas para o desenvolvimento de atividade de ensino, pesquisa e disseminação do conhecimento no país\cite{SBCApresentacao}.
 
 Geralmente, nos eventos da SBC são realizadas submissões de artigos, sendo estes na formatação devida pré-estabelecida pela própria sociedade.
 
-\bibliographystyle{sbc}
-\bibliography{References.bib}
+\bibliographystyle{/usr/share/texmf/tex/latex/IEEEtran/bibtex/IEEEtran.bst}
+\bibliography{References}
 \end{document}
