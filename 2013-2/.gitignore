@@ -19,7 +19,6 @@
 *.eps
 *.blg
 *.ps
-*.pdf
 
 # LibreOffice lock file
 *\#
