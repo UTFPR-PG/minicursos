@@ -1,6 +1,69 @@
-@misc{_transition,
-	title = {The Transition from High School to University Writing},
-	url = {http://www.writing.utoronto.ca/advice/general/transition-to-university},
-	urldate = {2014-01-27},
-	file = {The Transition from High School to University Writing:/home/fabiano/.zotero/zotero/ru3nfjod.default/zotero/storage/QDRF6WX2/transition-to-university.html:text/html}
+% This file was created with JabRef 2.9.2.
+% Encoding: UTF-8
+
+@MISC{luatex,
+  author = {Hans Hagen \and Hartmut Henkel \and Taco Hoekwater},
+  title = {LuaTeX},
+  year = {2007},
+  owner = {gabriel},
+  timestamp = {2014.01.29},
+  url = {http://www.luatex.org/}
 }
+
+@MISC{xetex,
+  author = {Jonathan Kew \and Khaled Hosny},
+  title = {XeTeX},
+  howpublished = {Sourceforge},
+  year = {2004},
+  owner = {gabriel},
+  timestamp = {2014.01.29},
+  url = {http://xetex.sourceforge.net/}
+}
+
+@MISC{intall-tl-ubuntu,
+  author = {Scott Kostyshak},
+  title = {Install script for TeX Live on Ubuntu},
+  howpublished = {github},
+  year = {2013},
+  owner = {gabriel},
+  timestamp = {2014.01.29},
+  url = {https://github.com/scottkosty/install-tl-ubuntu}
+}
+
+@MISC{miktex,
+  author = {Christian Schenk},
+  title = {MiKTeX},
+  owner = {gabriel},
+  timestamp = {2014.01.29},
+  url = {http://miktex.org/}
+}
+
+@MISC{_transition,
+  author = {Becky Vogan and Jerry Plotnick},
+  title = {The Transition from High School to University Writing},
+  file = {The Transition from High School to University Writing:/home/fabiano/.zotero/zotero/ru3nfjod.default/zotero/storage/QDRF6WX2/transition-to-university.html:text/html},
+  url = {http://www.writing.utoronto.ca/advice/general/transition-to-university},
+  urldate = {2014-01-27}
+}
+
+@MISC{wiki:texEditors,
+  author = {Wikipedia},
+  title = {Comparison of TeX editors},
+  howpublished = {Wikipedia},
+  month = {January},
+  year = {2014},
+  owner = {gabriel},
+  timestamp = {2014.01.29},
+  url = {http://en.wikipedia.org/wiki/Comparison\_of\_TeX\_editors}
+}
+
+@MISC{texstudio,
+  author = {Benito van der Zander and Jan Sundermeyer and Daniel Braun and Tim
+	Hoffmann},
+  title = {TexStudio},
+  howpublished = {Sourceforge},
+  owner = {gabriel},
+  timestamp = {2014.01.29},
+  url = {http://texstudio.sourceforge.net/}
+}
+
