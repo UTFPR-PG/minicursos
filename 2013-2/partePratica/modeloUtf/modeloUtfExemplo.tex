@@ -1,0 +1,146 @@
+\documentclass[12pt,openright,oneside,chapter=TITLE,section=TITLE,
+	%subsection=TITLE,
+	%subsubsection=TITLE,
+	brazil]{utfpr-pg}
+
+%\usepackage{cmap}
+%\usepackage[T1]{fontenc}
+%\usepackage{lastpage}
+%\usepackage{indentfirst}
+%\usepackage{color}
+%\usepackage{graphicx}
+%\usepackage{lipsum}
+
+\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
+
+% % Configurações do pacote backref
+% % Usado sem a opção hyperpageref de backref
+% \renewcommand{\backrefpagesname}{Citado na(s) página(s):~}
+% % Texto padrão antes do número das páginas
+% \renewcommand{\backref}{}
+% % Define os textos da citação
+% \renewcommand*{\backrefalt}[4]{
+% 	\ifcase #1 %
+% 		Nenhuma citação no texto.%
+% 	\or
+% 		Citado na página #2.%
+% 	\else
+% 		Citado #1 vezes nas páginas #2.%
+% 	\fi}%
+
+%  Informações de dados para CAPA e FOLHA DE ROSTO
+%\departamento{Departamento Acadêmico de Informática}
+\curso{Bacharelado em Ciência da Computação}
+\titulo{Pequeno exemplo de uso da classe de TCC da UTFPR}
+\autor{Calouros 2013.02}
+\local{Brasil}
+\data{2013}
+\orientador{Fabiano Rosas}
+\coorientador{Gabriel B. Casella}
+\tipotrabalho{Minicurso \LaTeX}
+% O preambulo deve conter o tipo do trabalho, o objetivo, 
+% o nome da instituição e a área de concentração 
+\preambulo{Modelo canônico de trabalho monográfico acadêmico em conformidade com
+as normas ABNT apresentado à comunidade de usuários \LaTeX da UTFPR.}
+
+% % informações do PDF
+% \makeatletter
+% \hypersetup{
+%      	%pagebackref=true,
+% 		pdftitle={\@title}, 
+% 		pdfauthor={\@author},
+%     	pdfsubject={\imprimirpreambulo},
+% 	    pdfcreator={LaTeX with abnTeX2},
+% 		pdfkeywords={abnt}{latex}{abntex}{abntex2}{trabalho acadêmico}, 
+% 		colorlinks=true,       		% false: boxed links; true: colored links
+%     	linkcolor=blue,          	% color of internal links
+%     	citecolor=blue,        		% color of links to bibliography
+%     	filecolor=magenta,      		% color of file links
+% 		urlcolor=blue,
+% 		bookmarksdepth=4
+% }
+% \makeatother
+
+% O tamanho do parágrafo é dado por:
+%\setlength{\parindent}{1.3cm}
+
+% Controle do espaçamento entre um parágrafo e outro:
+%\setlength{\parskip}{0.2cm}  % tente também \onelineskip
+
+%\makeindex
+
+\begin{document}
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+ \pretextual
+\imprimircapa
+% % Folha de rosto (o * indica que haverá a ficha bibliográfica)
+ \imprimirfolhaderosto*
+
+ \begin{resumo}
+  Segundo a [3.1-3.2]{NBR6028:2003}, o resumo deve ressaltar o
+  objetivo, o método, os resultados e as conclusões do documento. A ordem e a extensão
+  destes itens dependem do tipo de resumo (informativo ou indicativo) e do
+  tratamento que cada item recebe no documento original. O resumo deve ser
+  precedido da referência do documento, com exceção do resumo inserido no
+  próprio documento. (\ldots) As palavras-chave devem figurar logo abaixo do
+  resumo, antecedidas da expressão Palavras-chave:, separadas entre si por
+  ponto e finalizadas também por ponto.
+
+  \vspace{\onelineskip}
+    
+  \noindent
+  \textbf{Palavras-chaves}: latex. abntex. utfpr.
+ \end{resumo}
+
+% \pdfbookmark[0]{\contentsname}{toc}
+% \tableofcontents*
+% \cleardoublepage
+
+% \textual
+
+ \chapter{Introdução}
+
+ Este documento e seu código-fonte são exemplos de referência de uso da classe
+ \textsf{abntex2} e do pacote \textsf{abntex2cite}. O documento 
+ exemplifica a elaboração de trabalho acadêmico (tese, dissertação e outros do
+ gênero) produzido conforme a norma da UTFPR.
+ 
+ Para uso da classe é necessário ter o pacote \textsf{abntex2} instalado e utilizar o arquivo \textsf{utfpr-pg.cls} como classe de documento. Os parâmetros e pacotes mais importantes vão no \verb|\documentclass[]{}| e no preâmbulo. As opções mostradas já estão de acordo com as normas e são mostradas abaixo:
+ \begin{verbatim}
+\documentclass[12pt,openright,oneside,chapter=TITLE,section=TITLE,
+	brazil]{utfpr-pg}
+	\usepackage[brazilian,hyperpageref]{backref}
+\usepackage[alf]{abntex2cite}
+ \end{verbatim}
+ \begin{description}
+	\item[12pt]	Define o tamanho da fonte;
+	\item[openright]	O capítulo deve começar sempre na página da direita;
+	\item[oneside]	Impressão em um lado da folha;
+	\item[chapter=TITLE]	Define que o capítulo será em caixa alta;
+	\item[section]	Define que a seção será em caixa alta;
+	\item[brazil]	Parâmetro para a classe abntex2 sobre codificação do país;
+	\item[backref]	Pacote para referências com hyperlink;
+	\item[abntex2cite]	Normas para apresentação das citações no formato ABNT. O parâmetro \verb|[alf]| define citações no formato alfanumérico.
+ \end{description}
+
+
+% % ---
+% % Finaliza a parte no bookmark do PDF, para que se inicie o bookmark na raiz
+% % ---
+% \bookmarksetup{startatroot}% 
+
+% \chapter{Conclusão}
+% \lipsum[31-33]
+
+% \postextual
+
+% % Referências bibliográficas
+\nocite{Knuth:1997:ACP:260999,Knuth:1997:ACP:270146,Knuth:1998:ACP:280635}
+\bibliography{referencias}
+
+% %\glossary
+% \printindex
+
+\end{document}
