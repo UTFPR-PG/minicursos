@@ -1,6 +1,6 @@
 ## Minicursos UTFPR
 ---
-Repositório para manter conteúdo relacionado aos minicursos.
+Repositório para manter conteúdo relacionado aos minicursos ministrado aos calouros da UTFPR-PG.
 
 ### TODO list LaTeX:
 - [x] Introdução
@@ -35,9 +35,9 @@ Repositório para manter conteúdo relacionado aos minicursos.
         
         - [ ] bibtex    
 
-    - [ ] LaTeX
+    - [x] LaTeX
 
-        - [ ] Básicos da instalação
+        - [x] Básicos da instalação
 
             * links úteis: 
                 [http://www.tug.org/protext/]()
@@ -46,18 +46,18 @@ Repositório para manter conteúdo relacionado aos minicursos.
         
     - [ ] Finalização do handout: considerações finais, recomendações, etc.
 
-- [ ] Parte prática:
+- [x] Parte prática:
  
-    - [ ] Templates
+    - [x] Templates
         
-        - [ ] SBC
+        - [ ] ~~SBC~~
         
-        - [ ] ABNT
+        - [ ] ~~ABNT~~
         
-        - [ ] UTFPR-PG
+        - [x] UTFPR-PG
         
-    - [ ] Slides?
+    - [ ] ~~Slides?~~
         
-        - [ ] Beamer
+        - [ ] ~~Beamer~~
         
-        - [ ] Powerdot
+        - [ ] ~~Powerdot~~
