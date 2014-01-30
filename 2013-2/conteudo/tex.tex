@@ -12,10 +12,10 @@ Knuth inicialmente previu que a sua tarefa, que consistia em aprender quais eram
 O funcionamento do \LaTeX é o seguinte: a partir de um arquivo de texto com extensão \tex\ contendo comandos e o texto que se quer exibir, o programa \textsf{latex} produz um arquivo independente de plataforma \dvi. Este arquivo então é convertido para diversos formatos dependendo de sua utilização desejada. No caso de uso mais comum, o arquivo \dvi\ é convertido para \pdf. Para se evitar este processo de conversão, normalmente utiliza-se o comando \textsf{pdflatex} que gera o \pdf\ diretamente a partir do \tex.
 
 Um exemplo de sintaxe dos comandos \TeX\ é visto a seguir:
-\lstinputlisting{contents/exemplo.tex}
+\lstinputlisting{conteudo/exemplo.tex}
 
 Este trecho de código produz um \pdf\ com esta aparência:
 
-\noindent\makebox[\textwidth]{\includegraphics[trim= 0 18cm 0 5cm,clip]{contents/exemplo}}
+\noindent\makebox[\textwidth]{\includegraphics[trim= 0 18cm 0 5cm,clip]{conteudo/exemplo}}
 
 Observe como, no código apresentado, não há nenhuma informação sobre que tipo de fonte utilizar, tamanho da letra, espaçamento entre linhas, posicionamento do título, etc. Estes detalhes são tratados pelo \LaTeX\ e o usuário não precisa se preocupar com eles.
