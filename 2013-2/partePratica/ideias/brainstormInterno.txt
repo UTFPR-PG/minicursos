@@ -48,8 +48,6 @@ Exemplo2:
 
     - Falar sobre table
 
-    - Mudar para
-
 - Para bibliografia o .bib
     - Baixar .bib de um site da internet (ja deixar pronto)
         - Mostrar de onde vem o .bib
