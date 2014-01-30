@@ -3,3 +3,7 @@ run: slides_latex_2013-2.tex
 
 convert:
 	./conv.sh
+
+clean:
+	find -iregex '.*\.\(log\|aux\|dvi\|lof\|lot\|bit\|idx\|glo\|bbl\|ilg\|toc\|ind\|out\|blg\|synctex.gz\|log\|bm\|brf\|bak\|bst\)' -delete
+
