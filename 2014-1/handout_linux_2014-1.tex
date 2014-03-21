@@ -140,6 +140,40 @@ A principal vantagem dessa abordagem é que ambos os sistemas possuem a máquina
 
 Uma desvantagem que pode ser citada é que não é possível executar os dois sistemas ao mesmo tempo e deve-se aguardar o \textit{reboot} para selecionar o outro sistema.
 
+
+\subsection{Live CD}
+
+Um Live CD é basicamente uma disto Linux instalada em um CD, desse modo é possível utilizar a distro Linux sem ter que instala-la. Apesar de algumas distros não anunciarem um Live CD a própria iso funciona como um Live CD, por exemplo as distro Ubuntu e Mint não anunciam um Live CD, mas ao colocar a iso em um CD pode-se testa-la sem instalar.
+
+Um Live CD não precisa ser, estritamente, gravado em um CD, por exemplo um pendrive funcionará do mesmo modo, além de ser mais pratico. A principal desvantagem dese método é a velocidade baixa de execução, pois é necessário ficar constantemente lendo a mídia utilizada, que normalmente é mais lenta do que um HD.
+
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=.5]{imagens/ubuntu-livecd.png}
+  \caption{Distro Ubuntu com a opção de testar sem instalar}
+  \label{fig:ubuntu-live}
+\end{figure}
+
+Na imagem \ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instala-lo. Algumas distros permitem instalar mesmo após ter sido iniciado como um live CD.
+
+\begin{itemize}
+    \item Colocar a mídia com o live CD no computador.
+    \item Iniciar o computador através daquela mídia, pode ser necessário alterar a ordem de boot na bios (TODO Adicionar mais informações ?).
+    \item Escolher a opção testar, se existir.
+\end{itemize}
+
+\subsection{Instalação}
+O modo de instalar o Linux irá variar dependendo da distro usada, pois cada uma tem um instalador diferente. Alguns instaladores provem uma interface gráfica. Enquanto outros tem apenas uma linha de comando.
+
+A instalação começa com o particionamento do disco rígido, particionar é dividir o espaço total em espaços menores, normalmente isto é feito para que cada espaço tenha uma utilização diferente. Exemplo: normalmente ao fazer \emph{Dual-Boot} existe uma partição onde fica o Windows e outra onde fica o Linux.
+
+Após particionar o HD deve-se formatar a partição, o que basicamente significa apagar todos os dados que existem nela, e escolher um sistema de arquivo para a partição, um sistema de arquivo é quem decide como armazenar os dados naquele partição, existem vários sistemas de arquivo sugerimos o ext4 por ser o mais novo e estável.
+
+Após isso a partição criada deve ser escolhida para como local de instalação, depois é so esperar a instalação acabar, pode ser necessário responder algumas perguntas para ajeitar o fuso horário, teclado, etc...
+
+TODO adicionar fotos da instalação.
+
 \section{Porque usar?}
 Existem algumas características dos sistemas baseados em Linux que fazem com que eles sejam atrativos para o uso na Ciência da Computação. Pode-se dizer que um sistema Linux possui foco nos desenvolvedores de sistemas enquanto que outros sistemas operacionais possuem foco no usuário.
 
