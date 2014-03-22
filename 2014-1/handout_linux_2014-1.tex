@@ -147,7 +147,6 @@ Um Live CD é uma distro Linux instalada em uma mídia externa como um CD ou pen
 
 A principal desvantagem é que a execução é lenta, pois fica limitada a mesma velocidade de leitura da mídia utilizada, que acaba sendo menor do que a velocidade de leitura de um HD.
 
-
 \begin{figure}[!h]
   \centering
   \includegraphics[scale=.5]{imagens/ubuntu-livecd.png}
@@ -171,13 +170,13 @@ Dependendo da distro Linux que for instalada o método de instalação será dif
 
 Um HD é dividido em partições, imagine um quarteirão que possui varias casas, é exatamente isto que uma partição faz, separa o HD em unidades menores. Um computador novo, que venha com o Windows instalado de fábrica, tem todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
 
-O Windows pode ser instalado em apenas uma partição, entretanto a instalação que será mostrada aqui precisa de duas partições para o Linux, uma pequena 3G\~5G e outra maior onde será instalado o Linux.
+O Windows pode ser instalado em apenas uma partição, entretanto a instalação que será mostrada aqui precisa de duas partições para o Linux, uma pequena com o mesmo tamanho da ram, se tiver 6G de ram esta partição deve ter 6G, e outra maior onde será instalado o Linux.
 
 Cada uma dessas partições tem um sistema de arquivo, que diz como cada informação deve ser guardada no disco, desse modo organizando-o. Sem um sistema de arquivos seria impossível dizer onde começa e termina cada `coisa' gravada no disco. O windows usa, normalmente, um sistema de arquivo chamado de NTFS enquanto o Linux, nessa instalação, usará o EXT4.
 
-O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, isto é, não existe c:\textbackslash no Linux, apenas `\textbackslash' que é chamado de \emph{root} ou raiz. Todo o resto do sistema é instalado a partir da raiz. Depois da raiz nos temos algumas pastas importantes por exemplo \emph{/home} onde fica gravado todos os arquivos do usuário.
+O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, isto é, não existe c:\textbackslash\ no Linux, apenas `\textbackslash' que é chamado de \emph{root} ou raiz. Todo o resto do sistema é instalado a partir da raiz. Depois da raiz nos temos algumas pastas importantes por exemplo \emph{/home} onde fica gravado todos os arquivos do usuário.
 
-A partição menor, aquela de 3G\~5G, será usada para \emph{SWAP} que é a memória virtual, basicamente usa-se o HD como se fosse memória RAM.
+A partição menor, aquela com o mesmo tamanho da ram, será usada para \emph{SWAP} que é a memória virtual, basicamente usa-se o HD como se fosse memória RAM.
 
 \subsection{Windows}
 A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Se o computador tiver apenas o c:\textbackslash será essa partição que iremos diminuir, caso haja mais \emph{drives}, mais letrinhas seguidas de :\textbackslash você pode escolher a maior partição para diminuir.
@@ -189,25 +188,63 @@ A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar esp
     \item Espere terminar, se tudo ocorreu bem, deve haver um espaço não alocado no disco.
 \end{itemize}
 
-
-
-\subsection{Linux}
-Após gravar a iso da distro desejada em um mídia como CD ou pendrive, pode-se usar o programa \emph{UNetbootin} para isso, deve-se inicializar o sistema a partir dessa isso. O mais comum seria colocar a iso no PC e este inicializar automaticamente a isso, caso isso não acontece é necessário trocar a ordem de boot.
+Após gravar a iso da distro desejada em um mídia como CD ou pendrive, pode-se usar o programa \emph{UNetbootin} para isso, deve-se inicializar o sistema a partir dessa isso. O mais comum seria colocar a iso no PC e este inicializar automaticamente a iso, caso isso não acontece é necessário trocar a ordem de boot.
 
 \begin{itemize}
-    \item Abra a BIOS ou UEFI\@. Normalmente as teclas \emph{f12}, \emph{esc} tem essa função. Caso nenhuma delas funciona procure a tecla para o seu modelo de PC.
+    \item Abra a BIOS ou UEFI\@. Normalmente as teclas \emph{f12}, \emph{esc} tem essa função. Caso nenhuma delas funcione procure a tecla para o seu modelo.
     \item Vá atá a seção BOOT.
-    \item Coloque em primeiro opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a BIOS/UEFI não ira carregar o Linux.
+    \item Coloque em primeiro a opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a BIOS/UEFI não ira carregar o Linux.
     \item Reinicie.
 \end{itemize}
 
+
+\subsection{Linux}
+
 Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instalar. Aqui será feita a instalação do Elementary OS, entretanto o seu instalador deve possuir opções parecidas.
-\begin{itemize}
-    \item Passa a Passo?
-\end{itemize}
 
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=.3]{imagens/elementary-install-01.png}
+  \caption{Menu de instalação da Elementary OS\@.}
+  \label{fig:elementary-menu}
+\end{figure}
 
-TODO adicionar fotos da instalação.
+Na imagem~\ref{fig:elementary-partition} cria-se a tabela de partições para um disco.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=.3]{imagens/elementary-install-04.png}
+  \caption{Criação da tabela de partições.}
+  \label{fig:elementary-partition}
+\end{figure}
+
+Na imagem~\ref{fig:elementary-root} a `/' raiz do sistema é criada, note que o ponto de montagem foi escolhido e o sistema de arquivos é EXT4\@.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=.3]{imagens/elementary-install-05.png}
+  \caption{Criação da partição onde ficará a `/' raiz do sistema.}
+  \label{fig:elementary-root}
+\end{figure}
+
+Na imagem~\ref{fig:elementary-swap} será criada a partição de SWAP\@. Como regra para o tamanho dessa partição utilize a mesmo tamanho da ram disponível.
+% O mesmo tamanho da RAM é utilizado para ser possível hibernar caso toda a RAM esteja cheia, referencia https://wiki.archlinux.org/index.php/Suspend_and_Hibernate.
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=.3]{imagens/elementary-install-06.png}
+  \caption{Criação da partição de SWAP.}
+  \label{fig:elementary-swap}
+\end{figure}
+
+Existem algumas configurações que devem ser feitas antes desse menu. A primeira é o horário, simplesmente clique no mapa perto de São Paulo. A segunda é sobre o layout do teclado, novamente selecione português do Brasil. A ultima será sobre o usuário como pode ser vista na imagem~\ref{fig:elementary-info}  
+
+\begin{figure}[!h]
+  \centering
+  \includegraphics[scale=.3]{imagens/elementary-install-10.png}
+  \caption{Criando um usuário.}
+  \label{fig:elementary-info}
+\end{figure}
 
 \section{Porque usar?}
 Existem algumas características dos sistemas baseados em Linux que fazem com que eles sejam atrativos para o uso na Ciência da Computação. Pode-se dizer que um sistema Linux possui foco nos desenvolvedores de sistemas enquanto que outros sistemas operacionais possuem foco no usuário.
