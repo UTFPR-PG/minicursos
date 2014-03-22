@@ -164,7 +164,36 @@ Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma o
     \item Escolher a opção testar, se existir.
 \end{itemize}
 
-\subsection{Instalação}
+\section{Instalação}
+Caso você nunca tenha instalado o Linux antes essa parte servirá de apoio durante a instalação. Aqui será discutido alguns conceitos necessarios para poder realizar uma instalação simples do Linux, seguida de um pequeno guia.
+
+A primeira coisa a entender é o \emph{boot} 
+
+Dependendo da distro Linux que for instalada o método de instalação será diferente. Algumas distros tem instaladores gráficos, o que facilita a instalação, enquanto outras tem instaladores por linha de comando, sugiro tentar primeiro uma que tenha um instalador gráfico.
+
+Um HD é dividido em partições, imagine um quarteirão que possui varias casas, é exatamente isto que uma partição faz, separa o HD em unidades menores. Um computador novo, que venha com o windows instalado de fábrica, tem todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
+
+O Windows pode ser instalado em apenas uma partição, entretanto a instalação que será mostrada aqui precisa de duas partições para o Linux, uma pequena 3G\~5G e outra maior onde será instalado o Linux.
+
+Cada uma dessas partições tem um sistema de arquivo, que diz como cada informação deve ser guardada no disco, desse modo organizando-o. Sem um sistema de arquivos seria impossível dizer onde começa e termina cada `coisa' gravada no disco. O windows usa, normalmente, um sistema de arquivo chamado de NTFS enquanto o Linux, nessa instalação, usará o EXT4.
+
+O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, isto é, não existe c:\textbackslash no Linux, apenas `\textbackslash' que é chamado de \emph{root} ou raiz. Todo o resto do sistema é instalado a partir da raiz. Depois da raiz nos temos algumas pastas importantes por exemplo \emph{/home} onde fica gravado todos os arquivos do usuário.
+
+A partição menor, aquela de 3G\~5G, será usada para \emph{SWAP} que é a memória virtual, basicamente usa-se o HD como se fosse memória RAM.
+
+\subsection{Windows}
+A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Se o computador tiver apenas o c:\textbackslash será essa partição que iremos diminuir, caso haja mais \emph{drives}, mais letrinhas seguidas de :\textbackslash você pode escolher a maior partição para diminuir.
+
+\begin{itemize}
+    \item Abra o gerenciador de disco.
+    \item Procure a partição com maior tamanho, clique com o direito e em diminuir volume.
+    \item Escolha o espaço para diminuir, sugiro no mínimo 25G.
+    \item Espere terminar, se tudo ocorreu bem, deve haver um espaço não alocado no disco.
+\end{itemize}
+
+
+
+\subsection{Linux}
 O modo de instalar o Linux irá variar dependendo da distro usada, pois cada uma tem um instalador diferente. Alguns instaladores provem uma interface gráfica. Enquanto outros tem apenas uma linha de comando.
 
 A instalação começa com o particionamento do disco rígido, particionar é dividir o espaço total em pedaços de espaço menor. Normalmente isto é feito para que cada espaço tenha uma utilização diferente. Exemplo: normalmente ao fazer \emph{Dual-Boot} existe uma partição para o Windows e outra para o Linux.
