@@ -56,7 +56,7 @@ Os princípios aplicados por Tanenbaum no MINIX, influenciaram um de seus alunos
 \section{Conhecendo o Linux}
 
 \subsection{GNU/Linux}
-Embora a maioria das pessoas conheça apenas o termo Linux, a nomenclatura mais acurada para o sistema que se usa nos dias de hoje é ``GNU/Linux''. Isso se dá devido ao fato de que a maioria das distribuições Linux (vide \ref{distro}) na verdade contêm o \textit{kernel} (vide \ref{kernel}) do Linux em conjunto com \textit{softwares} GNU.
+Embora a maioria das pessoas conheça apenas o termo Linux, a nomenclatura mais acurada para o sistema que se usa nos dias de hoje é ``GNU/Linux''. Isso se dá devido ao fato de que a maioria das distribuições Linux (vide~\ref{distro}) na verdade contêm o \textit{kernel} (vide~\ref{kernel}) do Linux em conjunto com \textit{softwares} GNU.
 
 O projeto GNU foi iniciado em setembro de 1983 por Richard Stallman, enquanto trabalhava no laboratório de inteligência artificial do Massachusetts Institute of Technology (MIT). O intuito do projeto é criar um ambiente de colaboração em que usuários de computadores possam ter acesso a programas que são distribuídos juntamente com o seu código-fonte (\textit{software} livre). A idéia da disseminação do \textit{software} livre é dar aos seus usuários total controle sobre os programas que são utilizados, ao contrário do \textit{software} proprietário, em que é provido o executável, mas não há como realizar modificações, nem mesmo saber o conteúdo do código que gerou o mesmo.
 
@@ -67,14 +67,14 @@ O \textit{kernel} é a parte do sistema que faz a ponte entre os recursos de \te
 
 Numa configuração monolítica (Linux, Windows, etc), os programas rodam em ``espaço de usuário'', o que significa que um programa usa apenas o espaço de memória reservado a ele e não possui acesso direto a recursos do sistema. Para que um programa efetue uma ação como por exemplo exibir uma mensagem na tela, é necessário que uma ``chamada de sistema'' seja feita através do \textit{kernel}, já que o programa não tem acesso à placa gráfica do computador.
 
-A figura \ref{fig:kernel} exemplifica a arquitetura básica de um sistema Linux:
+A figura~\ref{fig:kernel} exemplifica a arquitetura básica de um sistema Linux:
 \begin{figure}[!h]
   \centering
   \includegraphics[scale=.8]{imagens/kernel.jpg}
   \caption{Arquitetura de um sistema GNU/Linux}
   \label{fig:kernel}
 \end{figure}
-Na camada superior, em espaço de usuário, estão as aplicações de usuário e a biblioteca GNU. Estas aplicações interagem com o \textit{kernel} através de uma interface de chamadas de sistema. O \textit{kernel}, por sua vez, faz acesso ao hardware.
+Na camada superior, em espaço de usuário, estão as aplicações de usuário e a biblioteca GNU\@. Estas aplicações interagem com o \textit{kernel} através de uma interface de chamadas de sistema. O \textit{kernel}, por sua vez, faz acesso ao hardware.
 
 \subsection{Distribuições}\label{distro}
 Como visto anteriormente, o que se conhece popularmente como Linux, é na verdade apenas o \textit{kernel}. Então, para que possamos ter um sistema funcionando, é necessário fazer a escolha de uma ``distribuição''. Distribuições nada mais são que o \textit{kernel} do Linux juntamente com alguns outros \textit{softwares} (em sua maioria GNU, mas não necessariamente) que dão funcionalidade ao sistema.
@@ -116,7 +116,7 @@ Uma máquina virtual (\textbf{VM}) é, como o nome indica, um computador virtual
   \label{fig:vm}
 \end{figure}
 
-Observe a imagem \ref{fig:vm}. Nela pode-se ver um sistema Windows (XP) servindo como base para outro sistema Windows (Win 7) rodando dentro da VM. Para efeitos de nomenclatura, chama-se de \textit{host} o sistema que está como base para executar a máquina virtual e \textit{guest} o sistema que está sendo emulado na VM. No exemplo acima, o \textit{host} é definido pelo Windows XP, enquanto o \textit{guest} é o Windows 7.
+Observe a imagem~\ref{fig:vm}. Nela pode-se ver um sistema Windows (XP) servindo como base para outro sistema Windows (Win 7) rodando dentro da VM\@. Para efeitos de nomenclatura, chama-se de \textit{host} o sistema que está como base para executar a máquina virtual e \textit{guest} o sistema que está sendo emulado na VM\@. No exemplo acima, o \textit{host} é definido pelo Windows XP, enquanto o \textit{guest} é o Windows 7.
 
 O sistema que está dentro da VM não afeta de maneira alguma o sistema base. Desta forma, já que a VM nada mais é que um \textit{software} rodando em um sistema qualquer, podemos levantar as seguintes vantagens de seu uso:
 
@@ -143,7 +143,7 @@ Uma desvantagem que pode ser citada é que não é possível executar os dois si
 
 \subsection{Live CD}
 
-Um Live CD é uma disto Linux instalada em uma mídia externa como um CD ou pendrive, desse modo é possível utilizar a distro Linux sem ter que instala-la. Apesar de algumas distros não anunciarem possuir um Live CD a iso `normal' funciona como um Live CD, por exemplo as distro Ubuntu e Mint não anunciam um Live CD, mas ao colocar a iso em uma mídia pode-se testa-la sem a necessidade de instalar.
+Um Live CD é uma distro Linux instalada em uma mídia externa como um CD ou pendrive, desse modo é possível utilizá-la sem ter que instalar em sua máquina. Apesar de algumas distros não anunciarem  um Live CD a iso `normal' funciona como um Live CD, por exemplo as distro Ubuntu e Mint não anunciam um Live CD, mas ao colocar a iso em uma mídia pode-se testá-la sem a necessidade de instalar.
 
 A principal desvantagem é que a execução é lenta, pois fica limitada a mesma velocidade de leitura da mídia utilizada, que acaba sendo menor do que a velocidade de leitura de um HD.
 
@@ -155,7 +155,7 @@ A principal desvantagem é que a execução é lenta, pois fica limitada a mesma
   \label{fig:ubuntu-live}
 \end{figure}
 
-Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instala-lo. Algumas distros permitem instalar mesmo após ter sido iniciado como um live CD.
+Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instalá-lo. Algumas distros permitem instalar mesmo após ter sido iniciado como um live CD.
 
 % (TODO Adicionar mais informações sobre alterar a ordem de boot?).
 \begin{itemize}
@@ -165,13 +165,11 @@ Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma o
 \end{itemize}
 
 \section{Instalação}
-Caso você nunca tenha instalado o Linux antes essa parte servirá de apoio durante a instalação. Aqui será discutido alguns conceitos necessarios para poder realizar uma instalação simples do Linux, seguida de um pequeno guia.
-
-A primeira coisa a entender é o \emph{boot} 
+Caso você nunca tenha instalado o Linux antes essa parte servirá de apoio durante a instalação. Aqui será discutido alguns conceitos necessários para poder realizar uma instalação simples do Linux, seguida de um pequeno guia.
 
 Dependendo da distro Linux que for instalada o método de instalação será diferente. Algumas distros tem instaladores gráficos, o que facilita a instalação, enquanto outras tem instaladores por linha de comando, sugiro tentar primeiro uma que tenha um instalador gráfico.
 
-Um HD é dividido em partições, imagine um quarteirão que possui varias casas, é exatamente isto que uma partição faz, separa o HD em unidades menores. Um computador novo, que venha com o windows instalado de fábrica, tem todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
+Um HD é dividido em partições, imagine um quarteirão que possui varias casas, é exatamente isto que uma partição faz, separa o HD em unidades menores. Um computador novo, que venha com o Windows instalado de fábrica, tem todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
 
 O Windows pode ser instalado em apenas uma partição, entretanto a instalação que será mostrada aqui precisa de duas partições para o Linux, uma pequena 3G\~5G e outra maior onde será instalado o Linux.
 
@@ -194,15 +192,19 @@ A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar esp
 
 
 \subsection{Linux}
-O modo de instalar o Linux irá variar dependendo da distro usada, pois cada uma tem um instalador diferente. Alguns instaladores provem uma interface gráfica. Enquanto outros tem apenas uma linha de comando.
+Após gravar a iso da distro desejada em um mídia como CD ou pendrive, pode-se usar o programa \emph{UNetbootin} para isso, deve-se inicializar o sistema a partir dessa isso. O mais comum seria colocar a iso no PC e este inicializar automaticamente a isso, caso isso não acontece é necessário trocar a ordem de boot.
 
-A instalação começa com o particionamento do disco rígido, particionar é dividir o espaço total em pedaços de espaço menor. Normalmente isto é feito para que cada espaço tenha uma utilização diferente. Exemplo: normalmente ao fazer \emph{Dual-Boot} existe uma partição para o Windows e outra para o Linux.
+\begin{itemize}
+    \item Abra a BIOS ou UEFI\@. Normalmente as teclas \emph{f12}, \emph{esc} tem essa função. Caso nenhuma delas funciona procure a tecla para o seu modelo de PC.
+    \item Vá atá a seção BOOT.
+    \item Coloque em primeiro opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a BIOS/UEFI não ira carregar o Linux.
+    \item Reinicie.
+\end{itemize}
 
-Após particionar o HD deve-se formatar a partição, o que significa apagar todos os dados que existem na partição, tome cuidado para não formatar a partição errada poise se isso acontecer todos os dados serão apagados. E escolher um sistema de arquivo para a partição, um sistema de arquivo é quem decide como armazenar os dados naquele partição, existem vários sistemas de arquivo sugerimos o ext4 por ser o mais novo e estável. 
-
-Após isso a partição criada deve ser escolhida para como local de montagem da `/', a \emph{root} ou raiz é o ponto inicial do sistema, todo o resto é criado a partir da raiz. Pense nela como o c:\textbackslash do windows. A partição `/' deve ser grande o suficiente para acomodar a distro mais eventuais programas que serão instalados, escolha um tamanho de acordo com seu HD, note que o mínimo aconselhável ficaria em torno dos 10G.
-
-Uma segunda partição deve ser criada, com tamanho médio de 5G, ao formatar esta partição escolha o ponto de montagem como \emph{SWAP}, que será o local que o Linux usará para memoria virtual, basicamente usar o HD como se fosse memória RAM, caso esta fique cheia.
+Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instalar. Aqui será feita a instalação do Elementary OS, entretanto o seu instalador deve possuir opções parecidas.
+\begin{itemize}
+    \item Passa a Passo?
+\end{itemize}
 
 
 TODO adicionar fotos da instalação.
