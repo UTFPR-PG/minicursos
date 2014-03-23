@@ -144,9 +144,13 @@ Uma desvantagem que pode ser citada é que não é possível executar os dois si
 
 \subsection{Live CD}
 
-Um Live CD é uma distro Linux instalada em uma mídia externa como um CD ou pendrive, desse modo é possível utilizá-la sem ter que instalar em sua máquina. Apesar de algumas distros não anunciarem  um Live CD a iso `normal' funciona como um Live CD, por exemplo as distro Ubuntu e Mint não anunciam um Live CD, mas ao colocar a iso em uma mídia pode-se testá-la sem a necessidade de instalar.
+Quando se deseja apenas testar uma determinada distro Linux, pode-se usar um Live CD, que é uma distro `instalada' em uma mídia externa como um pendrive ou CD. 
 
-A principal desvantagem é que a execução fica lenta, pois fica limitada a velocidade de leitura da mídia utilizada, que acaba sendo menor do que a velocidade de leitura de um HD.
+Além de testar a distro um Live CD pode ser usado para reparar erros em um sistema operacional já instalado, Windows ou Linux. Outro possibilidade é utilizar um Live CD para recuperar informações que foram deletadas por acidente. Um terceiro uso seria ter um sistema operacional com mais liberdade em um computador restrito, por exemplo um computador de uma empresa, usando um Live CD você fica livre para fazer o que quiser.
+
+Por ser um Live CD qualquer mudança que você tenha feito durante a utilização será perdida assim que você desligar o computador.
+
+Para criar um Live CD basta baixar a \emph{.iso} da distro desejada e instala-la em uma mídia externo, para isso pode-se usar um programa como \emph{UNetbootin} ou o comando \emph{dd} no Linux.
 
 \begin{figure}[!h]
   \centering
@@ -157,39 +161,29 @@ A principal desvantagem é que a execução fica lenta, pois fica limitada a vel
 
 Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instalá-lo. Algumas distros permitem instalar mesmo após ter sido iniciado como um live CD.
 
-% (TODO Adicionar mais informações sobre alterar a ordem de boot?).
-\begin{itemize}
-    \item Colocar a mídia com o live CD no computador.
-    \item Iniciar o computador através daquela mídia, pode ser necessário alterar a ordem de boot na bios (vide~\ref{itm:boot-order}).
-    \item Escolher a opção testar, se existir.
-\end{itemize}
-
 \section{Instalação}
-Caso você nunca tenha instalado o Linux antes essa parte servirá de apoio durante a instalação. Aqui será discutido alguns conceitos necessários para poder realizar uma instalação simples do Linux, seguida de um pequeno guia.
+Caso você nunca tenha instalado o Linux antes essa parte servirá de apoio durante a instalação. Aqui será discutido alguns conceitos necessários para poder realizar uma instalação simples do Linux, seguida de um pequeno guia. Os passos citados aqui podem variar, então prepare-se para utilizar o seu \emph{google-fu}.
 
-Dependendo da distro Linux que for instalada o método de instalação será diferente. Algumas distros tem instaladores gráficos, o que facilita a instalação, enquanto outras tem instaladores por linha de comando, sugiro tentar primeiro uma que tenha um instalador gráfico.
+Dependendo da distro Linux que for instalada o método de instalação será diferente. Algumas distros tem instaladores gráficos como na figura~\ref{fig:ubuntu-live}, o que facilita a instalação, enquanto outras tem instaladores por linha de comando como na figura~\ref{fig:arch-installer}, sugiro tentar primeiro instalador gráfico já que é mais simples usa-lo.
 
 \begin{figure}[H]
     \centering
     \includegraphics[scale=.5]{imagens/arch-install-01.png}
-    \caption{Instalação da istro Arch, exemplo de instalador por linha de comando.}
+    \caption{Instalação da distro Arch, exemplo de instalador por linha de comando.}
     \label{fig:arch-installer}
 \end{figure}
 
 Um HD é dividido em partições, imagine um quarteirão que possui varias casas, é exatamente isto que uma partição faz, separa o HD em unidades menores. Um computador novo, que venha com o Windows instalado de fábrica, tem todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
 
-% O mesmo tamanho da RAM é utilizado para ser possível hibernar caso toda a RAM esteja cheia, referencia https://wiki.archlinux.org/index.php/Suspend_and_Hibernate.
-O Windows pode ser instalado em apenas uma partição, entretanto a instalação que será mostrada aqui precisa de duas partições para o Linux, uma pequena com o mesmo tamanho da ram, se tiver 6G de ram esta partição deve ter 6G, e outra maior onde será instalado o Linux, o tamanho dessa fica a seu critério entretanto 20G seriam o aconselhável para uma instalação pequena.
+Tanto o Windows como o Linux podem ser instalados em apenas uma partição. Para o Linux usaremos uma partição de 20G para uma instalação pequena, aumente o tamanho a vontade, principalmente se for utilizar o Linux para ouvir música, ver filmes ou jogar. 
 % É claro os tamanhos foram sugeridos imaginando que a pessoa usará o Linux apenas para a faculdade, o que a maioria fará... Um pouco menos de 10G é requisitado apenas para instalação base de algumas distros, os outros 10 ficam para o usuário encher de sabe-se lá o que...
 
-Cada uma dessas partições tem um sistema de arquivo, que diz como cada informação deve ser guardada no disco, desse modo organizando-o. Sem um sistema de arquivos seria impossível dizer onde começa e termina cada `coisa' gravada no disco. O windows usa um sistema de arquivo chamado de NTFS enquanto o Linux, nessa instalação, usará o EXT4.
+Cada partições tem um sistema de arquivo, que diz como cada informação deve ser guardada no disco, desse modo organizando-o. Sem um sistema de arquivos seria impossível dizer onde começa e termina cada `coisa' gravada no disco. O windows usa um sistema de arquivo chamado de NTFS enquanto o Linux, nessa instalação, usará o EXT4.
 
-O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, isto é, não existe c:\textbackslash\ no Linux, apenas `\textbackslash' que é chamado de \emph{root} ou raiz. Todo o resto do sistema é instalado a partir da raiz. Depois da raiz nos temos algumas pastas importantes por exemplo \emph{/home} onde fica gravado todos os arquivos do usuário como fotos, músicas, imagens, etc\dots
-
-A partição menor, aquela com o mesmo tamanho da ram, será usada para \emph{SWAP} que é a memória virtual, basicamente usa-se o HD como memória RAM.
+O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, isto é, não existe c:\textbackslash\ no Linux, apenas `\textbackslash'\ que é chamado de \emph{root} ou raiz. Todo o resto do sistema é instalado a partir da raiz. Depois da raiz nos temos algumas pastas importantes por exemplo \emph{/home} onde fica gravado todos `dados' do usuário como fotos, músicas, imagens, etc\dots
 
 \subsection{Windows}
-A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Se o computador tiver apenas o c:\textbackslash\ será essa partição que iremos diminuir, caso haja mais \emph{drives}, mais letrinhas seguidas de :\textbackslash\ você pode escolher a maior partição para diminuir.
+A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Se o computador tiver apenas o c:\textbackslash\ será essa partição que iremos diminuir, caso haja mais \emph{drives} letrinhas seguidas de :\textbackslash\ você pode escolher a maior partição para diminuir.
 
 \begin{itemize}
     \item Abra o gerenciador de disco.
@@ -210,7 +204,7 @@ Após gravar a iso da distro desejada em um mídia como CD ou pendrive, pode-se 
 
 \subsection{Linux}
 
-Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instalar. Aqui será feita a instalação do Elementary OS, entretanto o seu instalador deve possuir opções parecidas.
+Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instalar. Aqui será feita a instalação do Elementary OS, entretanto o seu instalador deve possuir opções parecidas. Já mencionamos antes, os passos citados podem variar então prepare o \emph{google-fu}.
 
 Após o Linux iniciar escolha a lingua desejada para a instalação, neste caso inglês, depois escolha a opção instalar, dependendo da distro pode estar escrito de forma diferente. Veja a figura~\ref{fig:elementary-menu}.
 
@@ -221,7 +215,7 @@ Após o Linux iniciar escolha a lingua desejada para a instalação, neste caso 
   \label{fig:elementary-menu}
 \end{figure}
 
-Uma tela mostrando os requisitos para o sistema ser instalado aparecerá, normalmente uma quantidade de memória disponível, estar conectado a uma fonte de alimentação e estar conectado a internet. Em algumas distros algumas opções a mais podem aparecer como: Instalar \emph{software} não \emph{OSS} de terceiros, escolha se quiser ouvir mp3 ou usar o flash, outra opção comum é baixar \emph{software} durante a instalação, isto irá garantir que os softwares mais novos sejam instalados, entretanto é necessário uma conexão com a internet.
+Uma tela mostrando os requisitos para o sistema ser instalado aparecerá, normalmente uma quantidade de memória disponível, estar conectado a uma fonte de alimentação e estar conectado a internet. Em algumas distros algumas opções a mais podem aparecer como: Instalar \emph{software} não \emph{OSS} (\emph{Open-Source Software}), marque se quiser ouvir mp3 ou usar o flash, outra opção comum é baixar \emph{software} durante a instalação, isto irá garantir que os softwares mais novos sejam instalados, entretanto é necessário uma conexão com a internet.
 
 Na figura~\ref{fig:elementary-install} podemos ver dois `tipos' de instalação. A primeira irá apagar todo o HD e instalar o Linux, escolha APENAS se quiser APAGAR O WINDOWS, caso contrario escolha a segunda o que nós levará a escolher onde instalar o Linux.
 
@@ -235,8 +229,6 @@ Na figura~\ref{fig:elementary-install} podemos ver dois `tipos' de instalação.
 
 Na imagem~\ref{fig:elementary-partition} é possível ver o HD identificado como \emph{/dev/sda}, a sua instalação possivelmente mostrará uma nome diferente. Escolha \emph{/dev/sda} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada abrirá como pode-se ver na figura~\ref{fig:elementary-root}. Altere apenas o tamanho lembre-se de deixar alguns espaço sobrando, em MB, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `/'. Essa partição criada é a raiz do sistema, todo o resto será instalado a partir dela.
 
-Uma segunda partição para SWAP tem que ser criada, repita o processo acima até abrir as opções para a nova partição. Agora, seguindo a figura~\ref{fig:elementary-swap} escolha para o tamanho a mesma quantidade de RAM disponível no sistema, o sistema de arquivo deve ser alterado para SWAP será impossível escolher um ponto de montagem.
-
 \begin{figure}[H]
   \centering
   \includegraphics[scale=.3]{imagens/elementary-install-04.png}
@@ -249,13 +241,6 @@ Uma segunda partição para SWAP tem que ser criada, repita o processo acima at�
   \includegraphics[scale=.3]{imagens/elementary-install-05.png}
   \caption{Criação da partição onde ficará a `/' raiz do sistema.}
   \label{fig:elementary-root}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=.3]{imagens/elementary-install-06.png}
-  \caption{Criação da partição de SWAP.}
-  \label{fig:elementary-swap}
 \end{figure}
 
 Agora será perguntada algumas opções mais simples, como o fuso horário e \emph{layout} do teclado. Finalmente você será levada a tela para configurar um novo usuário como na figura~\ref{fig:elementary-info}. Não existe muitas regras aqui, prencha as informações de forma coerente. Finalmente espera a instalação acabar, o pc será reiniciado. Retire a mídia de instalação do PC. Se tudo ocorreu de forma correta você será levada para uma tela de login, o que significa que o Linux foi instalado com sucesso.
