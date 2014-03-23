@@ -13,8 +13,8 @@ Repositório dedicado ao conteúdo dos minicursos realizados pelos alunos do DAI
     
         * Dentro das pastas está todo o conteúdo do minicurso para aquele semestre.
         
-            * handout\_&lt;minicurso>\_&lt;semestre>.pdf é o arquivo contendo o material escrito.
-            * slides\_&lt;minicurso>\_&lt;semestre>.pdf é o arquivo da apresentação, se houver.
+            * handout\_<minicurso>\_<semestre>.pdf é o arquivo contendo o material escrito.
+            * slides\_<minicurso>\_<semestre>.pdf é o arquivo da apresentação, se houver.
             * Ex: **handout_linux_2013-2.pdf**
 
 ## Downloads:
