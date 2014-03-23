@@ -62,6 +62,6 @@ h3{
 
 .footer{
 	border-bottom-style: none;
-	border-top-style: outset;
+	/*border-top-style: outset;*/
 }
 /* # vim:set ts=4 sw=4 noet: */
