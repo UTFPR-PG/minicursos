@@ -146,11 +146,11 @@ Uma desvantagem que pode ser citada é que não é possível executar os dois si
 
 Quando se deseja apenas testar uma determinada distro Linux, pode-se usar um Live CD, que é uma distro `instalada' em uma mídia externa como um pendrive ou CD. 
 
-Além de testar a distro um Live CD pode ser usado para reparar erros em um sistema operacional já instalado, Windows ou Linux. Outro possibilidade é utilizar um Live CD para recuperar informações que foram deletadas por acidente. Um terceiro uso seria ter um sistema operacional com mais liberdade em um computador restrito, por exemplo um computador de uma empresa, usando um Live CD você fica livre para fazer o que quiser.
+Além de testar a distro um Live CD pode ser usado para reparar erros em um sistema operacional já instalado, Windows ou Linux. Outra possibilidade é utilizar um Live CD para recuperar informações que foram deletadas por acidente. Um terceiro uso seria ter um sistema operacional com mais liberdade em um computador restrito, por exemplo um computador de uma empresa, usando um Live CD você fica livre para fazer o que quiser.
 
-Por ser um Live CD qualquer mudança que você tenha feito durante a utilização será perdida assim que você desligar o computador.
+Por ser um Live CD qualquer mudança que você tenha feito ou programa instalado durante a utilização será perdida assim que você desligar o computador.
 
-Para criar um Live CD basta baixar a \emph{.iso} da distro desejada e instala-la em uma mídia externo, para isso pode-se usar um programa como \emph{UNetbootin} ou o comando \emph{dd} no Linux.
+Para criar um Live CD basta baixar a \emph{.iso} da distro desejada e instalá-la em uma mídia externo, para isso pode-se usar um programa como \emph{UNetbootin} ou o comando \emph{dd} no Linux.
 
 \begin{figure}[!h]
   \centering
@@ -164,7 +164,7 @@ Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma o
 \section{Instalação}
 Caso você nunca tenha instalado o Linux antes essa parte servirá de apoio durante a instalação. Aqui será discutido alguns conceitos necessários para poder realizar uma instalação simples do Linux, seguida de um pequeno guia. Os passos citados aqui podem variar, então prepare-se para utilizar o seu \emph{google-fu}.
 
-Dependendo da distro Linux que for instalada o método de instalação será diferente. Algumas distros tem instaladores gráficos como na figura~\ref{fig:ubuntu-live}, o que facilita a instalação, enquanto outras tem instaladores por linha de comando como na figura~\ref{fig:arch-installer}, sugiro tentar primeiro instalador gráfico já que é mais simples usa-lo.
+Dependendo da distro Linux que for instalada o método de instalação será diferente. Algumas distros tem instaladores gráficos como na figura~\ref{fig:ubuntu-live}, o que facilita a instalação, enquanto outras tem instaladores por linha de comando como na figura~\ref{fig:arch-installer}, sugiro tentar primeiro instalador gráfico já que é mais simples usá-lo.
 
 \begin{figure}[H]
     \centering
@@ -188,15 +188,14 @@ A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar esp
 \begin{itemize}
     \item Abra o gerenciador de disco.
     \item Procure a partição com maior tamanho, clique com o direito e em diminuir volume.
-    \item Escolha o espaço para diminuir, sugerimos 25G.
+    \item Escolha o espaço para diminuir, sugerimos 20G.
     \item Espere terminar, se tudo ocorreu bem, deve haver um espaço não alocado no disco.
 \end{itemize}
 
 Após gravar a iso da distro desejada em um mídia como CD ou pendrive, pode-se usar o programa \emph{UNetbootin} para isso, deve-se inicializar o sistema a partir dessa iso. O mais comum seria colocar a iso no PC e este inicializar automaticamente a iso, caso isso não acontece é necessário trocar a ordem de boot.
 
-% Falar de UEFI deixaria as coisas confusas. Adicionar imagens de apoio ?
 \begin{itemize}\label{itm:boot-order}
-    \item Abra a BIOS\@. Normalmente a tecla \emph{f12} ou \emph{esc} tem essa função. Caso nenhuma delas funcione procure a tecla para o seu modelo.
+    \item Abra a BIOS\@. Quando o computador estiver ligando aperte a tecla \emph{f12} ou \emph{esc}. Caso nenhuma delas funcione procure a tecla para o seu modelo.
     \item Vá atá a seção BOOT.
     \item Coloque em primeiro a opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a BIOS não ira carregar o Linux.
     \item Reinicie.
@@ -206,7 +205,7 @@ Após gravar a iso da distro desejada em um mídia como CD ou pendrive, pode-se 
 
 Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instalar. Aqui será feita a instalação do Elementary OS, entretanto o seu instalador deve possuir opções parecidas. Já mencionamos antes, os passos citados podem variar então prepare o \emph{google-fu}.
 
-Após o Linux iniciar escolha a lingua desejada para a instalação, neste caso inglês, depois escolha a opção instalar, dependendo da distro pode estar escrito de forma diferente. Veja a figura~\ref{fig:elementary-menu}.
+Após o Linux iniciar escolha a língua desejada para a instalação, neste caso inglês, depois escolha a opção instalar. Veja a figura~\ref{fig:elementary-menu}.
 
 \begin{figure}[H]
   \centering
@@ -226,15 +225,7 @@ Na figura~\ref{fig:elementary-install} podemos ver dois `tipos' de instalação.
   \label{fig:elementary-install}
 \end{figure}
 
-
-Na imagem~\ref{fig:elementary-partition} é possível ver o HD identificado como \emph{/dev/sda}, a sua instalação possivelmente mostrará uma nome diferente. Escolha \emph{/dev/sda} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada abrirá como pode-se ver na figura~\ref{fig:elementary-root}. Altere apenas o tamanho lembre-se de deixar alguns espaço sobrando, em MB, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `/'. Essa partição criada é a raiz do sistema, todo o resto será instalado a partir dela.
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[scale=.3]{imagens/elementary-install-04.png}
-  \caption{Criação de partições.}
-  \label{fig:elementary-partition}
-\end{figure}
+Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \emph{/dev/sda}, a sua instalação possivelmente mostrará uma nome diferente. Escolha \emph{free space} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada abrirá como pode-se ver na figura~\ref{fig:elementary-root}. Altere o tamanho, aqui usamos 20G, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `/'. Essa partição criada é a raiz do sistema, todo o resto será instalado a partir dela.
 
 \begin{figure}[H]
   \centering
@@ -243,7 +234,7 @@ Na imagem~\ref{fig:elementary-partition} é possível ver o HD identificado como
   \label{fig:elementary-root}
 \end{figure}
 
-Agora será perguntada algumas opções mais simples, como o fuso horário e \emph{layout} do teclado. Finalmente você será levada a tela para configurar um novo usuário como na figura~\ref{fig:elementary-info}. Não existe muitas regras aqui, prencha as informações de forma coerente. Finalmente espera a instalação acabar, o pc será reiniciado. Retire a mídia de instalação do PC. Se tudo ocorreu de forma correta você será levada para uma tela de login, o que significa que o Linux foi instalado com sucesso.
+Agora será perguntada algumas opções mais simples, como o fuso horário e \emph{layout} do teclado. Finalmente você será levada a tela para configurar um novo usuário como na figura~\ref{fig:elementary-info}. Não existe muitas regras aqui, preencha as informações de forma coerente. Finalmente espera a instalação acabar, o pc será reiniciado. Retire a mídia de instalação do PC\@. Se tudo ocorreu de forma correta você será levada para uma tela de login, o que significa que o Linux foi instalado com sucesso.
 
 \begin{figure}[H]
   \centering
