@@ -1,0 +1,13 @@
+*.pdf
+*.aux
+*.log
+*.toc
+*.bbl
+*.dvi
+*.blg
+#*.jpg
+*.bm
+#*.png
+#*.eps
+#*.ps
+*.dvi
