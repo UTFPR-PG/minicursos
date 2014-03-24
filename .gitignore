@@ -1,13 +1,34 @@
-*.pdf
+# Latex files
 *.aux
 *.log
 *.toc
 *.bbl
 *.dvi
-*.blg
-#*.jpg
+*.synctex.gz
+*.out
+*.brf
+*.bak
+*.cls
+*.bst
+*.bib.bak
+
+# Images and other files
 *.bm
-#*.png
-#*.eps
-#*.ps
-*.dvi
+#*.gif
+*.blg
+*.ps
+
+# LibreOffice lock file
+*\#
+
+# Building files
+*.class
+*.o
+
+# Compacted files
+*.7z
+*.rar
+*.zip
+*.tar
+*.tar.*
+*.lzma
