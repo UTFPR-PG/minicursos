@@ -85,12 +85,12 @@ Algumas distribuições mais comuns são: Ubuntu, Debian, Fedora, entre várias 
 O conceito de distribuição (também chamadas de ``distro'') geralmente gera alguma confusão entre os usuários de Linux, já que todos os \textit{softwares} com os quais a pessoa está interagindo no uso cotidiano do sistema são na verdade \textit{softwares} que são providos pela distribuição. Isto faz com que um usuário, ao experimentar várias \textit{distros} em seu computador, não perceba que na verdade, o \textit{kernel} rodando por baixo da camada de \textit{software} de usuário é o mesmo para todas as distribuições.
 
 \subsubsection{Desktop Environments e Window Managers}
-Outra distinção importante que deve ser feita é quanto ao conceito de \textit{Desktop Environments} (ambientes de \textit{desktop}) e \textit{Window Managers} (gerenciadores de janelas). Falando de maneira grosseira, \textit{Desktop Environments} são a parte da distribuição responsável por partes do sistema como o ``menu iniciar'', gerenciamento de sessão e o próprio \textit{desktop}. Os \textit{Window Managers} são a parte que gerencia a aparência das janelas e o comportamento de funções como a troca de janelas (alt + Tab).
+Outra distinção importante que deve ser feita é quanto ao conceito de \textit{Desktop Environments} (ambientes de \textit{desktop}) e \textit{Window Managers} (gerenciadores de janelas). Falando de maneira grosseira, \textit{Desktop Environments} são a parte da distribuição responsável por partes do sistema como o ``menu iniciar'', gerenciamento de sessão e o próprio \textit{desktop}. Os \textit{Window Managers} são a parte que gerencia a aparência das janelas e o comportamento de funções como a troca de janelas (\texttt{Alt + Tab}).
 
 A maioria das distribuições já provê um DE e um WM, porém algumas delas trazem apenas os programas essenciais, ficando a instalação da parte gráfica a cargo do usuário. É importante entender a diferença entre \textit{distro}, \textit{desktop environment} e \textit{window manager} para que no caso de um problema ou caso alguma funcionalidade não lhe agrade, você saiba exatamente em qual parte do sistema está o problema.
 
 \section{Como obter?}
-A maioria das distribuições Linux é disponibilizada grátis na \textit{internet} na forma de imagens \textit{.iso}. Para a instalação, as seguintes alternativas existem:
+A maioria das distribuições Linux é disponibilizada grátis na \textit{internet} na forma de imagens \texttt{.iso}. Para a instalação, as seguintes alternativas existem:
 
 \begin{enumerate}
 \item Manter o sistema operacional nativo e rodar Linux em uma máquina virtual.\\
@@ -108,7 +108,7 @@ A maioria das distribuições Linux é disponibilizada grátis na \textit{intern
 
 \subsection{Máquina Virtual}
 
-Uma máquina virtual (\textbf{VM}) é, como o nome indica, um computador virtual baseado somente em \emph{software} que funciona como um emulador, reproduzindo a arquitetura e funcionalidades de um computador de verdade. Através da máquina virtual, pode-se ter vários sistemas operacionais instalados em uma mesma máquina e utilizá-los todos sem afetar o sistema base do computador.
+Uma máquina virtual (\emph{VM}) é, como o nome indica, um computador virtual baseado somente em \emph{software} que funciona como um emulador, reproduzindo a arquitetura e funcionalidades de um computador de verdade. Através da máquina virtual, pode-se ter vários sistemas operacionais instalados em uma mesma máquina e utilizá-los todos sem afetar o sistema base do computador.
 
 \begin{figure}[!h]
   \centering
@@ -144,13 +144,13 @@ Uma desvantagem que pode ser citada é que não é possível executar os dois si
 
 \subsection{Live CD}
 
-Quando se deseja apenas testar uma determinada distro Linux, pode-se usar um Live CD, que é uma distro `instalada' em uma mídia externa como um pendrive ou CD. 
+Quando se deseja apenas testar uma determinada distro Linux, pode-se usar um \textit{Live} CD, que é uma distro ``instalada'' em uma mídia externa como um pendrive ou CD. 
 
-Além de testar a distro um Live CD pode ser usado para reparar erros em um sistema operacional já instalado, Windows ou Linux. Outra possibilidade é utilizar um Live CD para recuperar informações que foram deletadas por acidente. Um terceiro uso seria ter um sistema operacional com mais liberdade em um computador restrito, por exemplo um computador de uma empresa, usando um Live CD você fica livre para fazer o que quiser.
+Além de testar a distro um \textit{Live} CD pode ser usado para reparar erros em um sistema operacional já instalado, Windows ou Linux. Outra possibilidade é utilizar um \textit{Live} CD para recuperar informações que foram deletadas por acidente. Um terceiro uso seria ter um sistema operacional com mais liberdade em um computador restrito, por exemplo um computador de uma empresa, usando um \textit{Live} CD você fica livre para fazer o que quiser.
 
-Por ser um Live CD qualquer mudança que você tenha feito ou programa instalado durante a utilização será perdida assim que você desligar o computador.
+Por ser um \textit{Live} CD qualquer mudança que você tenha feito ou programa instalado durante a utilização será perdida assim que você desligar o computador.
 
-Para criar um Live CD basta baixar a \emph{.iso} da distro desejada e instalá-la em uma mídia externo, para isso pode-se usar um programa como \emph{UNetbootin} ou o comando \emph{dd} no Linux.
+Para criar um \textit{Live} CD basta baixar a \texttt{.iso} da distro desejada e instalá-la em uma mídia externo, para isso pode-se usar um programa como \emph{UNetbootin} ou o comando \texttt{dd} no Linux.
 
 \begin{figure}[!h]
   \centering
@@ -159,7 +159,7 @@ Para criar um Live CD basta baixar a \emph{.iso} da distro desejada e instalá-l
   \label{fig:ubuntu-live}
 \end{figure}
 
-Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instalá-lo. Algumas distros permitem instalar mesmo após ter sido iniciado como um live CD.
+Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instalá-lo. Algumas distros permitem instalar mesmo após ter sido iniciado como um \textit{Live} CD.
 
 \section{Instalação}
 Caso você nunca tenha instalado o Linux antes essa parte servirá de apoio durante a instalação. Aqui será discutido alguns conceitos necessários para poder realizar uma instalação simples do Linux, seguida de um pequeno guia. Os passos citados aqui podem variar, então prepare-se para utilizar o seu \emph{google-fu}.
@@ -175,29 +175,29 @@ Dependendo da distro Linux que for instalada o método de instalação será dif
 
 Um HD é dividido em partições, imagine um quarteirão que possui varias casas, é exatamente isto que uma partição faz, separa o HD em unidades menores. Um computador novo, que venha com o Windows instalado de fábrica, tem todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
 
-Tanto o Windows como o Linux podem ser instalados em apenas uma partição. Para o Linux usaremos uma partição de 20G para uma instalação pequena, aumente o tamanho a vontade, principalmente se for utilizar o Linux para ouvir música, ver filmes ou jogar. 
+Tanto o Windows como o Linux podem ser instalados em apenas uma partição. Para o Linux usaremos uma partição de \texttt{20GB} para uma instalação pequena, aumente o tamanho a vontade, principalmente se for utilizar o Linux para ouvir música, ver filmes ou jogar. 
 % É claro os tamanhos foram sugeridos imaginando que a pessoa usará o Linux apenas para a faculdade, o que a maioria fará... Um pouco menos de 10G é requisitado apenas para instalação base de algumas distros, os outros 10 ficam para o usuário encher de sabe-se lá o que...
 
-Cada partições tem um sistema de arquivo, que diz como cada informação deve ser guardada no disco, desse modo organizando-o. Sem um sistema de arquivos seria impossível dizer onde começa e termina cada `coisa' gravada no disco. O windows usa um sistema de arquivo chamado de NTFS enquanto o Linux, nessa instalação, usará o EXT4.
+Cada partições tem um sistema de arquivo, que diz como cada informação deve ser guardada no disco, desse modo organizando-o. Sem um sistema de arquivos seria impossível dizer onde começa e termina cada ``coisa'' gravada no disco. O Windows usa um sistema de arquivo chamado de NTFS enquanto o Linux, nessa instalação, usará o EXT4.
 
-O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, isto é, não existe \texttt{c:\textbackslash} no Linux, apenas `\texttt{/}' que é chamado de \emph{root} ou raiz. Todo o resto do sistema é instalado a partir da raiz. Depois da raiz nos temos algumas pastas importantes por exemplo \emph{/home} onde fica gravado todos `dados' do usuário como fotos, músicas, imagens, etc.
+O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, isto é, não existe \texttt{c:\textbackslash} no Linux, apenas `\texttt{/}' que é chamado de \texttt{root} ou raiz. Todo o resto do sistema é instalado a partir da raiz. Depois da raiz nos temos algumas pastas importantes por exemplo \texttt{/home} onde fica gravado todos ``dados'' do usuário como fotos, músicas, imagens, etc.
 
 \subsection{Windows}
-A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Se o computador tiver apenas o \texttt{c:\textbackslash} será essa partição que iremos diminuir, caso haja mais \emph{drives} letrinhas seguidas de \texttt{:\textbackslash} você pode escolher a maior partição para diminuir.
+A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Se o computador tiver apenas o \texttt{c:\textbackslash} será essa partição que iremos diminuir, caso haja mais \emph{drives} (letrinhas seguidas de \texttt{:\textbackslash}) você pode escolher a maior partição para diminuir.
 
 \begin{itemize}
     \item Abra o gerenciador de disco.
     \item Procure a partição com maior tamanho, clique com o direito e em diminuir volume.
-    \item Escolha o espaço para diminuir, sugerimos 20G.
+    \item Escolha o espaço para diminuir, sugerimos 20GB.
     \item Espere terminar, se tudo ocorreu bem, deve haver um espaço não alocado no disco.
 \end{itemize}
 
 Após gravar a iso da distro desejada em um mídia como CD ou pendrive, pode-se usar o programa \emph{UNetbootin} para isso, deve-se inicializar o sistema a partir dessa iso. O mais comum seria colocar a iso no PC e este inicializar automaticamente a iso, caso isso não acontece é necessário trocar a ordem de boot.
 
 \begin{itemize}\label{itm:boot-order}
-    \item Abra a BIOS\@. Quando o computador estiver ligando aperte a tecla \emph{f12} ou \emph{esc}. Caso nenhuma delas funcione procure a tecla para o seu modelo.
-    \item Vá atá a seção BOOT.
-    \item Coloque em primeiro a opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a BIOS não ira carregar o Linux.
+    \item Abra a \texttt{BIOS}\@. Quando o computador estiver ligando aperte a tecla \emph{f12} ou \emph{esc}. Caso nenhuma delas funcione procure a tecla para o seu modelo.
+    \item Vá atá a seção \texttt{BOOT}.
+    \item Coloque em primeiro a opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a \texttt{BIOS} não ira carregar o Linux.
     \item Reinicie.
 \end{itemize}
 
@@ -214,9 +214,9 @@ Após o Linux iniciar escolha a língua desejada para a instalação, neste caso
   \label{fig:elementary-menu}
 \end{figure}
 
-Uma tela mostrando os requisitos para o sistema ser instalado aparecerá, normalmente uma quantidade de memória disponível, estar conectado a uma fonte de alimentação e estar conectado a internet. Em algumas distros algumas opções a mais podem aparecer como: Instalar \emph{software} não \emph{OSS} (\emph{Open-Source Software}), marque se quiser ouvir mp3 ou usar o flash, outra opção comum é baixar \emph{software} durante a instalação, isto irá garantir que os softwares mais novos sejam instalados, entretanto é necessário uma conexão com a internet.
+Uma tela mostrando os requisitos para o sistema ser instalado aparecerá, normalmente uma quantidade de memória disponível, estar conectado a uma fonte de alimentação e estar conectado a internet. Em algumas distros algumas opções a mais podem aparecer como: Instalar \textit{software} não \textit{OSS} (\textit{Open-Source Software}), marque se quiser ouvir mp3 ou usar o flash, outra opção comum é baixar \textit{software} durante a instalação, isto irá garantir que os softwares mais novos sejam instalados, entretanto é necessário uma conexão com a internet.
 
-Na figura~\ref{fig:elementary-install} podemos ver dois `tipos' de instalação. A primeira irá apagar todo o HD e instalar o Linux, escolha APENAS se quiser APAGAR O WINDOWS, caso contrario escolha a segunda o que nós levará a escolher onde instalar o Linux.
+Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalação. A primeira irá apagar todo o HD e instalar o Linux, escolha APENAS se quiser APAGAR O WINDOWS, caso contrario escolha a segunda o que nós levará a escolher onde instalar o Linux.
 
 \begin{figure}[H]
   \centering
@@ -225,16 +225,16 @@ Na figura~\ref{fig:elementary-install} podemos ver dois `tipos' de instalação.
   \label{fig:elementary-install}
 \end{figure}
 
-Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \emph{/dev/sda}, a sua instalação possivelmente mostrará uma nome diferente. Escolha \emph{free space} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada abrirá como pode-se ver na figura~\ref{fig:elementary-root}. Altere o tamanho, aqui usamos 20G, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `/'. Essa partição criada é a raiz do sistema, todo o resto será instalado a partir dela.
+Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \texttt{/dev/sda}, a sua instalação possivelmente mostrará uma nome diferente. Escolha \textit{free space} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada abrirá como pode-se ver na figura~\ref{fig:elementary-root}. Altere o tamanho, aqui usamos \texttt{20GB}, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `\texttt{/}'. Essa partição criada é a raiz do sistema, todo o resto será instalado a partir dela.
 
 \begin{figure}[H]
   \centering
   \includegraphics[scale=.3]{imagens/elementary-install-05.png}
-  \caption{Criação da partição onde ficará a `/' raiz do sistema.}
+  \caption{Criação da partição onde ficará a `\texttt{/}' raiz do sistema.}
   \label{fig:elementary-root}
 \end{figure}
 
-Agora será perguntada algumas opções mais simples, como o fuso horário e \emph{layout} do teclado. Finalmente você será levada a tela para configurar um novo usuário como na figura~\ref{fig:elementary-info}. Não existe muitas regras aqui, preencha as informações de forma coerente. Finalmente espera a instalação acabar, o pc será reiniciado. Retire a mídia de instalação do PC\@. Se tudo ocorreu de forma correta você será levada para uma tela de login, o que significa que o Linux foi instalado com sucesso.
+Agora será perguntada algumas opções mais simples, como o fuso horário e \textit{layout} do teclado. Finalmente você será levada a tela para configurar um novo usuário como na figura~\ref{fig:elementary-info}. Não existe muitas regras aqui, preencha as informações de forma coerente. Finalmente espera a instalação acabar, o pc será reiniciado. Retire a mídia de instalação do PC\@. Se tudo ocorreu de forma correta você será levada para uma tela de login, o que significa que o Linux foi instalado com sucesso.
 
 \begin{figure}[H]
   \centering
@@ -265,7 +265,7 @@ Normalmente, as distribuições Linux aplicam o conceito de ``pacote''. Um pacot
 
 Quando utilizamos um computador, estamos acostumados a usar a \underline{interface gráfica}. Isso significa que fazemos bastante uso do \textit{mouse} para acessar as variadas funções do sistema e os resultados das nossas ações são exibidos na tela de maneira muito clara. Ex: ao mover um arquivo, podemos simplesmente clicar sobre ele e arrastá-lo para outra pasta. Esta interação é feita de maneira muito intuitiva.
 
-Embora hoje em dia, quase todas as distribuições Linux possuam uma interface gráfica, o seu ponto forte é a \underline{interface de linha de comando}. A CLI (\emph{Command Line Interface}) não é baseada nos preceitos de \textit{mouse} + gráficos com os quais estamos acostumados. A sua utilização se faz através de comandos de texto. Para realizar tarefas como a criação de uma pasta, ou fazer a cópia de um arquivo, um comando será digitado em um console. Para executar a mesma ação do exemplo anterior, digitaríamos o comando: \com{mv local\_arquivo local\_destino}. O comando não retornaria resposta alguma, o que em um sistema Unix significa que tudo ocorreu com sucesso. No começo, esta nova forma de interagir com o computador e estes comandos podem parecer intimidantes, porém com o tempo e costume, a utilização da CLI fará com que a navegabilidade se torne rápida e focada.
+Embora hoje em dia, quase todas as distribuições Linux possuam uma interface gráfica, o seu ponto forte é a \underline{interface de linha de comando}. A CLI (\textit{Command Line Interface}) não é baseada nos preceitos de \textit{mouse} + gráficos com os quais estamos acostumados. A sua utilização se faz através de comandos de texto. Para realizar tarefas como a criação de uma pasta, ou fazer a cópia de um arquivo, um comando será digitado em um console. Para executar a mesma ação do exemplo anterior, digitaríamos o comando: \com{mv local\_arquivo local\_destino}. O comando não retornaria resposta alguma, o que em um sistema Unix significa que tudo ocorreu com sucesso. No começo, esta nova forma de interagir com o computador e estes comandos podem parecer intimidantes, porém com o tempo e costume, a utilização da CLI fará com que a navegabilidade se torne rápida e focada.
 
 Além da navegação básica pelas pastas, os comandos da CLI também podem ser combinados de forma a executar tarefas complexas, como manipulação de arquivos ou gerenciamento de rede, atividades que em outros sistemas operacionais provavelmente teríamos que procurar por um programa na internet para realizá-las.\\
 
@@ -274,72 +274,71 @@ A seguir, veremos alguns comandos básicos e sua utilização.
 % Um comando da CLI possui um nome e pode possuir parâmetros. Esses parametros podem modificar o comportamento do comando para suprir as suas necessidades. Normalmente, um parâmetro acompanha o nome do comando dessa forma: \cominline{grep -h}, onde ``h'' pode ser a forma abreviada de um parâmetro. É comum a forma mais longa ser acompanhada de dois ``-'', da seguinte forma: \cominline{grep --help}. Informações sobre os parâmetros podem ser encontradas no manual do comando, assim como sua descrição e exemplos de uso. O manual é acessado dessa maneira: \cominline{man grep}.
 % \\
 
-{\small \it Como um guia, todas as linhas de comandos terão o caracter \$ no começo, apenas para indicar a linha onde será digitado o comando em questão. O caracter não faz parte do comando e deve ser ignorado.\\}
+{\small \it Como um guia, todas as linhas de comandos terão o carácter \$ no começo, apenas para indicar a linha onde será digitado o comando em questão. O carácter não faz parte do comando e deve ser ignorado.\\}
 
-Ao abrir uma janela de terminal, primeiramente precisamos saber ``onde estamos''. Para saber em qual pasta você está trabalhando na linha de comando, digite \textbf{pwd}, que significa ``print working directory''.\\
+Ao abrir uma janela de terminal, primeiramente precisamos saber ``onde estamos''. Para saber em qual pasta você está trabalhando na linha de comando, digite \texttt{pwd}, que significa ``\textit{print working directory}''.\\
 
 \com{pwd\\/home/usuario}\\
 
-A resposta do comando é a pasta atual. ``/home/usuario'', seria similar ao ``C:\textbackslash Usuários\textbackslash usuário\textbackslash'' \  de um sistema Windows.
+A resposta do comando é a pasta atual. ``\texttt{/home/usuario}'', seria similar ao ``\texttt{C:\textbackslash Usuários\textbackslash usuário\textbackslash}'' de um sistema Windows.
 
 Há alguns ``atalhos'' que podem ser utilizados na hora de digitar comandos:
 \begin{itemize}
-\item o caracter \textbf{$\sim$} é uma outra forma de representar a pasta ``/home/usuario''
-\item um \textbf{.} significa o diretório atual e \textbf{..} é equivalente ao diretório anterior. Portanto, no caso acima, \textbf{.} significaria ``/home/usuario'' e \textbf{..} significaria ``/home''
+\item o caracter \textbf{$\sim$} é uma outra forma de representar a pasta ``\texttt{/home/usuario}''
+\item um \textbf{.} significa o diretório atual e \textbf{..} é equivalente ao diretório anterior. Portanto, no caso acima, \textbf{.} significaria ``\texttt{/home/usuario}'' e \texttt{..} significaria ``\texttt{/home}''
 \end{itemize}
-A mudança de diretórios, ou seja, pastas, deve ser feita através do comando \textbf{cd} (``change directory'').
+A mudança de diretórios, ou seja, pastas, deve ser feita através do comando \texttt{cd} (``\textit{change directory}'').
 
 \com{cd /home/usuario/Área\textbackslash\xspace de\textbackslash\xspace Trabalho/\\\$ cd ..\\\$ pwd\\/home/usuario\\\$ cd ./Área\textbackslash\xspace de\textbackslash\xspace Trabalho/\\\$ pwd\\/home/usuario/Área\textbackslash\xspace de\textbackslash\xspace Trabalho}\\
 
-É importante lembrar que o / também é um diretório! Esta é a pasta raiz do seu sistema, portanto:\\
+É importante lembrar que o \texttt{/} também é um diretório! Esta é a pasta raiz do seu sistema, portanto:\\
 
 \com{cd /home/usuario/}
 é \underline{\textbf{diferente}} de:
 \com{cd home/usuario/}\\
 
-Você pode criar uma pasta usando o \textbf{mkdir} (``make directory''). Lembre-se que sempre que você não souber em que pasta você está, você pode utilizar o pwd.\\
+Você pode criar uma pasta usando o \texttt{mkdir} (``\textit{make directory}''). Lembre-se que sempre que você não souber em que pasta você está, você pode utilizar o \texttt{pwd}.\\
 
 \com{cd /tmp/\\\$ mkdir NovaPasta\\\$ mkdir NovaPasta/Pasta2}\\
 
-Se você desejar saber o conteúdo de uma pasta, basta utilizar o comando \textbf{ls} (``list''). Este comando mostrará tanto pastas quanto arquivos presentes.\\
+Se você desejar saber o conteúdo de uma pasta, basta utilizar o comando \texttt{ls} (``\textit{list}''). Este comando mostrará tanto pastas quanto arquivos presentes.\\
 
 \com{cd /tmp/\\\$ ls\\NovaPasta\\\$ cd NovaPasta\\\$ ls\\Pasta2}\\
 
-Para remover uma pasta, um simples comando pode ser usado, o \textbf{rmdir} (``remove directory''), porém a pasta só será removida se ela estiver vazia, caso contrário uma mensagem de erro aparecerá na tela. No nosso exemplo, podemos excluir a Pasta2 dessa forma:\\
+Para remover uma pasta, um simples comando pode ser usado, o \texttt{rmdir} (``\textit{remove directory}''), porém a pasta só será removida se ela estiver vazia, caso contrário uma mensagem de erro aparecerá na tela. No nosso exemplo, podemos excluir a \texttt{Pasta2} dessa forma:\\
 
 \com{cd /tmp/\\\$ rmdir ./NovaPasta/Pasta2}\\
 
-Você pode criar um arquivo vazio com apenas um comando, o \textbf{touch}. \\
+Você pode criar um arquivo vazio com apenas um comando, o \texttt{touch}. \\
 
 \com{cd /tmp/NovaPasta\\\$ touch teste.txt}\\
 
-Para podermos copiar um arquivo, utilizaremos o comando \textbf{cp}.\\
+Para podermos copiar um arquivo, utilizaremos o comando \texttt{cp}.\\
 
 \com{ls /tmp/NovaPasta\\teste.txt\\\$ cp /tmp/NovaPasta/teste.txt /tmp/teste2.txt}\\
 
-Utilizando o \textbf {cp} com o parâmetro \textbf{-r} somos capazes de copiar pastas.\\
+Utilizando o \texttt{cp} com o parâmetro \texttt{-r} somos capazes de copiar pastas.\\
 
 \com{cp -r /tmp/NovaPasta /tmp/NovaPasta2}\\
 
-Remover um arquivo definitivamente é bem simples quando utilizamos o comando \textbf{rm}. Apenas é necessário colocar o nome do arquivo que se deseja excluir e estar na pasta correta.\\
+Remover um arquivo definitivamente é bem simples quando utilizamos o comando \texttt{rm}. Apenas é necessário colocar o nome do arquivo que se deseja excluir e estar na pasta correta.\\
 
 \com{cd /tmp/\\\$ rm teste2.txt}\\
 
-Novamente, para excluirmos uma pasta, é preciso usar o parâmetro \textbf{-r}. É preciso ter muito cuidado ao usar essa funcionalidade, pois esse comando apagará definitivamente qualquer pasta mesmo que haja conteúdo dentro.\\
+Novamente, para excluirmos uma pasta, é preciso usar o parâmetro \texttt{-r}. É preciso ter muito cuidado ao usar essa funcionalidade, pois esse comando apagará definitivamente qualquer pasta mesmo que haja conteúdo dentro.\\
 
 \com{cd /tmp/\\\$ rm -r NovaPasta2}\\
-\\
 
 Há outros comandos que são interessantes:
 \begin{itemize}
-\item\cominline{cat ArquivoQualquer.txt} - Imprime na tela o conteúdo de ArquivoQualquer.txt
-\item\cominline{find /home/usuario -name ArquivoQualquer} - Procura dentro da ``home'' um arquivo de nome ArquivoQualquer.
-\item\cominline{grep string caminho\_para\_pasta/} - Procura dentro dos arquivos da pasta a string colocada após grep.
+\item\cominline{cat ArquivoQualquer.txt} - Imprime na tela o conteúdo de \texttt{ArquivoQualquer.txt}
+\item\cominline{find /home/usuario -name ArquivoQualquer} - Procura dentro da ``\texttt{home}'' um arquivo de nome \texttt{ArquivoQualquer}.
+\item\cominline{grep string caminho\_para\_pasta/} - Procura dentro dos arquivos da pasta a string colocada após \texttt{grep}.
 \item\cominline{shutdown -h now} - Desliga o computador.
 \item\cominline{shutdown -r now} - Reinicia o computador.
 \item\cominline{sudo comando} - Executar um programa como um super usuário.
 \item\cominline{tar -cf Arquivo.tar.gz caminho\_para\_pasta/} - Comprimir arquivos na pasta indicada pelo caminho.
-\item\cominline{tar -xf Arquivo.tar.gz} - Extrair arquivos de um .tar.gz.
+\item\cominline{tar -xf Arquivo.tar.gz} - Extrair arquivos de um \texttt{.tar.gz}.
 \end{itemize}
 
 \section{Passos seguintes}
@@ -349,7 +348,7 @@ Recomenda-se que o usuário experimente com várias instalações e configuraç�
 
 Outro ponto importante de ser ressaltado é que embora, em alguns momentos, o uso de sistemas Unix e software livre em geral possa parecer difícil ou complicado, o conhecimento e aprofundamento nestes tópicos com certeza trará frutos para sua vida acadêmica e profissional.
 
-Desta forma, os autores deste documento colocam-se à disposição para o esclarecimento de dúvidas e suporte de maneira geral através da lista de emails \url{psl_pg@googlegroups.com}.
+Desta forma, os autores deste documento colocam-se à disposição para o suporte e esclarecimento de dúvidas gerais através da lista de email~\url{psl_pg@googlegroups.com}.
 
 \nocite{Tanenbaum:2007:MOS:1410217}
 \nocite{shotts2012linux}
