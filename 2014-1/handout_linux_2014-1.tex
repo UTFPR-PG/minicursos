@@ -57,7 +57,7 @@ Embora a maioria das pessoas conheça apenas o termo Linux, a nomenclatura mais 
 
 O projeto GNU foi iniciado em setembro de 1983 por Richard Stallman, enquanto trabalhava no laboratório de inteligência artificial do Massachusetts Institute of Technology (MIT). O intuito do projeto é criar um ambiente de colaboração em que usuários de computadores possam ter acesso a programas que são distribuídos juntamente com o seu código-fonte (\textit{software} livre). A idéia da disseminação do \textit{software} livre é dar aos seus usuários total controle sobre os programas que são utilizados, ao contrário do \textit{software} proprietário, em que é provido o executável, mas não há como realizar modificações, nem mesmo saber o conteúdo do código que gerou o mesmo.
 
-Juntamente com o projeto GNU, foi criado o movimento ``Free software'' e a instituição de fins não lucrativos ``Free software foundation'', que atualmente, entre outras atividades, administra o projeto GNU e as licenças GNU.
+Juntamente com o projeto GNU, foi criado o movimento ``Free software'' e a instituição de fins não lucrativos ``Free Software Foundation'', que atualmente, entre outras atividades, administra o projeto GNU e as licenças GNU.
 
 \subsection{O kernel}\label{kernel}
 O \textit{kernel} é a parte do sistema que faz a ponte entre os recursos de \textit{hardware}, como memória, CPU, dispositivos de entrada e saída; e a camada de \textit{software}.
@@ -151,11 +151,11 @@ Uma desvantagem que pode ser citada é que não é possível executar os dois si
 
 Quando se deseja apenas testar uma determinada distro Linux, pode-se usar um \textit{Live} CD, que é uma distro ``instalada'' em uma mídia externa como um pendrive ou CD. 
 
-Além de testar a distro um \textit{Live} CD pode ser usado para reparar erros em um sistema operacional já instalado, Windows ou Linux. Outra possibilidade é utilizar um \textit{Live} CD para recuperar informações que foram deletadas por acidente. Um terceiro uso seria ter um sistema operacional com mais liberdade em um computador restrito, por exemplo um computador de uma empresa.
+Além de testar a distro, um \textit{Live} CD pode ser usado para reparar erros em um sistema operacional já instalado, Windows ou Linux. Outra possibilidade é utilizar um \textit{Live} CD para recuperar informações que foram deletadas por acidente. Um terceiro uso seria ter um sistema operacional com mais liberdade em um computador restrito, por exemplo um computador de uma empresa.
 
 Por ser um \textit{Live} CD qualquer mudança que você tenha feito ou programa instalado durante a utilização será perdida assim que você desligar o computador.
 
-Para criar um \textit{Live} CD basta baixar a \texttt{.iso} da distro desejada e instalá-la em uma mídia externa, utilizando um programa como o \emph{UNetbootin} ou o comando \texttt{dd} no Linux.
+Para criar um \textit{Live} CD, basta baixar a \texttt{.iso} da distro desejada e instalá-la em uma mídia externa, utilizando um programa como o \emph{UNetbootin} ou o comando \texttt{dd} no Linux.
 
 \begin{figure}[!h]
   \centering
@@ -164,12 +164,12 @@ Para criar um \textit{Live} CD basta baixar a \texttt{.iso} da distro desejada e
   \label{fig:ubuntu-live}
 \end{figure}
 
-Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instalá-lo. Algumas distros permitem instalar mesmo após ter sido iniciado como um \textit{Live} CD.
+Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instalá-lo. Algumas distros permitem a instalação mesmo após terem sido iniciadas como um \textit{Live} CD.
 
 \section{Instalação}
-Nesta seção serão discutidos alguns conceitos\footnote{Os passos citados aqui servem para que o leitor se familiarize com os conceitos e idéias envolvidos na instalação de um sistema. Evite seguir estes passos à risca já que a sua situação pode variar. Recomenda-se conferir cada passo seguindo um guia específico ou buscando no \emph{Google}} necessários para poder realizar uma instalação simples do Linux, seguidos de um pequeno guia (vide seção~\ref{guia}).
+Nesta seção serão discutidos alguns conceitos\footnote{Os passos citados aqui servem para que o leitor se familiarize com os conceitos e idéias envolvidos na instalação de um sistema. Evite seguir estes passos à risca já que a sua situação pode variar. Recomenda-se conferir cada passo seguindo um guia específico ou buscando no \emph{Google}} necessários para realizar uma instalação simples do Linux, seguidos de um pequeno guia (vide seção~\ref{guia}).
 
-Dependendo da distro Linux a ser instalada o método de instalação será diferente. Algumas distros têm instaladores gráficos como na figura~\ref{fig:ubuntu-live}, o que facilita a instalação, enquanto outras têm instaladores por linha de comando como na figura~\ref{fig:arch-installer}.
+Dependendo da distro Linux a ser instalada, o método de instalação será diferente. Algumas distros têm instaladores gráficos como na figura~\ref{fig:ubuntu-live}, o que facilita a instalação, enquanto outras têm instaladores por linha de comando como na figura~\ref{fig:arch-installer}.
 
 \begin{figure}[h]
     \centering
@@ -189,7 +189,7 @@ Independentemente da forma de instalação escolhida, existem alguns passos que 
 Vejamos o que significam cada um destes conceitos básicos.
 
 \subsection{Particionamento}
-Um disco rígido é dividido em partições, como um quarteirão que possui várias casas, um HD é ``particionado'' em unidades menores. Um computador novo, que venha com o Windows instalado de fábrica, terá todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
+Um disco rígido é dividido em partições; Como um quarteirão que possui várias casas, um HD é ``particionado'' em unidades menores. Um computador novo, que venha com o Windows instalado de fábrica, terá todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
 
 Uma boa prática\footnote{O particionamento depende muito da forma como o computador será utilizado. Existem várias estratégias para se manter a segurança entre os vários sistemas instalados em uma máquina, bem como questões de backup, etc.} é manter além da partição do Windows, mais duas partições para o Linux: uma para os programas (\texttt{20GB} para uma instalação pequena) e outra para os arquivos, de tamanho maior, principalmente se for utilizar o Linux para ouvir música ou ver filmes.
 
@@ -207,7 +207,7 @@ O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, 
 A definição de pontos de montagem significa, de forma bastante simples, dizer quais destas pastas ficarão em quais das partições citadas anteriormente.
 
 \subsection{Instalação do sistema}
-Esta é a etapa em que se instala o sistema, propriamente dito. Geralmente será feita a instalação de um sistema básico a partir da \texttt{iso} e o resto dos programas será baixado da \textit{internet}.
+Esta é a etapa em que se instala o sistema, propriamente dito. Geralmente será feita a instalação de um sistema básico a partir da \texttt{.iso} e o resto dos programas será baixado da \textit{internet}.
 
 \section{Guia de instalação}\label{guia}
 Esta seção contém um passo a passo mais detalhado do processo de instalação. Conforme já mencionamos, lembre-se sempre de buscar na \textit{internet} pela solução mais adequada ao seu caso.
@@ -215,7 +215,7 @@ Esta seção contém um passo a passo mais detalhado do processo de instalação
 \subsection{Windows}
 A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Isso pode ser feito pelo Gerenciador de Disco do Windows. Se o computador tiver apenas o \texttt{C:\textbackslash} será essa partição que iremos diminuir, caso haja mais \emph{drives} você pode escolher a maior partição para diminuir. Escolha o espaço para diminuir, clicando com o botão direito sobre a unidade e em diminuir volume. Ao final do processo, se tudo correu bem, deve haver um espaço não alocado no disco. Este é o espaço onde instalaremos o Linux.
 
-Agora, precisamos inicializar o sistema a partir da \texttt{iso}\footnote{Deve ter sido gravada em um mídia como CD ou pendrive, através de um programa como, por exemplo, o \emph{UNetbootin}} da distro desejada. Para isso, deve-se reiniciar o computador e pressionar a tecla \emph{f12} quando ele estiver ligando. Isso irá exibir um menu que controla a ordem na qual os dispositivos são lidos em busca de uma imagem para \textit{boot}. Coloque em primeiro a opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a \texttt{BIOS} não ira carregar o Linux.
+Agora, precisamos inicializar o sistema a partir da \texttt{.iso}\footnote{Deve ter sido gravada em um mídia como CD ou pendrive, através de um programa como, por exemplo, o \emph{UNetbootin}} da distro desejada. Para isso, deve-se reiniciar o computador e pressionar a tecla \emph{F12} quando ele estiver ligando. Isso irá exibir um menu que controla a ordem na qual os dispositivos são lidos em busca de uma imagem para \textit{boot}. Coloque em primeiro a opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a \texttt{BIOS} não ira carregar o Linux.
 
 \subsection{Linux}
 Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instalar. Aqui será feita a instalação do Elementary OS, entretanto o seu instalador deve possuir opções parecidas.
@@ -227,12 +227,12 @@ Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instal
   \label{fig:elementary-menu}
 \end{figure}
 
-Após o Linux iniciar escolha o idioma desejado para a instalação, neste caso inglês, depois escolha a opção instalar. Veja a figura~\ref{fig:elementary-menu}.
+Após o Linux iniciar, escolha o idioma desejado para a instalação, neste caso inglês, depois escolha a opção instalar. Veja a figura~\ref{fig:elementary-menu}.
 
 Uma tela mostrando os requisitos para o sistema a ser instalado aparecerá, normalmente indicando a quantidade de memória necessária, e lembrando que se deve estar conectado a uma fonte de alimentação.
 É comum é baixar \textit{software} durante a instalação, isto irá garantir que os programas mais novos sejam instalados, portanto, garanta também, uma conexão com a \textit{internet}.
 
-Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalação. A primeira irá apagar todo o HD e instalar o Linux, escolha apenas se quiser \emph{apagar} o Windows, caso contrário escolha a segunda o que nós levará a escolher onde instalar o Linux.
+Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalação. A primeira irá apagar todo o HD e instalar o Linux, escolha apenas se quiser \emph{apagar} o Windows, caso contrário escolha a segunda, que nós levará a escolher onde instalar o Linux.
 
 \begin{figure}[h]
   \centering
@@ -241,7 +241,7 @@ Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalaçã
   \label{fig:elementary-install}
 \end{figure}
 
-A seguir realizaremos o processo de particionamento, formatação e definição dos pontos de montagem para o Linux. Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \texttt{/dev/sda}, a sua instalação possivelmente mostrará um nome diferente. Escolha \textit{free space} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada se abrirá. Altere o tamanho da partição, aqui usamos \texttt{20GB}, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `\texttt{/}'. Essa partição criada é a raiz do sistema.
+A seguir realizaremos o processo de particionamento, formatação e definição dos pontos de montagem para o Linux. Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \texttt{/dev/sda} (a sua instalação possivelmente mostrará um nome diferente). Escolha \textit{free space} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada se abrirá. Altere o tamanho da partição. Aqui usamos \texttt{20GB}, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `\texttt{/}'. Essa partição criada é a raiz do sistema.
 
 \begin{figure}[h]
   \centering
@@ -254,7 +254,7 @@ Caso você tenha diminuído a partição do Windows suficientemente, além da re
 
 Acomode quaisquer outras partições que deseja utilizar no disco e certifique-se de que as alterações realizadas estão corretas (o HD correto está sendo usado? as partições têm o tamanho desejado? os pontos de montagem foram atribuídos de forma correta?) já que quando as informações de particionamento forem gravadas no disco, na maioria das vezes as partições são reformatadas.
 
-Na tela seguinte serão perguntadas algumas opções mais simples, como o fuso horário e \textit{layout} do teclado. Finalmente você será levado à tela para configurar um novo usuário como na figura~\ref{fig:elementary-info}. Não existem muitas regras aqui, preencha as informações de forma coerente. Finalmente espere a instalação acabar e o computador será reiniciado. Retire a mídia de instalação do PC\@. Se tudo ocorreu de forma correta você será levado para uma tela de login, o que significa que o Linux foi instalado com sucesso.
+Na tela seguinte serão perguntadas algumas opções mais simples, como o fuso horário e \textit{layout} do teclado. Finalmente você será levado à tela para configurar um novo usuário como na figura~\ref{fig:elementary-info}. Não existem muitas regras aqui, lembrando que as informações devem ser preenchidas de forma coerente. Finalmente espere a instalação acabar e o computador será reiniciado. Retire a mídia de instalação do PC\@. Se tudo ocorreu de forma correta você será levado para uma tela de login, o que significa que o Linux foi instalado com sucesso.
 
 \begin{figure}[h]
   \centering
@@ -270,7 +270,7 @@ Vejamos agora alguns conceitos básicos de utilização do seu novo sistema Linu
 
 Quando utilizamos um computador, estamos acostumados a usar a \underline{interface gráfica}. Isso significa que fazemos bastante uso do \textit{mouse} para acessar as variadas funções do sistema e os resultados das nossas ações são exibidos na tela de maneira muito clara. Ex: ao mover um arquivo, podemos simplesmente clicar sobre ele e arrastá-lo para outra pasta. Esta interação é feita de maneira muito intuitiva.
 
-Embora hoje em dia, quase todas as distribuições Linux possuam uma interface gráfica, o seu ponto forte é a \underline{interface de linha de comando}. A CLI (\textit{Command Line Interface}) não é baseada nos preceitos de \textit{mouse} + gráficos com os quais estamos acostumados. A sua utilização se faz através de comandos de texto. Para realizar tarefas como a criação de uma pasta, ou fazer a cópia de um arquivo, um comando será digitado em um console. Para executar a mesma ação do exemplo anterior, digitaríamos o comando: \com{mv local\_arquivo local\_destino}. O comando não retornaria resposta alguma, o que em um sistema Unix significa que tudo ocorreu com sucesso. No começo, esta nova forma de interagir com o computador e estes comandos podem parecer intimidantes, porém com o tempo e costume, a utilização da CLppI fará com que a navegabilidade se torne rápida e focada.
+Embora hoje em dia, quase todas as distribuições Linux possuam uma interface gráfica, o seu ponto forte é a \underline{interface de linha de comando}. A CLI (\textit{Command Line Interface}) não é baseada nos preceitos de \textit{mouse} + gráficos com os quais estamos acostumados. A sua utilização se faz através de comandos de texto. Para realizar tarefas como a criação de uma pasta, ou fazer a cópia de um arquivo, um comando será digitado em um console. Para executar a mesma ação do exemplo anterior, digitaríamos o comando: \com{mv local\_arquivo local\_destino}. O comando não retornaria resposta alguma, o que em um sistema Unix significa que tudo ocorreu com sucesso. No começo, esta nova forma de interagir com o computador e estes comandos podem parecer intimidantes, porém com o tempo e costume, a utilização da CLI fará com que a navegabilidade se torne rápida e focada.
 
 Além da navegação básica pelas pastas, os comandos da CLI também podem ser combinados de forma a executar tarefas complexas, como manipulação de arquivos ou gerenciamento de rede, atividades que em outros sistemas operacionais provavelmente teríamos que procurar por um programa na internet para realizá-las.\\
 
