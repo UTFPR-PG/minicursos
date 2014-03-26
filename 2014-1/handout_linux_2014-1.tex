@@ -168,7 +168,7 @@ Para criar um \textit{Live} CD basta baixar a \texttt{.iso} da distro desejada e
 Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instalá-lo. Algumas distros permitem instalar mesmo após ter sido iniciado como um \textit{Live} CD.
 
 \section{Instalação}
-Nesta seção serão discutidos alguns conceitos necessários para poder realizar uma instalação simples do Linux, seguidos de um pequeno guia. Os passos citados aqui servem para que o leitor se familiarize com os conceitos e idéias envolvidos na instalação de um sistema. Evite seguir estes passos à risca já que a sua situação pode variar. Recomenda-se conferir cada passo seguindo um guia específico ou buscando no \emph{Google}.
+Nesta seção serão discutidos alguns conceitos\footnote{Os passos citados aqui servem para que o leitor se familiarize com os conceitos e idéias envolvidos na instalação de um sistema. Evite seguir estes passos à risca já que a sua situação pode variar. Recomenda-se conferir cada passo seguindo um guia específico ou buscando no \emph{Google}} necessários para poder realizar uma instalação simples do Linux, seguidos de um pequeno guia (vide~\ref{guia}).
 
 Dependendo da distro Linux a ser instalada o método de instalação será diferente. Algumas distros têm instaladores gráficos como na figura~\ref{fig:ubuntu-live}, o que facilita a instalação, enquanto outras têm instaladores por linha de comando como na figura~\ref{fig:arch-installer}.
 
@@ -179,10 +179,18 @@ Dependendo da distro Linux a ser instalada o método de instalação será difer
     \label{fig:arch-installer}
 \end{figure}
 
-Vejamos agora alguns conceitos básicos necessários para a instalação.
+Independentemente da forma de instalação escolhida, existem alguns passos que serão executados na maioria dos casos:
+\begin{itemize}
+\item Particionamento.
+\item Formatação.
+\item Definição de pontos de montagem.
+\item Instalação do sistema.
+\end{itemize}
+
+Vejamos o que significam cada um destes conceitos básicos.
 
 \subsection{Particionamento}
-Um disco rígido é dividido em partições, como um quarteirão que possui varias casas, um HD é ``particionado'' em unidades menores. Um computador novo, que venha com o Windows instalado de fábrica, terá todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
+Um disco rígido é dividido em partições, como um quarteirão que possui várias casas, um HD é ``particionado'' em unidades menores. Um computador novo, que venha com o Windows instalado de fábrica, terá todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
 
 Uma boa prática\footnote{O particionamento depende muito da forma como o computador será utilizado. Existem várias estratégias para se manter a segurança entre os vários sistemas instalados em uma máquina, bem como questões de backup, etc.} é manter além da partição do Windows, mais duas partições para o Linux: uma para os programas (\texttt{20GB} para uma instalação pequena) e outra para os arquivos, de tamanho maior, principalmente se for utilizar o Linux para ouvir música ou ver filmes.
 
@@ -190,34 +198,30 @@ Uma boa prática\footnote{O particionamento depende muito da forma como o comput
 % É claro os tamanhos foram sugeridos imaginando que a pessoa usará o Linux apenas para a faculdade, o que a maioria fará... Um pouco menos de 10G é requisitado apenas para instalação base de algumas distros, os outros 10 ficam para o usuário encher de sabe-se lá o que...
 
 \subsection{Formatação}
-Cada partição tem um sistema de arquivo, que diz como cada informação deve ser guardada no disco, desse modo organizando-o. Sem um sistema de arquivos seria impossível dizer onde começa e termina cada ``coisa'' gravada no disco. O Windows usa um sistema de arquivo chamado de NTFS enquanto o Linux, nessa instalação, usará o EXT4.
+Cada partição tem um ``sistema de arquivos'', que diz como cada informação deve ser guardada no disco, desse modo organizando-o. Sem um sistema de arquivos seria impossível dizer onde começa e termina cada ``coisa'' gravada no disco. O Windows usa um sistema de arquivos chamado de NTFS enquanto o Linux, nessa instalação, usará o EXT4.
 
-O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, isto é, não existe \texttt{c:\textbackslash} no Linux, apenas `\texttt{/}' que é chamado de \texttt{root} ou raiz. Todo o resto do sistema é instalado a partir da raiz. Depois da raiz nos temos algumas pastas importantes por exemplo \texttt{/home} onde fica gravado todos ``dados'' do usuário como fotos, músicas, imagens, etc.
+O processo de apagar uma partição e definir nela um novo sistema de arquivos é chamado de formatação e é uma etapa necessária durante a instalação, já que não podemos esperar que o Linux funcione se as partições ainda estão no formato utilizado pelo Windows.
+
+\subsection{Pontos de montagem}
+O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, isto é, não existe \texttt{C:\textbackslash}, apenas `\texttt{/}' que é chamado de \texttt{root} ou raiz. Todo o resto do sistema é instalado a partir da raiz. Depois da raiz existem algumas pastas importantes, por exemplo \texttt{/home} onde ficam gravados todos ``dados'' do usuário como fotos, músicas, imagens, etc.
+
+A definição de pontos de montagem significa, de forma bastante simples, dizer quais destas pastas ficarão em quais das partições citadas anteriormente.
+
+\subsection{Instalação do sistema}
+Esta é a etapa em que se instala o sistema, propriamente dito. Geralmente será feita a instalação de um sistema básico a partir da \texttt{iso} e o resto dos programas será baixado da \textit{internet}.
+
+\section{Guia de instalação}\label{guia}
+Esta seção contém um passo a passo mais detalhado do processo de instalação. Conforme já mencionamos, lembre-se sempre de buscar na \textit{internet} pela solução mais adequada ao seu caso.
 
 \subsection{Windows}
-A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Se o computador tiver apenas o \texttt{c:\textbackslash} será essa partição que iremos diminuir, caso haja mais \emph{drives} (letrinhas seguidas de \texttt{:\textbackslash}) você pode escolher a maior partição para diminuir.
+A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Isso pode ser feito pelo Gerenciador de Disco. Se o computador tiver apenas o \texttt{C:\textbackslash} será essa partição que iremos diminuir, caso haja mais \emph{drives} você pode escolher a maior partição para diminuir. Escolha o espaço para diminuir, clicando com o botão direito sobre a unidade e em diminuir volume. Ao final do processo, se tudo correu bem, deve haver um espaço não alocado no disco. Este é o espaço onde instalaremos o Linux.
 
-\begin{itemize}
-    \item Abra o gerenciador de disco.
-    \item Procure a partição com maior tamanho, clique com o direito e em diminuir volume.
-    \item Escolha o espaço para diminuir, sugerimos 20GB.
-    \item Espere terminar, se tudo ocorreu bem, deve haver um espaço não alocado no disco.
-\end{itemize}
-
-Após gravar a iso da distro desejada em um mídia como CD ou pendrive, pode-se usar o programa \emph{UNetbootin} para isso, deve-se inicializar o sistema a partir dessa iso. O mais comum seria colocar a iso no PC e este inicializar automaticamente a iso, caso isso não acontece é necessário trocar a ordem de boot.
-
-\begin{itemize}\label{itm:boot-order}
-    \item Abra a \texttt{BIOS}\@. Quando o computador estiver ligando aperte a tecla \emph{f12} ou \emph{esc}. Caso nenhuma delas funcione procure a tecla para o seu modelo.
-    \item Vá atá a seção \texttt{BOOT}.
-    \item Coloque em primeiro a opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a \texttt{BIOS} não ira carregar o Linux.
-    \item Reinicie.
-\end{itemize}
+Agora, precisamos inicializar o sistema a partir da \texttt{iso}\footnote{Deve ter sido gravada em um mídia como CD ou pendrive, através de um programa como, por exemplo, o \emph{UNetbootin}} da distro desejada. Para isso, deve-se reiniciar o computador e pressionar a tecla \emph{f12} quando ele estiver ligando. Isso irá exibir um menu que controla a ordem na qual os dispositivos são lidos em busca de uma imagem para \textit{boot}. Coloque em primeiro a opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a \texttt{BIOS} não ira carregar o Linux.
 
 \subsection{Linux}
+Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instalar. Aqui será feita a instalação do Elementary OS, entretanto o seu instalador deve possuir opções parecidas.
 
-Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instalar. Aqui será feita a instalação do Elementary OS, entretanto o seu instalador deve possuir opções parecidas. Já mencionamos antes, os passos citados podem variar então prepare o \emph{google-fu}.
-
-Após o Linux iniciar escolha a língua desejada para a instalação, neste caso inglês, depois escolha a opção instalar. Veja a figura~\ref{fig:elementary-menu}.
+Após o Linux iniciar escolha o idioma desejado para a instalação, neste caso inglês, depois escolha a opção instalar. Veja a figura~\ref{fig:elementary-menu}.
 
 \begin{figure}[H]
   \centering
@@ -226,9 +230,11 @@ Após o Linux iniciar escolha a língua desejada para a instalação, neste caso
   \label{fig:elementary-menu}
 \end{figure}
 
-Uma tela mostrando os requisitos para o sistema ser instalado aparecerá, normalmente uma quantidade de memória disponível, estar conectado a uma fonte de alimentação e estar conectado a internet. Em algumas distros algumas opções a mais podem aparecer como: Instalar \textit{software} não \textit{OSS} (\textit{Open-Source Software}), marque se quiser ouvir mp3 ou usar o flash, outra opção comum é baixar \textit{software} durante a instalação, isto irá garantir que os softwares mais novos sejam instalados, entretanto é necessário uma conexão com a internet.
+Uma tela mostrando os requisitos para o sistema a ser instalado aparecerá, normalmente quantidade de memória necessária, estar conectado a uma fonte de alimentação e estar conectado à \textit{internet}.
 
-Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalação. A primeira irá apagar todo o HD e instalar o Linux, escolha APENAS se quiser APAGAR O WINDOWS, caso contrario escolha a segunda o que nós levará a escolher onde instalar o Linux.
+É comum é baixar \textit{software} durante a instalação, isto irá garantir que os softwares mais novos sejam instalados, entretanto é necessário uma conexão com a \textit{internet}.
+
+Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalação. A primeira irá apagar todo o HD e instalar o Linux, escolha APENAS se quiser APAGAR O WINDOWS, caso contrário escolha a segunda o que nós levará a escolher onde instalar o Linux.
 
 \begin{figure}[H]
   \centering
@@ -237,7 +243,7 @@ Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalaçã
   \label{fig:elementary-install}
 \end{figure}
 
-Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \texttt{/dev/sda}, a sua instalação possivelmente mostrará uma nome diferente. Escolha \textit{free space} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada abrirá como pode-se ver na figura~\ref{fig:elementary-root}. Altere o tamanho, aqui usamos \texttt{20GB}, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `\texttt{/}'. Essa partição criada é a raiz do sistema, todo o resto será instalado a partir dela.
+Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \texttt{/dev/sda}, a sua instalação possivelmente mostrará um nome diferente. Escolha \textit{free space} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada abrirá como pode-se ver na figura~\ref{fig:elementary-root}. Altere o tamanho, aqui usamos \texttt{20GB}, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `\texttt{/}'. Essa partição criada é a raiz do sistema, todo o resto será instalado a partir dela.
 
 \begin{figure}[H]
   \centering
