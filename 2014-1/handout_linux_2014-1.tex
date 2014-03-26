@@ -67,7 +67,7 @@ Numa configuração monolítica (Linux, Windows, etc), os programas rodam em ``e
 A figura~\ref{fig:kernel} exemplifica a arquitetura básica de um sistema Linux:
 \begin{figure}[!h]
   \centering
-  \includegraphics[scale=.8]{imagens/kernel.jpg}
+  \includegraphics[]{imagens/kernel.jpg}
   \caption{Arquitetura de um sistema GNU/Linux}
   \label{fig:kernel}
 \end{figure}
@@ -167,11 +167,11 @@ Para criar um \textit{Live} CD basta baixar a \texttt{.iso} da distro desejada e
 Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instalá-lo. Algumas distros permitem instalar mesmo após ter sido iniciado como um \textit{Live} CD.
 
 \section{Instalação}
-Nesta seção serão discutidos alguns conceitos\footnote{Os passos citados aqui servem para que o leitor se familiarize com os conceitos e idéias envolvidos na instalação de um sistema. Evite seguir estes passos à risca já que a sua situação pode variar. Recomenda-se conferir cada passo seguindo um guia específico ou buscando no \emph{Google}} necessários para poder realizar uma instalação simples do Linux, seguidos de um pequeno guia (vide~\ref{guia}).
+Nesta seção serão discutidos alguns conceitos\footnote{Os passos citados aqui servem para que o leitor se familiarize com os conceitos e idéias envolvidos na instalação de um sistema. Evite seguir estes passos à risca já que a sua situação pode variar. Recomenda-se conferir cada passo seguindo um guia específico ou buscando no \emph{Google}} necessários para poder realizar uma instalação simples do Linux, seguidos de um pequeno guia (vide seção~\ref{guia}).
 
 Dependendo da distro Linux a ser instalada o método de instalação será diferente. Algumas distros têm instaladores gráficos como na figura~\ref{fig:ubuntu-live}, o que facilita a instalação, enquanto outras têm instaladores por linha de comando como na figura~\ref{fig:arch-installer}.
 
-\begin{figure}[H]
+\begin{figure}[h]
     \centering
     \includegraphics[scale=.5]{imagens/arch-install-01.png}
     \caption{Instalação da distro Arch, exemplo de instalador por linha de comando.}
@@ -220,68 +220,57 @@ Agora, precisamos inicializar o sistema a partir da \texttt{iso}\footnote{Deve t
 \subsection{Linux}
 Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instalar. Aqui será feita a instalação do Elementary OS, entretanto o seu instalador deve possuir opções parecidas.
 
-Após o Linux iniciar escolha o idioma desejado para a instalação, neste caso inglês, depois escolha a opção instalar. Veja a figura~\ref{fig:elementary-menu}.
-
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=.4]{imagens/elementary-install-01.png}
+  \includegraphics[scale=.31]{imagens/elementary-install-01.png}
   \caption{Menu de instalação da Elementary OS\@.}
   \label{fig:elementary-menu}
 \end{figure}
 
+Após o Linux iniciar escolha o idioma desejado para a instalação, neste caso inglês, depois escolha a opção instalar. Veja a figura~\ref{fig:elementary-menu}.
+
 Uma tela mostrando os requisitos para o sistema a ser instalado aparecerá, normalmente indicando a quantidade de memória necessária, e lembrando que se deve estar conectado a uma fonte de alimentação.
 É comum é baixar \textit{software} durante a instalação, isto irá garantir que os programas mais novos sejam instalados, portanto, garanta também, uma conexão com a \textit{internet}.
 
-Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalação. A primeira irá apagar todo o HD e instalar o Linux, escolha APENAS se quiser APAGAR O WINDOWS, caso contrário escolha a segunda o que nós levará a escolher onde instalar o Linux.
+Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalação. A primeira irá apagar todo o HD e instalar o Linux, escolha apenas se quiser \emph{apagar} o Windows, caso contrário escolha a segunda o que nós levará a escolher onde instalar o Linux.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=.3]{imagens/elementary-install-03.png}
+  \includegraphics[scale=.6]{imagens/elementary-install-03.png}
   \caption{Tipos de instalação da Elementary OS\@.}
   \label{fig:elementary-install}
 \end{figure}
 
-Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \texttt{/dev/sda}, a sua instalação possivelmente mostrará um nome diferente. Escolha \textit{free space} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada abrirá como pode-se ver na figura~\ref{fig:elementary-root}. Altere o tamanho, aqui usamos \texttt{20GB}, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `\texttt{/}'. Essa partição criada é a raiz do sistema, todo o resto será instalado a partir dela.
+A seguir realizaremos o processo de particionamento, formatação e definição dos pontos de montagem para o Linux. Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \texttt{/dev/sda}, a sua instalação possivelmente mostrará um nome diferente. Escolha \textit{free space} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada se abrirá. Altere o tamanho da partição, aqui usamos \texttt{20GB}, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `\texttt{/}'. Essa partição criada é a raiz do sistema.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=.3]{imagens/elementary-install-05.png}
+  \includegraphics[scale=.6]{imagens/elementary-install-05.png}
   \caption{Criação da partição onde ficará a `\texttt{/}' raiz do sistema.}
   \label{fig:elementary-root}
 \end{figure}
 
-Agora será perguntada algumas opções mais simples, como o fuso horário e \textit{layout} do teclado. Finalmente você será levada a tela para configurar um novo usuário como na figura~\ref{fig:elementary-info}. Não existe muitas regras aqui, preencha as informações de forma coerente. Finalmente espera a instalação acabar, o pc será reiniciado. Retire a mídia de instalação do PC\@. Se tudo ocorreu de forma correta você será levada para uma tela de login, o que significa que o Linux foi instalado com sucesso.
+Caso você tenha diminuído a partição do Windows suficientemente, além da recém criada partição de \texttt{20GB}, ainda haverá algum espaço não alocado no disco. Repita o processo citado acima para a partição onde ficará sua \textit{home} selecionando o tamanho desejado, tipo de sistemas de arquivo EXT4 e ponto de montagem \texttt{/home}.
+
+Acomode quaisquer outras partições que deseja utilizar no disco e certifique-se de que as alterações realizadas estão corretas (o HD correto está sendo usado? as partições têm o tamanho desejado? os pontos de montagem foram atribuídos de forma correta?) já que quando as informações de particionamento forem gravadas no disco, na maioria das vezes as partições são reformatadas.
+
+Na tela seguinte serão perguntadas algumas opções mais simples, como o fuso horário e \textit{layout} do teclado. Finalmente você será levado à tela para configurar um novo usuário como na figura~\ref{fig:elementary-info}. Não existem muitas regras aqui, preencha as informações de forma coerente. Finalmente espere a instalação acabar e o computador será reiniciado. Retire a mídia de instalação do PC\@. Se tudo ocorreu de forma correta você será levado para uma tela de login, o que significa que o Linux foi instalado com sucesso.
 
 \begin{figure}[h]
   \centering
-  \includegraphics[scale=.3]{imagens/elementary-install-10.png}
+  \includegraphics[scale=.5]{imagens/elementary-install-10.png}
   \caption{Criando um usuário.}
   \label{fig:elementary-info}
 \end{figure}
 
-\section{Porque usar?}
-Existem algumas características dos sistemas baseados em Linux que fazem com que eles sejam atrativos para o uso na Ciência da Computação. Pode-se dizer que um sistema Linux possui foco nos desenvolvedores de sistemas enquanto que outros sistemas operacionais possuem foco no usuário.
 
-\subsection{Familiaridade geral com termos e conceitos}
-Pelo fato de se basear em software de código aberto, existem muitos conceitos teóricos da computação que podem ser verificados muito facilmente quando se usa Linux. Um exemplo simples é o próprio \textit{kernel}, que é escrito na linguagem C. Ao estudar programação ou Sistemas Operacionais, o código do \textit{kernel} pode ser explorado para que se entenda como os conceitos estudados são aplicados em um sistema operacional ``de verdade''.
-
-Outro exemplo são as aplicações na área de Redes de Computadores, que em sua maioria se baseiam em Linux. Ao usar Linux no seu dia a dia, você já estará se familiarizando com alguns conceitos nesta área.
-
-\subsection{Aprendizado de boas práticas}
-O uso contínuo do sistema pode levar ao conhecimento de boas práticas de programação. Um bom exemplo é a ``filosofia'' de se projetar programas que façam apenas uma tarefa, mas a façam de maneira bem feita.
-
-Outro ponto que se pode ressaltar é o fato de o Linux ser bastante documentado. Isso significa que os programas possuem um manual de instruções de utilização. Acostumar-se a ler manuais e pesquisar sobre funções desconhecidas é um ponto importante dentro da computação, já que constantemente nos deparamos com código escrito por outras pessoas ou situações novas nas quais não possuímos domínio. Saber buscar informação nos lugares certos é algo valioso.
-
-\subsection{Gerenciamento de pacotes}
-Além dos benefícios dentro da computação, as distribuições Linux também trazem algumas funcionalidades que são úteis para qualquer pessoa. O gerenciamento de pacotes é uma delas.
-
-Normalmente, as distribuições Linux aplicam o conceito de ``pacote''. Um pacote nada mais é que um programa preparado para ser instalado em seu sistema. Pacotes são específicos para cada distribuição e garantem que programas serão instalados e desinstalados de forma correta. Além disso, há o conceito de ``repositórios'' que são servidores que abrigam vários pacotes. A vantagem dessa abordagem é que quando se quer instalar um programa, ao invés de se procurar em um site de busca pelo programa que se deseja, baixar um executável e instalar o programa; um usuário Linux pode simplesmente digitar o nome do programa em seu gerenciador de pacotes que irá automaticamente percorrer os repositórios procurando pelo pacote correto, mais atual e com garantia de idoneidade. Isto mantém o sistema muito fácil de gerenciar, já que o gerenciador de pacotes toma conta de tudo. Os pacotes também são, em geral, submetidos ao julgamento da comunidade de usuários do sistema, tornando pacotes ``quebrados'' ou com código malicioso mais difíceis de serem encontrados.
+Vejamos agora alguns conceitos básicos de utilização do seu novo sistema Linux.
 
 \section{Uso da linha de comando}
 
 Quando utilizamos um computador, estamos acostumados a usar a \underline{interface gráfica}. Isso significa que fazemos bastante uso do \textit{mouse} para acessar as variadas funções do sistema e os resultados das nossas ações são exibidos na tela de maneira muito clara. Ex: ao mover um arquivo, podemos simplesmente clicar sobre ele e arrastá-lo para outra pasta. Esta interação é feita de maneira muito intuitiva.
 
-Embora hoje em dia, quase todas as distribuições Linux possuam uma interface gráfica, o seu ponto forte é a \underline{interface de linha de comando}. A CLI (\textit{Command Line Interface}) não é baseada nos preceitos de \textit{mouse} + gráficos com os quais estamos acostumados. A sua utilização se faz através de comandos de texto. Para realizar tarefas como a criação de uma pasta, ou fazer a cópia de um arquivo, um comando será digitado em um console. Para executar a mesma ação do exemplo anterior, digitaríamos o comando: \com{mv local\_arquivo local\_destino}. O comando não retornaria resposta alguma, o que em um sistema Unix significa que tudo ocorreu com sucesso. No começo, esta nova forma de interagir com o computador e estes comandos podem parecer intimidantes, porém com o tempo e costume, a utilização da CLI fará com que a navegabilidade se torne rápida e focada.
+Embora hoje em dia, quase todas as distribuições Linux possuam uma interface gráfica, o seu ponto forte é a \underline{interface de linha de comando}. A CLI (\textit{Command Line Interface}) não é baseada nos preceitos de \textit{mouse} + gráficos com os quais estamos acostumados. A sua utilização se faz através de comandos de texto. Para realizar tarefas como a criação de uma pasta, ou fazer a cópia de um arquivo, um comando será digitado em um console. Para executar a mesma ação do exemplo anterior, digitaríamos o comando: \com{mv local\_arquivo local\_destino}. O comando não retornaria resposta alguma, o que em um sistema Unix significa que tudo ocorreu com sucesso. No começo, esta nova forma de interagir com o computador e estes comandos podem parecer intimidantes, porém com o tempo e costume, a utilização da CLppI fará com que a navegabilidade se torne rápida e focada.
 
 Além da navegação básica pelas pastas, os comandos da CLI também podem ser combinados de forma a executar tarefas complexas, como manipulação de arquivos ou gerenciamento de rede, atividades que em outros sistemas operacionais provavelmente teríamos que procurar por um programa na internet para realizá-las.\\
 
@@ -357,14 +346,34 @@ Há outros comandos que são interessantes:
 \item\cominline{tar -xf Arquivo.tar.gz} - Extrair arquivos de um \texttt{.tar.gz}.
 \end{itemize}
 
+As ferramentas de linha de comando são inúmeras e permitem ao desenvolvedor ou administrador de redes um controle avançado sobre um sistema ou conjunto de sistemas. Vale a pena dedicar algum tempo para o aprendizado destas ferramentas já que elas aumentam o volume e agilidade com que se consegue trabalhar. A seguir, veremos mais alguns motivos para utilizar um sistema Linux.
+
+\section{Porque usar?}
+Existem algumas características dos sistemas baseados em Linux que fazem com que eles sejam atrativos para o uso na Ciência da Computação. Pode-se dizer que um sistema Linux possui foco nos desenvolvedores de sistemas enquanto que outros sistemas operacionais possuem foco no usuário.
+
+\subsection{Familiaridade geral com termos e conceitos}
+Pelo fato de se basear em software de código aberto, existem muitos conceitos teóricos da computação que podem ser verificados muito facilmente quando se usa Linux. Um exemplo simples é o próprio \textit{kernel}, que é escrito na linguagem C. Ao estudar programação ou Sistemas Operacionais, o código do \textit{kernel} pode ser explorado para que se entenda como os conceitos estudados são aplicados em um sistema operacional ``de verdade''.
+
+Outro exemplo são as aplicações na área de Redes de Computadores, que em sua maioria se baseiam em Linux. Ao usar Linux no seu dia a dia, você já estará se familiarizando com alguns conceitos nesta área.
+
+\subsection{Aprendizado de boas práticas}
+O uso contínuo do sistema pode levar ao conhecimento de boas práticas de programação. Um bom exemplo é a ``filosofia'' de se projetar programas que façam apenas uma tarefa, mas a façam de maneira bem feita.
+
+Outro ponto que se pode ressaltar é o fato de o Linux ser bastante documentado. Isso significa que os programas possuem um manual de instruções de utilização. Acostumar-se a ler manuais e pesquisar sobre funções desconhecidas é um ponto importante dentro da computação, já que constantemente nos deparamos com código escrito por outras pessoas ou situações novas nas quais não possuímos domínio. Saber buscar informação nos lugares certos é algo valioso.
+
+\subsection{Gerenciamento de pacotes}
+Além dos benefícios dentro da computação, as distribuições Linux também trazem algumas funcionalidades que são úteis para qualquer pessoa. O gerenciamento de pacotes é uma delas.
+
+Normalmente, as distribuições Linux aplicam o conceito de ``pacote''. Um pacote nada mais é que um programa preparado para ser instalado em seu sistema. Pacotes são específicos para cada distribuição e garantem que programas serão instalados e desinstalados de forma correta. Além disso, há o conceito de ``repositórios'' que são servidores que abrigam vários pacotes. A vantagem dessa abordagem é que quando se quer instalar um programa, ao invés de se procurar em um site de busca pelo programa que se deseja, baixar um executável e instalar o programa; um usuário Linux pode simplesmente digitar o nome do programa em seu gerenciador de pacotes que irá automaticamente percorrer os repositórios procurando pelo pacote correto, mais atual e com garantia de idoneidade. Isto mantém o sistema muito fácil de gerenciar, já que o gerenciador de pacotes toma conta de tudo. Os pacotes também são, em geral, submetidos ao julgamento da comunidade de usuários do sistema, tornando pacotes ``quebrados'' ou com código malicioso mais difíceis de serem encontrados.
+
 \section{Passos seguintes}
 Como já mencionado anteriormente, os conceitos aqui apresentados servem apenas como um direcionamento inicial. Espera-se que o leitor continue a buscar fundamentação teórica sobre o uso e funcionamento de sistemas operacionais como um todo. As referências apresentadas a seguir podem servir como um ponto de partida.
 
-Recomenda-se que o usuário experimente com várias instalações e configurações de sistema diferentes e que durante o seu processo de aprendizagem faça uso intensivo de sites de busca e dos manuais e outros tipos de documentação disponíveis na Internet. O uso das máquinas virtuais como um ``local seguro'' para experimentos também é incentivado.
+Recomenda-se que o usuário experimente com várias instalações e configurações de sistemas diferentes e que durante o seu processo de aprendizagem faça uso intensivo de \textit{sites} de busca e dos manuais e outros tipos de documentação disponíveis na Internet. O uso das máquinas virtuais como um ``local seguro'' para experimentos também é incentivado.
 
 Outro ponto importante de ser ressaltado é que embora, em alguns momentos, o uso de sistemas Unix e software livre em geral possa parecer difícil ou complicado, o conhecimento e aprofundamento nestes tópicos com certeza trará frutos para sua vida acadêmica e profissional.
 
-Desta forma, os autores deste documento colocam-se à disposição para o suporte e esclarecimento de dúvidas gerais através da lista de email~\url{psl_pg@googlegroups.com}.
+Desta forma, os autores deste documento colocam-se à disposição para o suporte e esclarecimento de dúvidas gerais através da lista de emails~\url{psl_pg@googlegroups.com}.
 
 \nocite{Tanenbaum:2007:MOS:1410217}
 \nocite{shotts2012linux}
