@@ -7,7 +7,6 @@
 \usepackage[hidelinks]{hyperref}
 \usepackage[alf]{abntex2cite}
 \usepackage{url}
-\usepackage{float} % Permite usar [H] nas imagens.
 \definecolor{dark-gray}{gray}{0.20}
 \definecolor{light-gray}{gray}{0.85}
 
@@ -214,7 +213,7 @@ Esta é a etapa em que se instala o sistema, propriamente dito. Geralmente será
 Esta seção contém um passo a passo mais detalhado do processo de instalação. Conforme já mencionamos, lembre-se sempre de buscar na \textit{internet} pela solução mais adequada ao seu caso.
 
 \subsection{Windows}
-A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Isso pode ser feito pelo Gerenciador de Disco. Se o computador tiver apenas o \texttt{C:\textbackslash} será essa partição que iremos diminuir, caso haja mais \emph{drives} você pode escolher a maior partição para diminuir. Escolha o espaço para diminuir, clicando com o botão direito sobre a unidade e em diminuir volume. Ao final do processo, se tudo correu bem, deve haver um espaço não alocado no disco. Este é o espaço onde instalaremos o Linux.
+A primeira coisa a fazer é reduzir o tamanho de uma partição para liberar espaço. Isso pode ser feito pelo Gerenciador de Disco do Windows. Se o computador tiver apenas o \texttt{C:\textbackslash} será essa partição que iremos diminuir, caso haja mais \emph{drives} você pode escolher a maior partição para diminuir. Escolha o espaço para diminuir, clicando com o botão direito sobre a unidade e em diminuir volume. Ao final do processo, se tudo correu bem, deve haver um espaço não alocado no disco. Este é o espaço onde instalaremos o Linux.
 
 Agora, precisamos inicializar o sistema a partir da \texttt{iso}\footnote{Deve ter sido gravada em um mídia como CD ou pendrive, através de um programa como, por exemplo, o \emph{UNetbootin}} da distro desejada. Para isso, deve-se reiniciar o computador e pressionar a tecla \emph{f12} quando ele estiver ligando. Isso irá exibir um menu que controla a ordem na qual os dispositivos são lidos em busca de uma imagem para \textit{boot}. Coloque em primeiro a opção iniciar da mídia desejada, CD ou pendrive, caso a opção errada seja colocada a \texttt{BIOS} não ira carregar o Linux.
 
@@ -223,20 +222,19 @@ Agora o Linux deve ter sido iniciado, espere acabar de carregar e escolha instal
 
 Após o Linux iniciar escolha o idioma desejado para a instalação, neste caso inglês, depois escolha a opção instalar. Veja a figura~\ref{fig:elementary-menu}.
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
-  \includegraphics[scale=.3]{imagens/elementary-install-01.png}
+  \includegraphics[scale=.4]{imagens/elementary-install-01.png}
   \caption{Menu de instalação da Elementary OS\@.}
   \label{fig:elementary-menu}
 \end{figure}
 
-Uma tela mostrando os requisitos para o sistema a ser instalado aparecerá, normalmente quantidade de memória necessária, estar conectado a uma fonte de alimentação e estar conectado à \textit{internet}.
-
-É comum é baixar \textit{software} durante a instalação, isto irá garantir que os softwares mais novos sejam instalados, entretanto é necessário uma conexão com a \textit{internet}.
+Uma tela mostrando os requisitos para o sistema a ser instalado aparecerá, normalmente indicando a quantidade de memória necessária, e lembrando que se deve estar conectado a uma fonte de alimentação.
+É comum é baixar \textit{software} durante a instalação, isto irá garantir que os programas mais novos sejam instalados, portanto, garanta também, uma conexão com a \textit{internet}.
 
 Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalação. A primeira irá apagar todo o HD e instalar o Linux, escolha APENAS se quiser APAGAR O WINDOWS, caso contrário escolha a segunda o que nós levará a escolher onde instalar o Linux.
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
   \includegraphics[scale=.3]{imagens/elementary-install-03.png}
   \caption{Tipos de instalação da Elementary OS\@.}
@@ -245,7 +243,7 @@ Na figura~\ref{fig:elementary-install} podemos ver dois ``tipos'' de instalaçã
 
 Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \texttt{/dev/sda}, a sua instalação possivelmente mostrará um nome diferente. Escolha \textit{free space} e clique no botão `+', isto irá criar uma nova partição. Um menu com as opções para a partição a ser criada abrirá como pode-se ver na figura~\ref{fig:elementary-root}. Altere o tamanho, aqui usamos \texttt{20GB}, o tipo do sistema de arquivo para EXT4 e em ponto de montagem escolha `\texttt{/}'. Essa partição criada é a raiz do sistema, todo o resto será instalado a partir dela.
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
   \includegraphics[scale=.3]{imagens/elementary-install-05.png}
   \caption{Criação da partição onde ficará a `\texttt{/}' raiz do sistema.}
@@ -254,7 +252,7 @@ Na imagem~\ref{fig:elementary-root} é possível ver o HD identificado como \tex
 
 Agora será perguntada algumas opções mais simples, como o fuso horário e \textit{layout} do teclado. Finalmente você será levada a tela para configurar um novo usuário como na figura~\ref{fig:elementary-info}. Não existe muitas regras aqui, preencha as informações de forma coerente. Finalmente espera a instalação acabar, o pc será reiniciado. Retire a mídia de instalação do PC\@. Se tudo ocorreu de forma correta você será levada para uma tela de login, o que significa que o Linux foi instalado com sucesso.
 
-\begin{figure}[H]
+\begin{figure}[h]
   \centering
   \includegraphics[scale=.3]{imagens/elementary-install-10.png}
   \caption{Criando um usuário.}
