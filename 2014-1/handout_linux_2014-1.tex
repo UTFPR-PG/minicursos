@@ -4,6 +4,7 @@
 \usepackage{pbox}
 \usepackage[brazil]{babel}
 \usepackage{xcolor}
+\usepackage[hidelinks]{hyperref}
 \usepackage[alf]{abntex2cite}
 \usepackage{url}
 \usepackage{float} % Permite usar [H] nas imagens.
@@ -29,16 +30,12 @@ Este material é apresentado como parte de uma série de minicursos que serão m
 Os conteúdos são dispostos aqui apenas como um apanhado geral com o objetivo de prover um embasamento mínimo e recomenda-se que outras fontes de pesquisa sejam utilizadas para o aprofundamento nestes assuntos.
 
 \subsection{Unix}
-O sistema \textbf{Unix} é um sistema operacional desenvolvido por Ken Thompson, Dennis Ritchie, Douglas McIlroy e Joe Ossanna em 1970, na American Telephone \& Telegraph Company (AT\&T).
+O sistema \textbf{Unix} é um sistema operacional desenvolvido por Ken Thompson, Dennis Ritchie, Douglas McIlroy e Joe Ossanna em 1970, na American Telephone \& Telegraph Company (AT\&T). Este sistema foi projetado para ser portável, multi-tarefa e multi-usuário.
 
-Este sistema foi projetado para ser portável, multi-tarefa e multi-usuário. Sistemas Unix são caracterizados por vários conceitos, como o uso de arquivos de texto para guardar dados, um sistema de arquivos hierárquico, o tratamento de certos dispositivos como arquivos e a idéia de que é melhor ter vários programas pequenos, cada um desempenhando uma única tarefa, de forma que eles possam ser encadeados para realizar uma tarefa maior do que o uso de um só programa que possua todas as funcionalidades. Estes conceitos são conhecidos como a ``filosofia Unix''.
-
-% que permitia uma grande portabilidade para diversas plataformas, o que fez com que o sistema crescesse rapidamente e fosse muito utilizado por instituições academicas. O sistema Unix gerou a criação do projeto GNU por Richard Stallman.
-
-% Under Unix, the operating system consists of many utilities along with the master control program, the kernel. The kernel provides services to start and stop programs, handles the file system and other common "low level" tasks that most programs share, and schedules access to avoid conflicts when programs try to access the same resource or device simultaneously. To mediate such access, the kernel has special rights, reflected in the division between user-space and kernel-space.
+Sistemas Unix são caracterizados por vários conceitos, como o uso de arquivos de texto para guardar dados, um sistema de arquivos hierárquico, o tratamento de certos dispositivos como arquivos e a idéia de que é melhor ter vários programas pequenos, cada um desempenhando uma única tarefa, de forma que eles possam ser encadeados para realizar uma tarefa maior do que o uso de um só programa que possua todas as funcionalidades. Estes conceitos são conhecidos como a ``filosofia Unix''.
 
 \subsection{Tanenbaum e o MINIX}
-Em 1987, Andrew S. Tanenbaum, enquanto professor da Vrije Universiteit em Amsterdã, desenvolveu o \textbf{MINIX} (mini-Unix), um sistema que seguia os mesmos princípios do Unix mas que seria usado somente propósitos educacionais, como material de apoio ao seu livro ``Operating Systems: Design and Implementation'' (em português: ``Sistemas Operacionais: Projeto e Implementação'').
+Em 1987, Andrew S. Tanenbaum, enquanto professor da Vrije Universiteit em Amsterdã, desenvolveu o \textbf{MINIX} (mini-Unix), um sistema que seguia os mesmos princípios do Unix mas que seria usado somente para propósitos educacionais, como material de apoio ao seu livro ``Operating Systems: Design and Implementation'' (em português: ``Sistemas Operacionais: Projeto e Implementação'').
 
 Os princípios aplicados por Tanenbaum no MINIX, influenciaram Linus Torvalds quando da criação de seu próprio sistema operacional, que mais tarde se tornaria o \textit{kernel} do \textbf{Linux}.
 
@@ -57,7 +54,7 @@ Os princípios aplicados por Tanenbaum no MINIX, influenciaram Linus Torvalds qu
 \section{Conhecendo o Linux}
 
 \subsection{GNU/Linux}
-Embora a maioria das pessoas conheça apenas o termo Linux, a nomenclatura mais acurada para o sistema que se usa nos dias de hoje é ``GNU/Linux''. Isso se dá devido ao fato de que a maioria das distribuições Linux (vide~\ref{distro}) na verdade contêm o \textit{kernel} (vide~\ref{kernel}) do Linux em conjunto com \textit{softwares} GNU.
+Embora a maioria das pessoas conheça apenas o termo Linux, a nomenclatura mais correta para o sistema que se usa nos dias de hoje é ``GNU/Linux''. Isso se dá devido ao fato de que a maioria das distribuições Linux (vide~\ref{distro}) na verdade contêm o \textit{kernel} (vide~\ref{kernel}) do Linux em conjunto com \textit{softwares} GNU.
 
 O projeto GNU foi iniciado em setembro de 1983 por Richard Stallman, enquanto trabalhava no laboratório de inteligência artificial do Massachusetts Institute of Technology (MIT). O intuito do projeto é criar um ambiente de colaboração em que usuários de computadores possam ter acesso a programas que são distribuídos juntamente com o seu código-fonte (\textit{software} livre). A idéia da disseminação do \textit{software} livre é dar aos seus usuários total controle sobre os programas que são utilizados, ao contrário do \textit{software} proprietário, em que é provido o executável, mas não há como realizar modificações, nem mesmo saber o conteúdo do código que gerou o mesmo.
 
@@ -90,20 +87,29 @@ Outra distinção importante que deve ser feita é quanto ao conceito de \textit
 A maioria das distribuições já provê um DE e um WM, porém algumas delas trazem apenas os programas essenciais, ficando a instalação da parte gráfica a cargo do usuário. É importante entender a diferença entre \textit{distro}, \textit{desktop environment} e \textit{window manager} para que no caso de um problema ou caso alguma funcionalidade não lhe agrade, você saiba exatamente em qual parte do sistema está o problema.
 
 \section{Como obter?}
-A maioria das distribuições Linux é disponibilizada grátis na \textit{internet} na forma de imagens \texttt{.iso}. Para a instalação, as seguintes alternativas existem:
+A forma mais comum de obtenção do Linux é através da seção de \textit{downloads} dos \textit{sites} das empresas ou entidades que mantém as distribuições. A maioria delas é disponibilizada grátis na forma de imagens \texttt{.iso} que podem ser gravadas em um CD ou \textit{pendrive} para a instalação. Para uma lista das distribuições existentes, consulte \url{http://en.wikipedia.org/wiki/List_of_Linux_distributions}.
+  
+\section{Formas de uso}
+Um dos maiores problemas para uma pessoa que está começando a usar uma tecnologia diferente é o vínculo com a tecnologia usada anteriormente, ou seja, ao se começar a usar Linux, a maior dificuldade que se encontra é a falta do outro sistema (geralmente Windows). Apresenta-se, aqui, algumas estratégias de uso que podem ser seguidas para minimizar este problema.
+
+
+Para a instalação e uso, existem as seguintes alternativas:
 
 \begin{enumerate}
-\item Manter o sistema operacional nativo e rodar Linux em uma máquina virtual.\\
+\item \label{1}Manter o sistema operacional nativo e rodar Linux em uma máquina virtual.\\
   Recomendado para testes iniciais, antes de se decidir por uma distribuição.
 
-\item Manter o sistema operacional nativo e o Linux em dual-boot.\\
+\item Manter o sistema operacional nativo e o Linux em \textit{dual-boot}.\\
   Recomendado para aqueles que usam com frequência as funcionalidades do sistema nativo, como jogos ou \textit{softwares} proprietários não disponíveis para Linux.
 
 \item Remover o sistema nativo e usar somente Linux.\\
   Recomendado para aqueles que já tem certa experiência com Linux e não necessitam de outro sistema operacional.
 
 \item Trocar o sistema nativo pelo Linux e rodar o sistema antigo em uma máquina virtual.\\
-  Para aqueles que já optaram por usar Linux, mas que em uma pequena fração do tempo, ainda precisam de funcionalidades do outro sistema.
+  O inverso da opção \ref{1}. Para aqueles que já optaram por usar Linux, mas que em uma pequena fração do tempo, ainda precisam de funcionalidades do outro sistema.
+  
+\item Uso de um Live CD.\\
+  Para quando se quer testar distribuições Linux, ou para quando se deseja usar as ferramentas presentes no Linux para fazer algum tipo de verificação ou manutenção no \textit{hardware} da máquina.
 \end{enumerate}
 
 \subsection{Máquina Virtual}
@@ -117,7 +123,7 @@ Uma máquina virtual (\emph{VM}) é, como o nome indica, um computador virtual b
   \label{fig:vm}
 \end{figure}
 
-Observe a imagem~\ref{fig:vm}. Nela pode-se ver um sistema Windows (XP) servindo como base para outro sistema Windows (Win 7) rodando dentro da VM\@. Para efeitos de nomenclatura, chama-se de \textit{host} o sistema que está como base para executar a máquina virtual e \textit{guest} o sistema que está sendo emulado na VM\@. No exemplo acima, o \textit{host} é definido pelo Windows XP, enquanto o \textit{guest} é o Windows 7.
+Observe a imagem~\ref{fig:vm}. Nela pode-se ver um sistema Windows (XP) servindo como base para outro sistema Windows (Win 7) rodando dentro da VM\@. Para efeitos de nomenclatura, chama-se de \textit{host} o sistema que está como base para executar a máquina virtual e \textit{guest} o sistema que está sendo emulado na VM\@. No exemplo acima, o \textit{host} é o Windows XP, enquanto o \textit{guest} é o Windows 7.
 
 O sistema que está dentro da VM não afeta de maneira alguma o sistema base. Desta forma, já que a VM nada mais é que um \textit{software} rodando em um sistema qualquer, podemos levantar as seguintes vantagens de seu uso:
 
@@ -130,12 +136,12 @@ O sistema que está dentro da VM não afeta de maneira alguma o sistema base. De
 Porém, pelo mesmo fato de ser apenas um programa rodando em seu computador a VM tem as desvantagens de que:
 
 \begin{itemize}
-\item Como estão sendo utilizados recursos de um sistema para rodar outro sistema, ocorrerá diminuição da eficiência, e o sistema poderá ficar lento ou não ter memória suficiente para executar algum programa.
+\item Como estão sendo utilizados recursos de um sistema para rodar outro sistema, ocorrerá diminuição da eficiência e o sistema poderá ficar lento ou não ter memória suficiente para executar algum programa.
   \item Para uma utilização prolongada, será sempre melhor instalar o sistema diretamente em seu computador.
 \end{itemize}
 
 \subsection{Dual-boot}
-Outra alternativa bastante popular na instalação de sistemas operacionais é o \textit{dual-boot}, ou \textit{multi-boot}. Nessa situação, os dois (ou mais) sistemas serão instalados totalmente em uma máquina, cada qual recebendo uma porção do disco rígido. Quando o usuário liga o computador, uma tela é exibida permitindo que se escolha qual dos sistemas deve ser carregado. Para alternar entre sistemas, basta reiniciar o computador e escolher o outro sistema.
+Outra alternativa bastante popular na instalação de sistemas operacionais é o \textit{dual-boot}, ou \textit{multi-boot}. Nessa situação, os dois (ou mais) sistemas serão instalados totalmente em uma máquina, cada qual recebendo uma porção do disco rígido. Quando o usuário liga o computador, uma tela é exibida permitindo que se escolha qual dos sistemas deve ser carregado. Para alternar entre eles, basta reiniciar o computador e escolher o outro sistema.
 
 A principal vantagem dessa abordagem é que ambos os sistemas possuem a máquina toda para si, exatamente como ocorre quando há apenas um sistema operacional instalado.
 
@@ -146,11 +152,11 @@ Uma desvantagem que pode ser citada é que não é possível executar os dois si
 
 Quando se deseja apenas testar uma determinada distro Linux, pode-se usar um \textit{Live} CD, que é uma distro ``instalada'' em uma mídia externa como um pendrive ou CD. 
 
-Além de testar a distro um \textit{Live} CD pode ser usado para reparar erros em um sistema operacional já instalado, Windows ou Linux. Outra possibilidade é utilizar um \textit{Live} CD para recuperar informações que foram deletadas por acidente. Um terceiro uso seria ter um sistema operacional com mais liberdade em um computador restrito, por exemplo um computador de uma empresa, usando um \textit{Live} CD você fica livre para fazer o que quiser.
+Além de testar a distro um \textit{Live} CD pode ser usado para reparar erros em um sistema operacional já instalado, Windows ou Linux. Outra possibilidade é utilizar um \textit{Live} CD para recuperar informações que foram deletadas por acidente. Um terceiro uso seria ter um sistema operacional com mais liberdade em um computador restrito, por exemplo um computador de uma empresa.
 
 Por ser um \textit{Live} CD qualquer mudança que você tenha feito ou programa instalado durante a utilização será perdida assim que você desligar o computador.
 
-Para criar um \textit{Live} CD basta baixar a \texttt{.iso} da distro desejada e instalá-la em uma mídia externo, para isso pode-se usar um programa como \emph{UNetbootin} ou o comando \texttt{dd} no Linux.
+Para criar um \textit{Live} CD basta baixar a \texttt{.iso} da distro desejada e instalá-la em uma mídia externa, utilizando um programa como o \emph{UNetbootin} ou o comando \texttt{dd} no Linux.
 
 \begin{figure}[!h]
   \centering
@@ -162,9 +168,9 @@ Para criar um \textit{Live} CD basta baixar a \texttt{.iso} da distro desejada e
 Na imagem~\ref{fig:ubuntu-live} é possível ver a distro Ubuntu mostrando uma opção para testar o Ubuntu sem instalá-lo. Algumas distros permitem instalar mesmo após ter sido iniciado como um \textit{Live} CD.
 
 \section{Instalação}
-Caso você nunca tenha instalado o Linux antes essa parte servirá de apoio durante a instalação. Aqui será discutido alguns conceitos necessários para poder realizar uma instalação simples do Linux, seguida de um pequeno guia. Os passos citados aqui podem variar, então prepare-se para utilizar o seu \emph{google-fu}.
+Nesta seção serão discutidos alguns conceitos necessários para poder realizar uma instalação simples do Linux, seguidos de um pequeno guia. Os passos citados aqui servem para que o leitor se familiarize com os conceitos e idéias envolvidos na instalação de um sistema. Evite seguir estes passos à risca já que a sua situação pode variar. Recomenda-se conferir cada passo seguindo um guia específico ou buscando no \emph{Google}.
 
-Dependendo da distro Linux que for instalada o método de instalação será diferente. Algumas distros tem instaladores gráficos como na figura~\ref{fig:ubuntu-live}, o que facilita a instalação, enquanto outras tem instaladores por linha de comando como na figura~\ref{fig:arch-installer}, sugiro tentar primeiro instalador gráfico já que é mais simples usá-lo.
+Dependendo da distro Linux a ser instalada o método de instalação será diferente. Algumas distros têm instaladores gráficos como na figura~\ref{fig:ubuntu-live}, o que facilita a instalação, enquanto outras têm instaladores por linha de comando como na figura~\ref{fig:arch-installer}.
 
 \begin{figure}[H]
     \centering
@@ -173,12 +179,18 @@ Dependendo da distro Linux que for instalada o método de instalação será dif
     \label{fig:arch-installer}
 \end{figure}
 
-Um HD é dividido em partições, imagine um quarteirão que possui varias casas, é exatamente isto que uma partição faz, separa o HD em unidades menores. Um computador novo, que venha com o Windows instalado de fábrica, tem todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
+Vejamos agora alguns conceitos básicos necessários para a instalação.
 
-Tanto o Windows como o Linux podem ser instalados em apenas uma partição. Para o Linux usaremos uma partição de \texttt{20GB} para uma instalação pequena, aumente o tamanho a vontade, principalmente se for utilizar o Linux para ouvir música, ver filmes ou jogar. 
+\subsection{Particionamento}
+Um disco rígido é dividido em partições, como um quarteirão que possui varias casas, um HD é ``particionado'' em unidades menores. Um computador novo, que venha com o Windows instalado de fábrica, terá todo o HD sendo usado apenas para o Windows. É necessário diminuir o espaço que o Windows está usando e entregar este espaço para o Linux.
+
+Uma boa prática\footnote{O particionamento depende muito da forma como o computador será utilizado. Existem várias estratégias para se manter a segurança entre os vários sistemas instalados em uma máquina, bem como questões de backup, etc.} é manter além da partição do Windows, mais duas partições para o Linux: uma para os programas (\texttt{20GB} para uma instalação pequena) e outra para os arquivos, de tamanho maior, principalmente se for utilizar o Linux para ouvir música ou ver filmes.
+
+
 % É claro os tamanhos foram sugeridos imaginando que a pessoa usará o Linux apenas para a faculdade, o que a maioria fará... Um pouco menos de 10G é requisitado apenas para instalação base de algumas distros, os outros 10 ficam para o usuário encher de sabe-se lá o que...
 
-Cada partições tem um sistema de arquivo, que diz como cada informação deve ser guardada no disco, desse modo organizando-o. Sem um sistema de arquivos seria impossível dizer onde começa e termina cada ``coisa'' gravada no disco. O Windows usa um sistema de arquivo chamado de NTFS enquanto o Linux, nessa instalação, usará o EXT4.
+\subsection{Formatação}
+Cada partição tem um sistema de arquivo, que diz como cada informação deve ser guardada no disco, desse modo organizando-o. Sem um sistema de arquivos seria impossível dizer onde começa e termina cada ``coisa'' gravada no disco. O Windows usa um sistema de arquivo chamado de NTFS enquanto o Linux, nessa instalação, usará o EXT4.
 
 O Linux organiza seus arquivos e diretórios de uma forma diferente do Windows, isto é, não existe \texttt{c:\textbackslash} no Linux, apenas `\texttt{/}' que é chamado de \texttt{root} ou raiz. Todo o resto do sistema é instalado a partir da raiz. Depois da raiz nos temos algumas pastas importantes por exemplo \texttt{/home} onde fica gravado todos ``dados'' do usuário como fotos, músicas, imagens, etc.
 
