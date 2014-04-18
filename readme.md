@@ -15,7 +15,7 @@ Repositório dedicado ao conteúdo dos minicursos realizados pelos alunos do DAI
         * Ex: **handout_linux_2013-2.pdf**
 
 ## Wiki:
-Encontra-se uma página de apresentação do projeto e informações referentes às questões operacionais dos minicursos, como quem foram os participantes de dada edição e comentários gerais sobre a execução dos cursos.
+Na [wiki](https://github.com/UTFPR-PG/minicursos/wiki) Encontra-se uma página de apresentação do projeto e informações referentes às questões operacionais dos minicursos, como quem foram os participantes de dada edição e comentários gerais sobre a execução dos cursos.
 
 ----
 *Mantido por:*
