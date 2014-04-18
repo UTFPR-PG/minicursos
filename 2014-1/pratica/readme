@@ -1,4 +1,0 @@
-Na etapa de preparação dos thinclients para uso no minicurso foi preciso transformar um .pdf com a lista de alunos em um arquivo de texto que pudesse ser utilizado pelo script de criação de usuários. Este mesmo problema foi proposto aos alunos e a resolução foi feita passo a passo, explicando os vários comandos e conceitos utilizados no processo.
-
-    - Inform_Intrum_2014_1.pdf contém os nomes e números de RA dos alunos matriculados na disciplina de Informática Instrumental.
-    - calouros2014-1_analise é o arquivo que deveria ser gerado.

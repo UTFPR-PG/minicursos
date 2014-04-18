@@ -1,0 +1,60 @@
+\documentclass{handout_utfpr}
+
+\usepackage{xspace}
+\usepackage{pbox}
+\usepackage[brazil]{babel}
+\usepackage{xcolor}
+\usepackage[alf]{abntex2cite}
+\usepackage{pdfpages}
+\usepackage{url}
+\usepackage{geometry}
+\usepackage{dashrule}
+\usepackage{listings}
+\definecolor{dark-gray}{gray}{0.20}
+\definecolor{light-gray}{gray}{0.85}
+
+\newcommand{\com}[1]{
+\colorbox{light-gray}{\texttt{\pbox{\textwidth}{\$ #1}}}
+}
+
+\newcommand{\cominline}[1]{
+\colorbox{light-gray}{\texttt{\pbox{\textwidth}{#1}}}
+}
+
+\newcommand{\pdf}{\textsf{.pdf}}
+\newcommand{\dvi}{\textsf{.dvi}}
+\newcommand{\tex}{\textsf{.tex}}
+
+\subjnum{CC31C}
+\subject{Introdução à Ciência da Computação}
+\subjelab{Introdução ao \LaTeX}
+
+\handoutdate{\today}
+
+\begin{document}
+\maketitle
+
+\section{Introdução}
+
+Este material é apresentado como parte de uma série de minicursos que serão ministrados sobre tópicos variados com o intuito de \textit{nivelar} o conhecimento dos alunos com relação a conceitos básicos que não estão inclusos nas ementas das disciplinas regulares do curso, bem como colocá-los em contato com ferramentas úteis e boas práticas da Computação.
+
+Os conteúdos são dispostos aqui apenas como um apanhado geral com o objetivo de prover um embasamento mínimo e recomenda-se que outras fontes de pesquisa sejam utilizadas para o aprofundamento nestes assuntos.
+
+
+
+\input{conteudo/intro_escrita} % Introdução à escrita científica
+
+\input{conteudo/tex} % TeX ao resgate!
+
+\input{conteudo/instalacao} % Básicos da instalação
+
+\input{conteudo/problemas} % Problemas comuns dos editores WYSIWYG
+
+%\input{conteudo/pratica} % Parte prática
+
+\input{conteudo/conclusao} % Conclusao
+
+\nocite{_transition}
+\bibliography{conteudo/handout_latex_2013-2}
+
+\end{document}

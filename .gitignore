@@ -17,6 +17,7 @@
 #*.gif
 *.blg
 *.ps
+recursos/exemplos/*
 
 # LibreOffice lock file
 *\#
