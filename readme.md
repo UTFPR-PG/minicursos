@@ -10,10 +10,9 @@ Repositório dedicado ao conteúdo dos minicursos realizados pelos alunos do DAI
  * Uma pasta para cada minicurso. (linux, latex,...)
 
     * Dentro das pastas a organização é de acordo com o ano/semestre de realização do minicurso. (2013-2, 2014-1,...). Lá está todo o conteúdo do minicurso para aquele semestre.
-        
-            * handout\_<minicurso>\_<semestre>.pdf é o arquivo contendo o material escrito.
-            * slides\_<minicurso>\_<semestre>.pdf é o arquivo da apresentação, se houver.
-            * Ex: **handout_linux_2013-2.pdf**
+        * handout\_&lt;minicurso&gt;_&lt;semestre&gt;.pdf é o arquivo contendo o material escrito.
+        * slides\_&lt;minicurso&gt;_&lt;semestre&gt;.pdf é o arquivo da apresentação, se houver.
+        * Ex: **handout_linux_2013-2.pdf**
 
 ## Wiki:
 Encontra-se uma página de apresentação do projeto e informações referentes às questões operacionais dos minicursos, como quem foram os participantes de dada edição e comentários gerais sobre a execução dos cursos.
@@ -31,4 +30,4 @@ Campus Ponta Grossa.
 
 ---
 
-######Markdown edited with [dillinger](https://dillinger.io)
+######Markdown edited with [dillinger](http://dillinger.io)
