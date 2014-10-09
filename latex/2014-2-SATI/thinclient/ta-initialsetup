@@ -47,6 +47,6 @@ pacman --noconfirm --root "$root" --dbpath "$root/var/lib/pacman" -S texlive-cor
 sudo thinarch -a users minicurso
 
 ## other files
-sudo ./thinarch -f handout_latex_2014-2.pdf
+sudo thinarch -f handout_latex_2014-2.pdf
 sudo thinarch -r "git clone https://github.com/UTFPR-PG/latex.git /home/\$login/classeUTFPR"
 sudo thinarch -r "chown -R \$login:minicurso /home/\$login/"
